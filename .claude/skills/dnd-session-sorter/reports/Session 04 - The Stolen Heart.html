@@ -1,0 +1,805 @@
+<title>The Stolen Heart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,800;1,6..96,600;1,6..96,800&family=Karla:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:      #E6E9E4;
+    --surface:     #F3F5F1;
+    --surface-2:   #DDE2DB;
+    --ink:         #151C1A;
+    --ink-soft:    #3B4744;
+    --muted:       #6B7773;
+    --rule:        #C4CCC3;
+    --patina:      #2C6B66;
+    --patina-deep: #1D4B47;
+    --garnet:      #8E2F3C;
+    --gold:        #94682A;
+    --glass:       #4A7F86;
+    --poison:      #3F7A2E;
+    --block-edge:  rgba(20,30,28,.28);
+    --shadow:      0 1px 2px rgba(20,30,28,.08), 0 14px 28px -16px rgba(20,30,28,.35);
+
+    --step--1: clamp(.78rem, .76rem + .1vw, .84rem);
+    --step-0:  clamp(1rem, .97rem + .16vw, 1.09rem);
+    --step-1:  clamp(1.2rem, 1.13rem + .34vw, 1.42rem);
+    --step-2:  clamp(1.5rem, 1.36rem + .68vw, 2rem);
+    --step-3:  clamp(2rem, 1.7rem + 1.5vw, 3.1rem);
+    --step-4:  clamp(2.9rem, 2.1rem + 3.9vw, 5.6rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #0E1413;
+      --surface:     #161E1D;
+      --surface-2:   #202B29;
+      --ink:         #E2E8E4;
+      --ink-soft:    #B4C0BB;
+      --muted:       #7E8D88;
+      --rule:        #2A3634;
+      --patina:      #5FB3AB;
+      --patina-deep: #8ACFC7;
+      --garnet:      #D8707F;
+      --gold:        #D2A254;
+      --glass:       #74B6BE;
+      --poison:      #8FCB6A;
+      --block-edge:  rgba(0,0,0,.6);
+      --shadow:      0 1px 2px rgba(0,0,0,.45), 0 16px 32px -16px rgba(0,0,0,.85);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:      #0E1413;
+    --surface:     #161E1D;
+    --surface-2:   #202B29;
+    --ink:         #E2E8E4;
+    --ink-soft:    #B4C0BB;
+    --muted:       #7E8D88;
+    --rule:        #2A3634;
+    --patina:      #5FB3AB;
+    --patina-deep: #8ACFC7;
+    --garnet:      #D8707F;
+    --gold:        #D2A254;
+    --glass:       #74B6BE;
+    --poison:      #8FCB6A;
+    --block-edge:  rgba(0,0,0,.6);
+    --shadow:      0 1px 2px rgba(0,0,0,.45), 0 16px 32px -16px rgba(0,0,0,.85);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Karla", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 78rem; margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 3.5rem) 6rem; }
+
+  h1, h2, h3 {
+    font-family: "Bodoni Moda", ui-serif, Georgia, "Times New Roman", serif;
+    text-wrap: balance;
+    margin: 0;
+    line-height: 1.08;
+    font-weight: 600;
+  }
+
+  p { margin: 0; max-width: 64ch; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: var(--step--1);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  a { color: var(--patina); text-underline-offset: .2em; }
+  :focus-visible { outline: 2px solid var(--patina); outline-offset: 3px; border-radius: 2px; }
+
+  section { margin-top: clamp(3rem, 6vw, 5rem); }
+
+  .sec-head { display: grid; gap: .5rem; }
+  .sec-head h2 { font-size: var(--step-3); font-weight: 600; }
+  .sec-head p:not(.eyebrow) { color: var(--muted); }
+
+  /* ---------- masthead ---------- */
+
+  .mast { padding: clamp(3rem, 8vw, 6.5rem) 0 clamp(2rem, 4vw, 3rem); }
+
+  .mast-meta { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; align-items: baseline; padding-bottom: 1.6rem; }
+
+  .mast h1 {
+    font-size: var(--step-4);
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -.015em;
+    margin-bottom: 1.4rem;
+  }
+
+  .standfirst { font-size: var(--step-1); line-height: 1.5; color: var(--ink-soft); font-weight: 300; max-width: 52ch; }
+
+  .rule-heavy { height: 2px; background: var(--ink); opacity: .82; margin-top: clamp(2rem, 4vw, 3rem); }
+
+  /* ---------- party ---------- */
+
+  .party {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .pc { padding: 1.5rem 1.2rem 1.6rem 0; display: flex; flex-direction: column; gap: .15rem; }
+  .pc-name { font-family: "Bodoni Moda", ui-serif, Georgia, serif; font-size: var(--step-1); font-weight: 600; line-height: 1.2; }
+  .pc-role { font-size: var(--step--1); color: var(--muted); }
+  .pc-mark { width: 1.9rem; height: 2px; margin-bottom: .7rem; background: var(--pc-color, var(--patina)); }
+
+  /* ---------- ledger ---------- */
+
+  .ledger-scroll { margin-top: 2rem; overflow-x: auto; }
+
+  .ledger {
+    width: 100%;
+    min-width: 40rem;
+    border-collapse: collapse;
+    font-size: var(--step--1);
+  }
+
+  .ledger th {
+    text-align: left;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 500;
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 1rem .7rem 0;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .ledger td { padding: .85rem 1rem .85rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+
+  .ledger .item { font-family: "Bodoni Moda", ui-serif, Georgia, serif; font-size: var(--step-0); font-weight: 600; white-space: nowrap; }
+  .ledger .what { color: var(--ink-soft); max-width: 36ch; }
+  .ledger .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .ledger th.num { text-align: right; }
+  .ledger .who { color: var(--muted); white-space: nowrap; }
+  .ledger .none { color: var(--muted); }
+
+  .ledger tfoot td { border-bottom: none; border-top: 2px solid var(--ink); padding-top: 1rem; font-weight: 500; }
+  .ledger tfoot .num { color: var(--gold); font-weight: 600; font-size: var(--step-0); }
+
+  /* ---------- descent ---------- */
+
+  .shaft {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: clamp(2.2rem, 4vw, 3.4rem);
+    padding-left: clamp(1.6rem, 4vw, 3rem);
+    border-left: 1px solid var(--rule);
+  }
+
+  .room { position: relative; display: grid; gap: .7rem; }
+
+  .room::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * clamp(1.6rem, 4vw, 3rem) - 4.5px);
+    top: .55rem;
+    width: 8px; height: 8px;
+    background: var(--ground);
+    border: 2px solid var(--patina);
+    border-radius: 50%;
+  }
+
+  .room.danger::before { border-color: var(--poison); }
+  .room.reveal::before { background: var(--garnet); border-color: var(--garnet); }
+
+  .room-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .9rem; }
+  .room h3 { font-size: var(--step-2); font-weight: 600; }
+
+  .move {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    color: var(--patina);
+    letter-spacing: .06em;
+  }
+
+  .room.danger .move { color: var(--poison); }
+
+  .room p + p { margin-top: .55rem; }
+
+  .pull {
+    margin: .6rem 0 .2rem;
+    padding: 1.1rem 0 1.1rem 1.3rem;
+    border-left: 3px solid var(--garnet);
+    font-family: "Bodoni Moda", ui-serif, Georgia, serif;
+    font-style: italic;
+    font-size: var(--step-2);
+    line-height: 1.25;
+    max-width: 26ch;
+  }
+
+  /* ---------- cervit ---------- */
+
+  .relics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .relic { background: var(--surface); padding: 1.7rem 1.5rem 1.8rem; display: grid; gap: .55rem; align-content: start; }
+
+  .relic-top { display: flex; align-items: center; gap: .9rem; }
+
+  .ingot {
+    flex: none;
+    width: 2.6rem; height: 1.1rem;
+    border-radius: 2px;
+    border: 1px solid var(--block-edge);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+  }
+  .ingot.white { background: linear-gradient(160deg, #FBFBF7, #D8DBD3 70%, #EEF0EA); }
+  .ingot.black { background: linear-gradient(160deg, #3A3D40, #0B0C0E 65%, #24272A); }
+
+  .relic h3 { font-size: var(--step-2); font-weight: 600; font-style: italic; }
+  .relic-holder { font-size: var(--step--1); color: var(--muted); }
+
+  .mech {
+    list-style: none;
+    margin: .6rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: .5rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .mech li { padding-left: 1.1rem; position: relative; }
+  .mech li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+
+  /* ---------- strata gallery ---------- */
+
+  .gallery {
+    margin-top: 2.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+    gap: clamp(1.2rem, 2.5vw, 2rem);
+  }
+
+  .exhibit { display: grid; gap: .9rem; align-content: start; }
+
+  .block {
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--block-edge);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .block::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(115deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 38%);
+    pointer-events: none;
+  }
+
+  .band { flex: var(--h, 1); background: var(--c); }
+
+  .flecks {
+    background-color: var(--c);
+    background-image:
+      radial-gradient(circle at 18% 40%, #FBF8EE 0 2.5px, transparent 3px),
+      radial-gradient(circle at 63% 72%, #FBF8EE 0 2px, transparent 2.5px),
+      radial-gradient(circle at 82% 28%, #F4EEDB 0 3px, transparent 3.5px),
+      radial-gradient(ellipse 9px 3px at 42% 22%, #FBF8EE 0 60%, transparent 70%);
+  }
+
+  .blades {
+    background-color: var(--c);
+    background-image:
+      linear-gradient(172deg, transparent 44%, #8E8A83 45%, #6E6A63 50%, transparent 51%),
+      linear-gradient(8deg, transparent 58%, #7B7770 59%, #5E5A54 62%, transparent 63%);
+  }
+
+  .shells {
+    background-color: var(--c);
+    background-image:
+      radial-gradient(ellipse 7px 3px at 30% 50%, #3A2E1E 0 55%, transparent 65%),
+      radial-gradient(ellipse 6px 2.5px at 74% 38%, #3A2E1E 0 55%, transparent 65%);
+  }
+
+  .brick {
+    background-color: #7E3527;
+    background-image:
+      repeating-linear-gradient(0deg, #2A1B16 0 1px, transparent 1px 9px),
+      repeating-linear-gradient(90deg, #2A1B16 0 1px, transparent 1px 22px);
+  }
+
+  .resin .band { filter: saturate(.9); }
+  .resin::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(214,150,48,.22), rgba(214,150,48,.1));
+    pointer-events: none;
+  }
+
+  .placard { display: grid; gap: .25rem; }
+  .placard h3 { font-size: var(--step-1); font-style: italic; font-weight: 600; line-height: 1.2; }
+  .placard p { font-size: var(--step--1); color: var(--muted); line-height: 1.5; }
+
+  .gallery-note { margin-top: 1.8rem; color: var(--ink-soft); }
+
+  /* ---------- threads ---------- */
+
+  .thread-list { margin: 2rem 0 0; padding: 0; list-style: none; display: grid; }
+
+  .thread {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 1rem;
+    padding: 1.15rem 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  .thread:last-child { border-bottom: 1px solid var(--rule); }
+
+  .thread-n { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: var(--step--1); color: var(--garnet); font-variant-numeric: tabular-nums; padding-top: .18rem; }
+  .thread-q { font-weight: 500; }
+  .thread-a { color: var(--muted); font-size: var(--step--1); margin-top: .2rem; }
+
+  /* ---------- colophon ---------- */
+
+  .colophon {
+    margin-top: clamp(3.5rem, 7vw, 6rem);
+    padding-top: 1.4rem;
+    border-top: 2px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.6rem;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .room, .exhibit, .relic { animation: rise .5s ease-out both; }
+    @keyframes rise { from { opacity: .35; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <div class="mast-meta">
+      <p class="eyebrow">The Shadow &nbsp;/&nbsp; Session 04</p>
+      <p class="eyebrow">11 September 2026</p>
+    </div>
+    <h1>The Stolen Heart</h1>
+    <p class="standfirst">
+      A short rest worth fourteen thousand gold, a jump Echo finished as a raven,
+      and six crystal sisters who finally told us where we are.
+    </p>
+    <div class="rule-heavy"></div>
+  </header>
+
+  <div class="party" aria-label="The party">
+    <div class="pc" style="--pc-color: var(--patina)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Vicaster</span>
+      <span class="pc-role">Eladrin warlock</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--glass)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Drivik</span>
+      <span class="pc-role">Deep gnome rogue</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--gold)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Aslaug</span>
+      <span class="pc-role">Halfling bard</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--garnet)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Muradin</span>
+      <span class="pc-role">Dwarf paladin</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--patina-deep)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Echo of Twilight</span>
+      <span class="pc-role">Tabaxi druid</span>
+    </div>
+  </div>
+
+  <section aria-labelledby="ledger-h">
+    <div class="sec-head">
+      <p class="eyebrow">The short rest</p>
+      <h2 id="ledger-h">What the vault was worth</h2>
+      <p>Four finds from last session identified, plus everything we carried out of the storeroom.</p>
+    </div>
+
+    <div class="ledger-scroll">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">What it turned out to be</th>
+            <th scope="col">Held by</th>
+            <th scope="col" class="num">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">Vantablack Coin</td>
+            <td class="what">Currency of demons and angels, used to buy and sell memories and other metaphysical things</td>
+            <td class="who">Vicaster</td>
+            <td class="num">~2,500 gp</td>
+          </tr>
+          <tr>
+            <td class="item">Golden Beans &times;219</td>
+            <td class="what">Kidneys of a rare mole that eats gold ore</td>
+            <td class="who">Drivik</td>
+            <td class="num">~2,190 gp</td>
+          </tr>
+          <tr>
+            <td class="item">White Pearl</td>
+            <td class="what">A special pearl that glows under special light</td>
+            <td class="who">Muradin</td>
+            <td class="num">400 gp</td>
+          </tr>
+          <tr>
+            <td class="item">Wrinkled Prune</td>
+            <td class="what">Dried brains, still a little squishy. Do not spill blood on it — something could emerge</td>
+            <td class="who">Echo</td>
+            <td class="num none">—</td>
+          </tr>
+          <tr>
+            <td class="item">White Cervit, 80&nbsp;kg</td>
+            <td class="what">A lost alloy. Reinforces armour against fire</td>
+            <td class="who">Split</td>
+            <td class="num">8,000 gp</td>
+          </tr>
+          <tr>
+            <td class="item">Black Cervit, 10&nbsp;kg</td>
+            <td class="what">A lost alloy. Turns aside every spell that starts with <em>Ray of</em></td>
+            <td class="who">Split</td>
+            <td class="num">1,000 gp</td>
+          </tr>
+          <tr>
+            <td class="item">Milky Heart Crystal</td>
+            <td class="what">A crystal sister's stolen heart</td>
+            <td class="who">Returned</td>
+            <td class="num none">—</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Identified value this session</td>
+            <td class="num">&asymp;14,090 gp</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="descent-h">
+    <div class="sec-head">
+      <p class="eyebrow">The descent</p>
+      <h2 id="descent-h">Down the shaft</h2>
+    </div>
+
+    <div class="shaft">
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Shaft</h3>
+          <span class="move">the handle · the chain</span>
+        </div>
+        <p>
+          Rested and a good deal richer, we went back to the handle. Muradin put his shoulder
+          into it and got nowhere — an athletics 13 was never going to do it alone — but with
+          Drivik pushing too it finally gave, and somewhere further into the room the chain
+          began to move. That was all. Vicaster tried a different approach: he cast light on
+          a stone and dropped it down the hole, and we watched it shrink to a pinprick until
+          there was nothing left to see.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Weighing Station</h3>
+          <span class="move">&darr; stairs</span>
+        </div>
+        <p>
+          So we took the stairs instead. They run alongside the shaft, down past a platform hung
+          on chains — a weighing system for ore, its tubs long empty — and keep going until
+          they bottom out in a cave. From there an open door looks straight onto the shaft: the
+          chain hanging in the middle, and on the far side of the gap, another opening.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Cervit Storage</h3>
+          <span class="move">&rarr; across the gap</span>
+        </div>
+        <p>
+          There was nothing for it but to jump. Drivik went first and made it look easy with a
+          22; Vicaster, Muradin and Aslaug followed with a 20, a 21 and a showy 26. Echo rolled
+          a 5 — and arrived as a raven, having wild shaped somewhere on the way down.
+        </p>
+        <p>
+          On the other side was a storeroom of rusted, rotting crates, though a few had held
+          up. Inside those were strips of a pale, resin-like material, and Drivik's natural 20
+          put a name to it: Cervit, an alloy people still turn up now and then but nobody knows
+          how to make any more. By the time the crates were empty we had around ninety kilos of
+          it, white and black, and we split it between us.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Orb Room</h3>
+          <span class="move">&uarr; ladder</span>
+        </div>
+        <p>
+          A ladder led up into a room of sturdy metal tables, with a broken half-dome of panels
+          hanging from the ceiling. Along one wall, four crystal orbs sat on pedestals, each a
+          third bigger than a football and full of strange, mutated underground plants. Our
+          skin prickled as we came close. So did Drivik's tongue, because of course he licked
+          one. Detect magic showed nothing, Vicaster's arcana could only offer “alchemy,” and
+          the machine overhead hung just too high for Muradin to get a proper look at.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Fabric Room</h3>
+          <span class="move">&darr; down the chain</span>
+        </div>
+        <p>
+          From there Drivik simply stepped onto the chain and slid down it, trusting to Reliable
+          Talent, into a room buried in heaps of old fabric. The rest of us climbed down after
+          him, more carefully. Further in, a ladder dropped away again, and below it something
+          was glowing a faint green.
+        </p>
+        <p>
+          We would come back through here later and find out what the heaps were hiding:
+          spectres wrapped in chains, rising out of the cloth. It was a short fight, and once
+          beaten they fled.
+        </p>
+      </article>
+
+      <article class="room danger">
+        <div class="room-head">
+          <h3>The Poison Cage</h3>
+          <span class="move">&darr; ladder</span>
+        </div>
+        <p>
+          The green came from a glowing ball inside a metal cage. Vicaster sent his familiar
+          through the bars in sphinx of wonder form, and it died, painfully. He summoned it back
+          and gave it candy, which seemed only fair. Getting close himself cost him 22 poison
+          damage, and when Drivik put an arrow into the ball, the arrow simply vanished.
+        </p>
+        <p>
+          Vicaster's arcana supplied the rest: this was a portal to the para-elemental plane of
+          poison. We gave it a very wide berth on the way past.
+        </p>
+      </article>
+
+      <article class="room reveal">
+        <div class="room-head">
+          <h3>The Crystal Hall</h3>
+          <span class="move">&darr; ladder, 20 ft</span>
+        </div>
+        <p>
+          Twenty feet further down, the ladder opened onto a room made of crystal, spirals
+          carved into its floor. Six women of crystal lounged on platforms of salt — Drivik
+          would later lick one to be sure — with spikes growing from their bodies and broken
+          gemstones where their eyes should be. Drivik took one look and scrambled back up.
+        </p>
+        <p>
+          The familiar went down in his place and asked how they were doing. They seemed
+          amused, and allowed that we might not be a treat if we minded our manners. So
+          Vicaster went down first, with a bow, and the rest of us followed.
+        </p>
+        <p>
+          They spoke one at a time, each sister taking her turn. They had been brought here
+          against their will, from a place where drought and purification rule, and had stayed
+          this long — though time, they said, is relative — because one of them had had her
+          heart stolen. That heart turned out to be the milky crystal from chest 19 of the
+          vault. We gave it back, they healed their sister, and then they told us where we were.
+        </p>
+        <p class="pull">We are in the Cradle.</p>
+        <p>
+          The place we had been looking for all along. A facility built to study deadly and
+          dangerous things, they said, with an observatory at its very bottom where the
+          builders searched for whatever their research needed.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-label="Cervit">
+    <div class="relics">
+      <div class="relic">
+        <div class="relic-top">
+          <span class="ingot white" aria-hidden="true"></span>
+          <h3>White Cervit</h3>
+        </div>
+        <p class="relic-holder">80 kg · 100 gp per kg · split across the party</p>
+        <ul class="mech">
+          <li>Reinforces armour, making it resistant to fire</li>
+          <li>Nobody knows how it was made any more</li>
+        </ul>
+      </div>
+      <div class="relic">
+        <div class="relic-top">
+          <span class="ingot black" aria-hidden="true"></span>
+          <h3>Black Cervit</h3>
+        </div>
+        <p class="relic-holder">10 kg · 100 gp per kg · split across the party</p>
+        <ul class="mech">
+          <li>Deflects every spell whose name begins with <em>Ray of</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="gallery-h">
+    <div class="sec-head">
+      <p class="eyebrow">The strata gallery</p>
+      <h2 id="gallery-h">Five slices of other worlds</h2>
+      <p>Perfectly polished blocks on platforms, each labelled. Drawn here from the descriptions.</p>
+    </div>
+
+    <div class="gallery">
+
+      <figure class="exhibit" style="margin:0">
+        <div class="block" role="img" aria-label="Pale bands of white and yellow stone flecked with bone">
+          <div class="band" style="--c:#EFE8D2; --h:1.2"></div>
+          <div class="band flecks" style="--c:#E2D6A6; --h:2"></div>
+          <div class="band" style="--c:#D6C78E; --h:.7"></div>
+          <div class="band flecks" style="--c:#EAE1C0; --h:2.2"></div>
+          <div class="band" style="--c:#CDBD83; --h:.9"></div>
+        </div>
+        <figcaption class="placard">
+          <h3>Vampire strata</h3>
+          <p>White and yellow, full of bones, teeth and other human remains.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exhibit" style="margin:0">
+        <div class="block" role="img" aria-label="Rust-brown bands packed with steel blades">
+          <div class="band blades" style="--c:#8A4A26; --h:1.6"></div>
+          <div class="band" style="--c:#5C3220; --h:.5"></div>
+          <div class="band blades" style="--c:#7A3F1F; --h:2"></div>
+          <div class="band" style="--c:#A05A2C; --h:.8"></div>
+          <div class="band blades" style="--c:#6E3B22; --h:1.6"></div>
+        </div>
+        <figcaption class="placard">
+          <h3>Sword strata</h3>
+          <p>Rusted metal packed with daggers, swords and blades. Stands for a stratum a kilometre tall.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exhibit" style="margin:0">
+        <div class="block resin" role="img" aria-label="Alternating red muscle and yellow fat under amber resin">
+          <div class="band" style="--c:#A8404F; --h:1.3"></div>
+          <div class="band" style="--c:#E6D49C; --h:.8"></div>
+          <div class="band" style="--c:#8E3342; --h:1.6"></div>
+          <div class="band" style="--c:#EAD9A2; --h:1.1"></div>
+          <div class="band" style="--c:#B44C5B; --h:1.2"></div>
+          <div class="band" style="--c:#E1CC8F; --h:.7"></div>
+        </div>
+        <figcaption class="placard">
+          <h3>Strata of fractured minds</h3>
+          <p>Cast in resin. Layers of muscle and fat.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exhibit" style="margin:0">
+        <div class="block" role="img" aria-label="Bands of green, orange, ochre and yellow with dark insect shells between">
+          <div class="band" style="--c:#5E8B3A; --h:1.2"></div>
+          <div class="band shells" style="--c:#D9822B; --h:1.1"></div>
+          <div class="band" style="--c:#B8872E; --h:1.3"></div>
+          <div class="band shells" style="--c:#E3C84A; --h:1"></div>
+          <div class="band" style="--c:#4F7A30; --h:.8"></div>
+          <div class="band shells" style="--c:#C9772A; --h:1"></div>
+        </div>
+        <figcaption class="placard">
+          <h3>Strata of the Gackling moon</h3>
+          <p>Green, orange, ochre and yellow, with the exoskeletons of creepy-crawlies between.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exhibit" style="margin:0">
+        <div class="block" role="img" aria-label="Black carbon bands around a band of brickwork">
+          <div class="band" style="--c:#2B2826; --h:1.1"></div>
+          <div class="band" style="--c:#171514; --h:.9"></div>
+          <div class="band brick" style="--h:1.8"></div>
+          <div class="band" style="--c:#3A3633; --h:.6"></div>
+          <div class="band" style="--c:#121110; --h:1.4"></div>
+        </div>
+        <figcaption class="placard">
+          <h3>Carbon layers of the burned city</h3>
+          <p>A block that is a piece of a building: brick, window and downpipe.</p>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <p class="gallery-note">
+      Echo's read: museum pieces from previous worlds, ruled by the Pantocrator — the
+      previous supreme god.
+    </p>
+  </section>
+
+  <section aria-labelledby="threads-h">
+    <div class="sec-head">
+      <p class="eyebrow">Still open</p>
+      <h2 id="threads-h">What we don't know yet</h2>
+    </div>
+    <ul class="thread-list">
+      <li class="thread">
+        <span class="thread-n">01</span>
+        <div>
+          <p class="thread-q">What is in the observatory?</p>
+          <p class="thread-a">The sisters call it the Cradle's central point, where the builders searched for their research materials. It's at the very bottom.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">02</span>
+        <div>
+          <p class="thread-q">Who stole the sister's heart?</p>
+          <p class="thread-a">It was sitting in a chest in the vault. Somebody put it there.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">03</span>
+        <div>
+          <p class="thread-q">What does the handle actually do?</p>
+          <p class="thread-a">It moves the chain. That's all we saw — and a lit stone dropped down the shaft just kept falling out of sight.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">04</span>
+        <div>
+          <p class="thread-q">Why keep a door to the plane of poison?</p>
+          <p class="thread-a">The Cradle was built to study deadly things. The cage says the builders knew how deadly.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">05</span>
+        <div>
+          <p class="thread-q">Why collect the ground of other worlds?</p>
+          <p class="thread-a">Five labelled slices from worlds the Pantocrator ruled, polished and put on display. The metal scrolls upstairs named gods nobody knows either.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">06</span>
+        <div>
+          <p class="thread-q">What was the half-dome machine for?</p>
+          <p class="thread-a">It hangs broken over the orb room, too high for Muradin to see properly.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="colophon">
+    <p class="eyebrow">The Shadow · Session 04 · The Stolen Heart</p>
+    <p class="eyebrow">Previously: <a href="https://claude.ai/code/artifact/fe1f815d-c636-43b9-9e21-7ce1df6a2696">The Hungry Ambassador</a></p>
+  </footer>
+
+</div>

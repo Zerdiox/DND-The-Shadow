@@ -1,0 +1,690 @@
+<title>The Hungry Ambassador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,800&family=Karla:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:      #E6E9E4;
+    --surface:     #F3F5F1;
+    --surface-2:   #DDE2DB;
+    --ink:         #151C1A;
+    --ink-soft:    #3B4744;
+    --muted:       #6B7773;
+    --rule:        #C4CCC3;
+    --patina:      #2C6B66;
+    --patina-deep: #1D4B47;
+    --garnet:      #8E2F3C;
+    --gold:        #94682A;
+    --glass:       #4A7F86;
+    --shadow:      0 1px 2px rgba(20,30,28,.06), 0 8px 24px -12px rgba(20,30,28,.18);
+
+    --step--1: clamp(.78rem, .76rem + .1vw, .84rem);
+    --step-0:  clamp(1rem, .97rem + .16vw, 1.09rem);
+    --step-1:  clamp(1.2rem, 1.13rem + .34vw, 1.42rem);
+    --step-2:  clamp(1.5rem, 1.36rem + .68vw, 2rem);
+    --step-3:  clamp(2rem, 1.7rem + 1.5vw, 3.1rem);
+    --step-4:  clamp(2.9rem, 2.1rem + 3.9vw, 5.6rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #0E1413;
+      --surface:     #161E1D;
+      --surface-2:   #202B29;
+      --ink:         #E2E8E4;
+      --ink-soft:    #B4C0BB;
+      --muted:       #7E8D88;
+      --rule:        #2A3634;
+      --patina:      #5FB3AB;
+      --patina-deep: #8ACFC7;
+      --garnet:      #D8707F;
+      --gold:        #D2A254;
+      --glass:       #74B6BE;
+      --shadow:      0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:      #0E1413;
+    --surface:     #161E1D;
+    --surface-2:   #202B29;
+    --ink:         #E2E8E4;
+    --ink-soft:    #B4C0BB;
+    --muted:       #7E8D88;
+    --rule:        #2A3634;
+    --patina:      #5FB3AB;
+    --patina-deep: #8ACFC7;
+    --garnet:      #D8707F;
+    --gold:        #D2A254;
+    --glass:       #74B6BE;
+    --shadow:      0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Karla", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 78rem; margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 3.5rem) 6rem; }
+
+  h1, h2, h3 {
+    font-family: "Bodoni Moda", ui-serif, Georgia, "Times New Roman", serif;
+    text-wrap: balance;
+    margin: 0;
+    line-height: 1.08;
+    font-weight: 600;
+  }
+
+  p { margin: 0; max-width: 64ch; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: var(--step--1);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--patina); outline-offset: 3px; border-radius: 2px; }
+
+  /* ---------- masthead ---------- */
+
+  .mast { padding: clamp(3rem, 8vw, 6.5rem) 0 clamp(2rem, 4vw, 3rem); }
+
+  .mast-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.4rem;
+    align-items: baseline;
+    padding-bottom: 1.6rem;
+  }
+
+  .mast h1 {
+    font-size: var(--step-4);
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -.015em;
+    margin-bottom: 1.4rem;
+  }
+
+  .standfirst {
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    font-weight: 300;
+    max-width: 52ch;
+  }
+
+  .rule-heavy { height: 2px; background: var(--ink); opacity: .82; margin-top: clamp(2rem, 4vw, 3rem); }
+
+  /* ---------- party ---------- */
+
+  .party {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .pc {
+    padding: 1.5rem 1.2rem 1.6rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+
+  .pc-name {
+    font-family: "Bodoni Moda", ui-serif, Georgia, serif;
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .pc-role { font-size: var(--step--1); color: var(--muted); }
+
+  .pc-mark {
+    width: 1.9rem; height: 2px; margin-bottom: .7rem;
+    background: var(--pc-color, var(--patina));
+  }
+
+  /* ---------- descent ---------- */
+
+  .descent { margin-top: clamp(3rem, 6vw, 5rem); }
+
+  .shaft {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: clamp(2.2rem, 4vw, 3.4rem);
+    position: relative;
+    padding-left: clamp(1.6rem, 4vw, 3rem);
+    border-left: 1px solid var(--rule);
+  }
+
+  .room { position: relative; display: grid; gap: .7rem; }
+
+  .room::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * clamp(1.6rem, 4vw, 3rem) - 4.5px);
+    top: .55rem;
+    width: 8px; height: 8px;
+    background: var(--ground);
+    border: 2px solid var(--patina);
+    border-radius: 50%;
+  }
+
+  .room-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .9rem; }
+
+  .room h3 { font-size: var(--step-2); font-weight: 600; }
+
+  .depth {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    color: var(--patina);
+    letter-spacing: .08em;
+  }
+
+  .room p + p { margin-top: .55rem; }
+
+  /* ---------- pull quote ---------- */
+
+  .pull {
+    margin: .6rem 0 .2rem;
+    padding: 1.1rem 0 1.1rem 1.3rem;
+    border-left: 3px solid var(--garnet);
+    font-family: "Bodoni Moda", ui-serif, Georgia, serif;
+    font-style: italic;
+    font-size: var(--step-2);
+    line-height: 1.25;
+    color: var(--ink);
+    max-width: 26ch;
+  }
+
+  /* ---------- relics ---------- */
+
+  .relics {
+    margin-top: clamp(3rem, 6vw, 5rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .relic { background: var(--surface); padding: 1.7rem 1.5rem 1.8rem; display: grid; gap: .55rem; align-content: start; }
+
+  .relic h3 { font-size: var(--step-2); font-weight: 600; font-style: italic; }
+
+  .relic-holder { font-size: var(--step--1); color: var(--muted); }
+
+  .mech {
+    list-style: none;
+    margin: .6rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: .5rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .mech li { padding-left: 1.1rem; position: relative; }
+  .mech li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+
+  /* ---------- hoard ---------- */
+
+  .hoard { margin-top: clamp(3rem, 6vw, 5rem); }
+
+  .hoard-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .chest {
+    background: var(--surface);
+    padding: .85rem .9rem 1rem;
+    display: grid;
+    gap: .12rem;
+    align-content: start;
+    min-height: 6.4rem;
+  }
+
+  .chest-n {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    letter-spacing: .06em;
+  }
+
+  .chest-item { font-weight: 500; line-height: 1.3; font-size: var(--step--1); }
+
+  .chest-note { font-size: .74rem; color: var(--muted); line-height: 1.4; }
+
+  .chest-by {
+    font-size: .72rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    margin-top: .3rem;
+    color: var(--by, var(--muted));
+  }
+
+  .chest.flagged { background: var(--surface-2); }
+
+  /* ---------- threads ---------- */
+
+  .threads { margin-top: clamp(3rem, 6vw, 5rem); }
+
+  .thread-list { margin: 2rem 0 0; padding: 0; list-style: none; display: grid; gap: 0; }
+
+  .thread {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 1rem;
+    padding: 1.15rem 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  .thread:last-child { border-bottom: 1px solid var(--rule); }
+
+  .thread-n {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    color: var(--garnet);
+    font-variant-numeric: tabular-nums;
+    padding-top: .18rem;
+  }
+
+  .thread-q { font-weight: 500; }
+  .thread-a { color: var(--muted); font-size: var(--step--1); margin-top: .2rem; }
+
+  /* ---------- colophon ---------- */
+
+  .colophon {
+    margin-top: clamp(3.5rem, 7vw, 6rem);
+    padding-top: 1.4rem;
+    border-top: 2px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.6rem;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .sec-head { display: grid; gap: .5rem; }
+  .sec-head h2 { font-size: var(--step-3); font-weight: 600; }
+  .sec-head p { color: var(--muted); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .room, .chest, .relic { animation: rise .5s ease-out both; }
+    .chest:nth-child(n+7) { animation-delay: .04s; }
+    @keyframes rise { from { opacity: .35; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <div class="mast-meta">
+      <p class="eyebrow">The Shadow &nbsp;/&nbsp; Session 03</p>
+      <p class="eyebrow">4 September 2026</p>
+    </div>
+    <h1>The Hungry Ambassador</h1>
+    <p class="standfirst">
+      A crown that frightens everyone but its wearer, a glass statue that waves back,
+      and something in the dark below that calls itself an ambassador right up until
+      it gets hungry.
+    </p>
+    <div class="rule-heavy"></div>
+  </header>
+
+  <section class="party" aria-label="The party">
+    <div class="pc" style="--pc-color: var(--patina)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Vicaster</span>
+      <span class="pc-role">Eladrin warlock</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--glass)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Drivik</span>
+      <span class="pc-role">Deep gnome rogue</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--gold)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Aslaug</span>
+      <span class="pc-role">Halfling bard</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--garnet)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Muradin</span>
+      <span class="pc-role">Dwarf paladin</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--patina-deep)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Echo of Twilight</span>
+      <span class="pc-role">Tabaxi druid</span>
+    </div>
+  </section>
+
+  <section class="descent">
+    <div class="sec-head">
+      <p class="eyebrow">The descent</p>
+      <h2>Five rooms, one way down</h2>
+    </div>
+
+    <div class="shaft">
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Throne Room</h3>
+          <span class="depth">throne · mace · crown</span>
+        </div>
+        <p>
+          An ornamental throne, mace and crown beneath a serpent relief nobody could place —
+          Aslaug's history check turned up nothing. Drivik found no traps, then read the room
+          with arcana: divination on the throne, enchantment on the crown, and both at once
+          on the mace.
+        </p>
+        <p>
+          Muradin took the mace. Vicaster took the crown and put it on, which cost everyone
+          else a wisdom save and left the party standing in fear until he removed it. Echo
+          then sat on the throne and became the only thing anyone could look at. Drivik gave
+          him treats.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Glass Statue Room</h3>
+          <span class="depth">tubes · aquariums · a portal</span>
+        </div>
+        <p>
+          A room built as a network of glass tubing and aquariums. At its centre stood a glass
+          statue of an old wise man — fancy clothes, serene expression, a glass pipe running
+          down into its head.
+        </p>
+        <p>
+          As Drivik came up the stairs, liquid began moving into the statue. It filled, it
+          moved, and it waved at him. Then it pointed at the portal at the far end of the room.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Glass Dome</h3>
+          <span class="depth">first contact</span>
+        </div>
+        <p>
+          Vicaster's familiar went through first, into a round chamber with a single door and,
+          beyond it, a passage of segments narrowing until only one person could pass. The
+          liquid left the statue, spread through the dome, and introduced itself:
+          <strong>Zeernebooch</strong>, ambassador.
+        </p>
+        <p>
+          It spoke of the Deep Kingdom — deeper than any person can reach. The builders of this
+          complex had been studying the ground, it said, and made a magical mechanism to bring
+          things from far below back up. The narrowing chambers were a contraption built so its
+          people could talk to ours at all.
+        </p>
+        <p class="pull">Then the door closed, and it said it was hungry.</p>
+        <p>
+          Spellcasting from Vicaster and a gorilla from Echo got the party out.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Library</h3>
+          <span class="depth">geology · four metal scrolls</span>
+        </div>
+        <p>
+          Shelves of books, almost all of them about geology and the study of the ground. The
+          find was four scrolls, in two titles: <em>Addictions of Abyssal Gods</em> and
+          <em>Narcotics and Vices of the Creators</em>. They name gods nobody at the table has
+          heard of — the working theory is former pretenders.
+        </p>
+        <p>
+          The more interesting thing may be the scrolls themselves: made of a metal-like
+          material, very sturdy, and sharp.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Vault</h3>
+          <span class="depth">twenty chests</span>
+        </div>
+        <p>
+          Up the stairs from the library: twenty large chests, some open, some closed. The
+          party opened all twenty and came away with nineteen finds, catalogued below. Then
+          they retreated to the main room with the deep hole.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="relics" aria-label="Named items">
+    <div class="relic">
+      <h3>Headhunter's Mace</h3>
+      <p class="relic-holder">Carried by Muradin · divination and enchantment</p>
+      <ul class="mech">
+        <li>+5 mace</li>
+        <li>Critical hit on a roll of 19 or 20</li>
+        <li>Always aims for the head</li>
+      </ul>
+    </div>
+    <div class="relic">
+      <h3>Crown of Fear</h3>
+      <p class="relic-holder">Taken by Vicaster · enchantment</p>
+      <ul class="mech">
+        <li>A creature that sees the wearer must succeed on a DC&nbsp;18 wisdom save or be frightened</li>
+        <li>The wearer is not affected</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="hoard">
+    <div class="sec-head">
+      <p class="eyebrow">The vault</p>
+      <h2>Twenty chests, nineteen finds</h2>
+      <p>Nothing here is identified yet. Chest&nbsp;1 read as empty the first time it was searched.</p>
+    </div>
+
+    <div class="hoard-grid">
+      <div class="chest flagged">
+        <span class="chest-n">01</span>
+        <span class="chest-item">Vantablack Coin</span>
+        <span class="chest-note">Absorbs light completely</span>
+        <span class="chest-by" style="--by: var(--patina)">Vicaster</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">02</span>
+        <span class="chest-item">Platinum Strips &times;120</span>
+        <span class="chest-note">6 gold each · 720 gp</span>
+        <span class="chest-by" style="--by: var(--glass)">Drivik</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">03</span>
+        <span class="chest-item">Bank Notes &times;258</span>
+        <span class="chest-note">Valid in every reality</span>
+        <span class="chest-by" style="--by: var(--gold)">Aslaug</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">04</span>
+        <span class="chest-item">Stone Disc</span>
+        <span class="chest-note">Featureless</span>
+        <span class="chest-by" style="--by: var(--gold)">Aslaug</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">05</span>
+        <span class="chest-item">Chain of 24 Links</span>
+        <span class="chest-note">&nbsp;</span>
+        <span class="chest-by" style="--by: var(--patina-deep)">Echo</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">06</span>
+        <span class="chest-item">Mavemaren Notes</span>
+        <span class="chest-note">Value 273 · a city unknown to the party</span>
+        <span class="chest-by" style="--by: var(--patina)">Vicaster</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">07</span>
+        <span class="chest-item">Smoke Fabric &times;6</span>
+        <span class="chest-note">Very thin fabric, almost smoke</span>
+        <span class="chest-by" style="--by: var(--patina)">Vicaster</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">08</span>
+        <span class="chest-item">Restless Crystals &times;5</span>
+        <span class="chest-note">The eye can't focus on them</span>
+        <span class="chest-by" style="--by: var(--patina-deep)">Echo</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">09</span>
+        <span class="chest-item">Black Resin</span>
+        <span class="chest-note">Black-purple residue</span>
+        <span class="chest-by" style="--by: var(--glass)">Drivik</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">10</span>
+        <span class="chest-item">Fire Crystals &times;4</span>
+        <span class="chest-note">In a leather bag · wrong hue for fire crystal</span>
+        <span class="chest-by" style="--by: var(--patina)">Vicaster</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">11</span>
+        <span class="chest-item">Tornado Prisms &times;2</span>
+        <span class="chest-note">A tornado turns inside each</span>
+        <span class="chest-by" style="--by: var(--patina)">Vicaster</span>
+      </div>
+      <div class="chest flagged">
+        <span class="chest-n">12</span>
+        <span class="chest-item">Radiant Gemstone</span>
+        <span class="chest-note">Held Echo's gaze; harder to break the longer it lasted</span>
+        <span class="chest-by" style="--by: var(--patina-deep)">Echo</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">13</span>
+        <span class="chest-item">Flame Streamers &times;11</span>
+        <span class="chest-note">Flags of a flame-like material</span>
+        <span class="chest-by" style="--by: var(--patina-deep)">Echo</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">14</span>
+        <span class="chest-item">Golden Beans &asymp;219</span>
+        <span class="chest-note">Surprisingly heavy</span>
+        <span class="chest-by" style="--by: var(--glass)">Drivik</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">15</span>
+        <span class="chest-item">Wrinkled Prune</span>
+        <span class="chest-note">Fist-sized</span>
+        <span class="chest-by" style="--by: var(--patina-deep)">Echo</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">16</span>
+        <span class="chest-item">White Pearl</span>
+        <span class="chest-note">In the corner of the chest</span>
+        <span class="chest-by" style="--by: var(--garnet)">Muradin</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">17</span>
+        <span class="chest-item">Acidic Emeralds &times;3</span>
+        <span class="chest-note">A green cloud left the chest</span>
+        <span class="chest-by" style="--by: var(--patina-deep)">Echo</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">18</span>
+        <span class="chest-item">Loathsome Garnet</span>
+        <span class="chest-note">Yellow and red · disgusting to look at</span>
+        <span class="chest-by" style="--by: var(--patina)">Vicaster</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">19</span>
+        <span class="chest-item">Milky Heart Crystal</span>
+        <span class="chest-note">Heart-shaped clump</span>
+        <span class="chest-by" style="--by: var(--gold)">Aslaug</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">20</span>
+        <span class="chest-item">Bottled Silver Tear</span>
+        <span class="chest-note">Suspended in water</span>
+        <span class="chest-by" style="--by: var(--gold)">Aslaug</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="threads">
+    <div class="sec-head">
+      <p class="eyebrow">Still open</p>
+      <h2>What we don't know yet</h2>
+    </div>
+    <ul class="thread-list">
+      <li class="thread">
+        <span class="thread-n">01</span>
+        <div>
+          <p class="thread-q">What is the serpent on the throne room wall?</p>
+          <p class="thread-a">The relief is clearly deliberate. History turned up nothing.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">02</span>
+        <div>
+          <p class="thread-q">What was the mechanism built to bring up?</p>
+          <p class="thread-a">Zeernebooch says the builders studied the ground and made a way to raise things from far below. It didn't say what they raised.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">03</span>
+        <div>
+          <p class="thread-q">Is Zeernebooch an ambassador or a mouth?</p>
+          <p class="thread-a">It gave a diplomatic account of the Deep Kingdom, then sealed the door and said it was hungry. Both may be true.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">04</span>
+        <div>
+          <p class="thread-q">Who are the Abyssal gods in the scrolls?</p>
+          <p class="thread-a">Named in the metal scrolls, unknown to everyone at the table. Former pretenders is a guess, not an answer.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">05</span>
+        <div>
+          <p class="thread-q">What is any of the hoard?</p>
+          <p class="thread-a">Nineteen finds, none identified. Two of them have already acted on their own.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">06</span>
+        <div>
+          <p class="thread-q">And the deep hole we retreated to?</p>
+          <p class="thread-a">Still there. Still deep. Where we left off.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="colophon">
+    <p class="eyebrow">The Shadow · Session 03 · The Hungry Ambassador</p>
+    <p class="eyebrow">Previously: The Dam &rarr; The Pier &rarr; The Tower &rarr; The Inverted Pyramid</p>
+  </footer>
+
+</div>

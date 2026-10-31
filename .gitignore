@@ -1,0 +1,15 @@
+# Tool scratch — regenerated on demand, no reason to keep history of it.
+.playwright-mcp/
+
+# Obsidian plugin cache — derived data, rebuilds itself.
+.smart-env/
+
+# Syncthing's folder marker. Empty, and Syncthing is being dropped.
+.stfolder/
+
+# Deliberately NOT ignored, despite looking like junk:
+#   .obsidian/     app config — Obsidian is dropped, but config is cheap to keep
+#   .stversions/   Syncthing's old file versions. Once Syncthing goes these are
+#                  orphaned, and they may hold the only copy of an old note.
+#                  The standing rule is never delete; so they are tracked.
+#   .trash/        same reasoning.

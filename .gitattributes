@@ -1,0 +1,4 @@
+# Store and restore every file byte-for-byte. Without this, git's autocrlf
+# rewrites LF to CRLF on checkout, which silently churns every note and makes
+# diffs unreadable. A notes vault wants its bytes left alone.
+* -text

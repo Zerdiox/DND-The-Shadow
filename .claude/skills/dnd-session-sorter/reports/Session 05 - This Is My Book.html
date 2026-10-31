@@ -1,0 +1,720 @@
+<title>This Is My Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,800;1,6..96,600;1,6..96,800&family=Karla:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:      #E6E9E4;
+    --surface:     #F3F5F1;
+    --surface-2:   #DDE2DB;
+    --ink:         #151C1A;
+    --ink-soft:    #3B4744;
+    --muted:       #6B7773;
+    --rule:        #C4CCC3;
+    --patina:      #2C6B66;
+    --patina-deep: #1D4B47;
+    --garnet:      #8E2F3C;
+    --gold:        #94682A;
+    --glass:       #4A7F86;
+    --poison:      #3F7A2E;
+    --block-edge:  rgba(20,30,28,.28);
+    --shadow:      0 1px 2px rgba(20,30,28,.08), 0 14px 28px -16px rgba(20,30,28,.35);
+
+    --step--1: clamp(.78rem, .76rem + .1vw, .84rem);
+    --step-0:  clamp(1rem, .97rem + .16vw, 1.09rem);
+    --step-1:  clamp(1.2rem, 1.13rem + .34vw, 1.42rem);
+    --step-2:  clamp(1.5rem, 1.36rem + .68vw, 2rem);
+    --step-3:  clamp(2rem, 1.7rem + 1.5vw, 3.1rem);
+    --step-4:  clamp(2.9rem, 2.1rem + 3.9vw, 5.6rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #0E1413;
+      --surface:     #161E1D;
+      --surface-2:   #202B29;
+      --ink:         #E2E8E4;
+      --ink-soft:    #B4C0BB;
+      --muted:       #7E8D88;
+      --rule:        #2A3634;
+      --patina:      #5FB3AB;
+      --patina-deep: #8ACFC7;
+      --garnet:      #D8707F;
+      --gold:        #D2A254;
+      --glass:       #74B6BE;
+      --poison:      #8FCB6A;
+      --block-edge:  rgba(0,0,0,.6);
+      --shadow:      0 1px 2px rgba(0,0,0,.45), 0 16px 32px -16px rgba(0,0,0,.85);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:      #0E1413;
+    --surface:     #161E1D;
+    --surface-2:   #202B29;
+    --ink:         #E2E8E4;
+    --ink-soft:    #B4C0BB;
+    --muted:       #7E8D88;
+    --rule:        #2A3634;
+    --patina:      #5FB3AB;
+    --patina-deep: #8ACFC7;
+    --garnet:      #D8707F;
+    --gold:        #D2A254;
+    --glass:       #74B6BE;
+    --poison:      #8FCB6A;
+    --block-edge:  rgba(0,0,0,.6);
+    --shadow:      0 1px 2px rgba(0,0,0,.45), 0 16px 32px -16px rgba(0,0,0,.85);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Karla", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 78rem; margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 3.5rem) 6rem; }
+
+  h1, h2, h3 {
+    font-family: "Bodoni Moda", ui-serif, Georgia, "Times New Roman", serif;
+    text-wrap: balance;
+    margin: 0;
+    line-height: 1.08;
+    font-weight: 600;
+  }
+
+  p { margin: 0; max-width: 64ch; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: var(--step--1);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  a { color: var(--patina); text-underline-offset: .2em; }
+  :focus-visible { outline: 2px solid var(--patina); outline-offset: 3px; border-radius: 2px; }
+
+  section { margin-top: clamp(3rem, 6vw, 5rem); }
+
+  .sec-head { display: grid; gap: .5rem; }
+  .sec-head h2 { font-size: var(--step-3); font-weight: 600; }
+  .sec-head p:not(.eyebrow) { color: var(--muted); }
+
+  /* ---------- masthead ---------- */
+
+  .mast { padding: clamp(3rem, 8vw, 6.5rem) 0 clamp(2rem, 4vw, 3rem); }
+  .mast-meta { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; align-items: baseline; padding-bottom: 1.6rem; }
+
+  .mast h1 {
+    font-size: var(--step-4);
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -.015em;
+    margin-bottom: 1.4rem;
+  }
+
+  .standfirst { font-size: var(--step-1); line-height: 1.5; color: var(--ink-soft); font-weight: 300; max-width: 52ch; }
+  .rule-heavy { height: 2px; background: var(--ink); opacity: .82; margin-top: clamp(2rem, 4vw, 3rem); }
+
+  /* ---------- party ---------- */
+
+  .party {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .pc { padding: 1.5rem 1.2rem 1.6rem 0; display: flex; flex-direction: column; gap: .15rem; }
+  .pc-name { font-family: "Bodoni Moda", ui-serif, Georgia, serif; font-size: var(--step-1); font-weight: 600; line-height: 1.2; }
+  .pc-role { font-size: var(--step--1); color: var(--muted); }
+  .pc-mark { width: 1.9rem; height: 2px; margin-bottom: .7rem; background: var(--pc-color, var(--patina)); }
+
+  /* ---------- the giant ---------- */
+
+  .quarry {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: minmax(16rem, 1.1fr) minmax(18rem, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 46rem) { .quarry { grid-template-columns: 1fr; } }
+
+  .quarry > div { background: var(--surface); padding: 1.7rem 1.5rem 1.8rem; }
+  .quarry p + p { margin-top: .6rem; }
+
+  .tried { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+  .tried caption {
+    text-align: left;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: .8rem;
+  }
+  .tried td { padding: .55rem 1rem .55rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .tried tr:last-child td { border-bottom: none; }
+  .tried .spell { font-weight: 500; white-space: nowrap; }
+  .tried .worked { color: var(--patina); font-weight: 500; }
+  .tried .nope { color: var(--muted); }
+
+  /* ---------- descent ---------- */
+
+  .shaft {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: clamp(1.8rem, 3vw, 2.6rem);
+    padding-left: clamp(1.6rem, 4vw, 3rem);
+    border-left: 1px solid var(--rule);
+  }
+
+  .room { position: relative; display: grid; gap: .55rem; }
+
+  .room::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * clamp(1.6rem, 4vw, 3rem) - 4.5px);
+    top: .55rem;
+    width: 8px; height: 8px;
+    background: var(--ground);
+    border: 2px solid var(--patina);
+    border-radius: 50%;
+  }
+
+  .room.danger::before { border-color: var(--garnet); }
+  .room.reveal::before { background: var(--garnet); border-color: var(--garnet); }
+
+  .room-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .9rem; }
+  .room h3 { font-size: var(--step-2); font-weight: 600; }
+
+  .move {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    color: var(--patina);
+    letter-spacing: .06em;
+  }
+  .room.danger .move, .room.reveal .move { color: var(--garnet); }
+  .room p + p { margin-top: .55rem; }
+
+  .pull {
+    margin: .6rem 0 .2rem;
+    padding: 1.1rem 0 1.1rem 1.3rem;
+    border-left: 3px solid var(--garnet);
+    font-family: "Bodoni Moda", ui-serif, Georgia, serif;
+    font-style: italic;
+    font-size: var(--step-2);
+    line-height: 1.25;
+    max-width: 24ch;
+  }
+
+  /* ---------- chests ---------- */
+
+  .chest-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .chest {
+    background: var(--surface);
+    padding: .85rem .9rem 1rem;
+    display: grid;
+    gap: .12rem;
+    align-content: start;
+    min-height: 6.2rem;
+  }
+  .chest.flagged { background: var(--surface-2); }
+
+  .chest-n {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    letter-spacing: .06em;
+  }
+  .chest-item { font-weight: 500; line-height: 1.3; font-size: var(--step--1); }
+  .chest-note { font-size: .74rem; color: var(--muted); line-height: 1.4; }
+  .chest-tag {
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    margin-top: .3rem;
+    color: var(--gold);
+  }
+
+  /* ---------- identified ---------- */
+
+  .ledger-scroll { margin-top: 2rem; overflow-x: auto; }
+  .ledger { width: 100%; min-width: 42rem; border-collapse: collapse; font-size: var(--step--1); }
+
+  .ledger th {
+    text-align: left;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 500;
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 1rem .7rem 0;
+    border-bottom: 2px solid var(--ink);
+  }
+  .ledger td { padding: .85rem 1rem .85rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .ledger .item { font-family: "Bodoni Moda", ui-serif, Georgia, serif; font-size: var(--step-0); font-weight: 600; white-space: nowrap; }
+  .ledger .what { color: var(--ink-soft); max-width: 40ch; }
+  .ledger .who { color: var(--muted); white-space: nowrap; }
+
+  /* ---------- threads ---------- */
+
+  .thread-list { margin: 2rem 0 0; padding: 0; list-style: none; display: grid; }
+  .thread {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 1rem;
+    padding: 1.15rem 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  .thread:last-child { border-bottom: 1px solid var(--rule); }
+  .thread-n { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: var(--step--1); color: var(--garnet); font-variant-numeric: tabular-nums; padding-top: .18rem; }
+  .thread-q { font-weight: 500; }
+  .thread-a { color: var(--muted); font-size: var(--step--1); margin-top: .2rem; }
+
+  /* ---------- colophon ---------- */
+
+  .colophon {
+    margin-top: clamp(3.5rem, 7vw, 6rem);
+    padding-top: 1.4rem;
+    border-top: 2px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.6rem;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .room, .chest, .quarry > div { animation: rise .5s ease-out both; }
+    @keyframes rise { from { opacity: .35; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <div class="mast-meta">
+      <p class="eyebrow">The Shadow &nbsp;/&nbsp; Session 05</p>
+      <p class="eyebrow">16 October 2026</p>
+    </div>
+    <h1>This Is My Book</h1>
+    <p class="standfirst">
+      Something boneless and white came up the chain, three spells did nothing to it,
+      and so we went down instead — into a room where a dead woman's soul was still
+      guarding her book.
+    </p>
+    <div class="rule-heavy"></div>
+  </header>
+
+  <div class="party" aria-label="The party">
+    <div class="pc" style="--pc-color: var(--patina)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Vicaster</span>
+      <span class="pc-role">Eladrin warlock</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--glass)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Drivik</span>
+      <span class="pc-role">Deep gnome rogue</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--gold)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Aslaug</span>
+      <span class="pc-role">Halfling bard</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--garnet)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Muradin</span>
+      <span class="pc-role">Dwarf paladin</span>
+    </div>
+    <div class="pc" style="--pc-color: var(--patina-deep)">
+      <div class="pc-mark"></div>
+      <span class="pc-name">Echo of Twilight</span>
+      <span class="pc-role">Tabaxi druid</span>
+    </div>
+  </div>
+
+  <section aria-labelledby="quarry-h">
+    <div class="sec-head">
+      <p class="eyebrow">The thing in the shaft</p>
+      <h2 id="quarry-h">What is coming up the chain</h2>
+    </div>
+
+    <div class="quarry">
+      <div>
+        <p>
+          Drivik caught it at the very edge of his darkvision, a hundred and twenty
+          feet down, and went back for a longer look: something pale and white,
+          slowly climbing the chain. It takes up the entire shaft.
+        </p>
+        <p>
+          The closer it came, the clearer it got. A giant, compacted into the space it
+          was climbing through, hauling itself up with its one free hand. Its body
+          moves like a liquid blob with no bones in it at all. It can reach an arm a
+          long way down a ladder after something it wants.
+        </p>
+        <p>
+          It is still alive, and when it could no longer follow us down, it turned
+          around and started climbing back up.
+        </p>
+      </div>
+      <div>
+        <table class="tried">
+          <caption>What we threw at it</caption>
+          <tbody>
+            <tr><td class="spell">Eldritch blast</td><td class="nope">Annoyed more than hurt</td></tr>
+            <tr><td class="spell">Repelling blast</td><td class="worked">Slowed its climb — the only thing that landed</td></tr>
+            <tr><td class="spell">Heat metal, on the chain</td><td class="nope">Unbothered. It grumbled</td></tr>
+            <tr><td class="spell">Sickening radiance</td><td class="nope">Nothing at all</td></tr>
+            <tr><td class="spell">Command</td><td class="worked">Made it drop Vicaster</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="descent-h">
+    <div class="sec-head">
+      <p class="eyebrow">The descent</p>
+      <h2 id="descent-h">Trading levels with it</h2>
+      <p>Every time we checked, it had gained another twenty feet.</p>
+    </div>
+
+    <div class="shaft">
+
+      <article class="room danger">
+        <div class="room-head">
+          <h3>The Strata Gallery</h3>
+          <span class="move">↑ back up</span>
+        </div>
+        <p>
+          We came back up to the blocks, and that was where Drivik spotted it. Three
+          spells later it was obvious we weren't going to win this by shooting at it,
+          so the plan became going around and below.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Crystal Hall</h3>
+          <span class="move">→ across the shaft</span>
+        </div>
+        <p>
+          Back across into the salt chamber — and the sisters weren't there. Their
+          sister healed and her heart back where it belonged, the six of them had
+          returned to their own plane. We went down.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Shell Room</h3>
+          <span class="move">↓ ladder</span>
+        </div>
+        <p>
+          Muradin went first into a room full of shells — clams, spirals, crab shells,
+          dried coral, every one of them empty. It reads like a piece of sea floor
+          left indoors. No ladder down from here, but a tunnel on the far side led
+          towards a stack of crates.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Art Store</h3>
+          <span class="move">→ across the shaft</span>
+        </div>
+        <p>
+          Drivik jumped first and handed everyone else over. No traps. The first
+          wooden chest held a sculpture — a woman in a toga with one hand outstretched,
+          nearly as tall as Drivik. We opened a few more and found the same thing
+          everywhere: the whole store is art, crated and waiting.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Floorboard Cave</h3>
+          <span class="move">↓ ladder</span>
+        </div>
+        <p>
+          A cave stacked with floorboards, cut and ready to lay. We checked the shaft
+          from here. Another twenty feet gained.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Tool Storage</h3>
+          <span class="move">→ across the shaft</span>
+        </div>
+        <p>
+          A tiled hallway opening into a bigger room: hammers, chisels, the ordinary
+          contents of a workshop — and among them a few implements Drivik couldn't
+          place at all, however long he looked. There was a ladder down, which by then
+          was the only thing that mattered. The giant reached our level and went into
+          the room with the wood, coming slowly for Aslaug, Echo and Vicaster.
+        </p>
+      </article>
+
+      <article class="room reveal">
+        <div class="room-head">
+          <h3>The Spider Chamber</h3>
+          <span class="move">↓ ladder</span>
+        </div>
+        <p>
+          Vicaster held it off while the others climbed, then followed. The round
+          chamber below had hieroglyphs and drawings across its walls, and in the
+          middle something like a spider, curled up on its back. Held in its legs was
+          a block of ice with a woman inside it.
+        </p>
+        <p>
+          The shaft looked empty. Then an arm came down the ladder, closed around
+          Vicaster, and lifted him up to be eaten — until Aslaug's <em>command</em>
+          made it let go.
+        </p>
+        <p>
+          Vicaster put a hand on the ice. The cold reminded him of the wraiths back
+          home in the library, though the magic wasn't coming from the woman and
+          wasn't wraith magic held in check either. Then he cut the block open, and
+          her soul came out of it screaming.
+        </p>
+        <p class="pull">STOP, THIS IS MY BOOK.</p>
+        <p>
+          We beat it, and took the book off her body.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Stables</h3>
+          <span class="move">↓ stairs</span>
+        </div>
+        <p>
+          Muradin had already seen what was below: stalls built for horses, and the
+          shapes of boats across the far side. Drivik went down and found a great door
+          leading away from the shaft. Above us the giant, unable to follow any
+          further, turned around and began climbing.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Great Hall</h3>
+          <span class="move">→ the bridge, 90 ft</span>
+        </div>
+        <p>
+          The bridge runs ninety feet out from the stables across open darkness, and
+          ends in an enormous hall with nothing in it but two bronze cylinders. Each
+          has a door, and inside each door a stair going down. We didn't take them.
+        </p>
+      </article>
+
+      <article class="room">
+        <div class="room-head">
+          <h3>The Armoury</h3>
+          <span class="move">↑ two ladders</span>
+        </div>
+        <p>
+          Up instead: a ladder to a shelf in the cave wall, then a second ladder into
+          another hall. A weapon store, long since stripped — the racks are bare. But
+          ten iron chests still stand against the wall, locked and untrapped, and
+          Drivik picked every one of them.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="chests-h">
+    <div class="sec-head">
+      <p class="eyebrow">The armoury</p>
+      <h2 id="chests-h">Ten chests</h2>
+      <p>Marked chests held something worth more than kit.</p>
+    </div>
+
+    <div class="chest-grid">
+      <div class="chest">
+        <span class="chest-n">01</span>
+        <span class="chest-item">Crossbow bolts</span>
+        <span class="chest-note">Metal. Chest full</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">02</span>
+        <span class="chest-item">Crossbows</span>
+        <span class="chest-note">&nbsp;</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">03</span>
+        <span class="chest-item">Crossbow snares</span>
+        <span class="chest-note">&nbsp;</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">04</span>
+        <span class="chest-item">Claw knives</span>
+        <span class="chest-note">Knives in a leather rig. Chest full</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">05</span>
+        <span class="chest-item">Climbing pickaxes</span>
+        <span class="chest-note">A climbing kit for everyone</span>
+      </div>
+      <div class="chest flagged">
+        <span class="chest-n">06</span>
+        <span class="chest-item">Finely crafted dagger</span>
+        <span class="chest-note">Thick leather hilt</span>
+        <span class="chest-tag">magical</span>
+      </div>
+      <div class="chest flagged">
+        <span class="chest-n">07</span>
+        <span class="chest-item">Four bronze balls</span>
+        <span class="chest-note">A button on top of each</span>
+        <span class="chest-tag">magical</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">08</span>
+        <span class="chest-item">Halberd head</span>
+        <span class="chest-note">Short handle, extends when activated</span>
+        <span class="chest-tag">masterwork</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">09</span>
+        <span class="chest-item">Red-lensed lanterns</span>
+        <span class="chest-note">The holder sees the light in black and white</span>
+      </div>
+      <div class="chest">
+        <span class="chest-n">10</span>
+        <span class="chest-item">Gas masks and tanks</span>
+        <span class="chest-note">Rusted away. Useless</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="ident-h">
+    <div class="sec-head">
+      <p class="eyebrow">Identified</p>
+      <h2 id="ident-h">Five things we now understand</h2>
+      <p>Two from the armoury, three carried down from the vault.</p>
+    </div>
+
+    <div class="ledger-scroll">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">What it does</th>
+            <th scope="col">Identified by</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">The dagger</td>
+            <td class="what">+2. Point it at something living and you feel its heartbeat — through walls</td>
+            <td class="who">Drivik</td>
+          </tr>
+          <tr>
+            <td class="item">Bronze balls &times;4</td>
+            <td class="what">Grenades. On exploding they turn stone to mud in a 30-foot radius</td>
+            <td class="who">Muradin</td>
+          </tr>
+          <tr>
+            <td class="item">Tornado Prisms &times;2</td>
+            <td class="what">Thumb-sized. Break one and it unleashes a tornado. Worth 1,000 gp apiece</td>
+            <td class="who">Vicaster</td>
+          </tr>
+          <tr>
+            <td class="item">Chain of 24 Links</td>
+            <td class="what">Casts <em>Evard's Black Tentacles</em>, consuming one link each time — so, 24 uses</td>
+            <td class="who">Echo</td>
+          </tr>
+          <tr>
+            <td class="item">Bottled Silver Tear</td>
+            <td class="what">A tear of time. Drink it to undo one event in your past. It always works, but the chance of terrible failure in percent equals the syllables in your request — so choose short words</td>
+            <td class="who">Aslaug</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="threads-h">
+    <div class="sec-head">
+      <p class="eyebrow">Still open</p>
+      <h2 id="threads-h">What we don't know yet</h2>
+    </div>
+    <ul class="thread-list">
+      <li class="thread">
+        <span class="thread-n">01</span>
+        <div>
+          <p class="thread-q">What is the thing in the shaft?</p>
+          <p class="thread-a">Boneless, enormous, and unbothered by three different spells. It's alive, and it's climbing back up the way we came.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">02</span>
+        <div>
+          <p class="thread-q">Who was the woman in the ice?</p>
+          <p class="thread-a">Buried in a block of ice in the legs of a spider, with a book, and a soul that stayed behind to guard it. The cold wasn't hers.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">03</span>
+        <div>
+          <p class="thread-q">What is actually in the book?</p>
+          <p class="thread-a">Understanding people in any shape or form — as far as a first reading gets you. It isn't magical, just impenetrable. Months of work.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">04</span>
+        <div>
+          <p class="thread-q">Where do the bronze cylinders go?</p>
+          <p class="thread-a">Two doors in the great hall, a stair down behind each. The observatory is somewhere below us, and we went up instead.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">05</span>
+        <div>
+          <p class="thread-q">What are the tools Drivik couldn't name?</p>
+          <p class="thread-a">Sitting among ordinary hammers and chisels in the tool storage. He studied them and got nothing.</p>
+        </div>
+      </li>
+      <li class="thread">
+        <span class="thread-n">06</span>
+        <div>
+          <p class="thread-q">Why shells, stables and boats this far down?</p>
+          <p class="thread-a">A room of dried sea floor, stalls built for horses, the shapes of boats. Somebody expected to go somewhere from down here.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="colophon">
+    <p class="eyebrow">The Shadow · Session 05 · This Is My Book</p>
+    <p class="eyebrow">Previously: <a href="https://claude.ai/code/artifact/c6af53cf-c4c7-414f-b00b-a13bbcca9f08">The Stolen Heart</a></p>
+  </footer>
+
+</div>
