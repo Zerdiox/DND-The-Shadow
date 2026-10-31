@@ -64,14 +64,17 @@ block. A prompt without it is not missing anything.
 
 | Room | Clause | Why it earns one |
 |---|---|---|
-| The Puddle | `Recovered from beneath an oily, intensely salty pool.` | the water is recorded as oily and very salty; it would leave residue |
+| The Puddle | `Recovered from beneath an oily, intensely salty pool.` | the *water* is oily and very salty, so anything submerged in it would show residue |
 | Alchemy Hall | `Found among alchemical benches of glassware dried out and gone gooey.` | the dried residue is everywhere, and most finds here are vessels |
 | Astral Chamber | `From beneath a chained astral being, whose white blood has long overflowed its flasks.` | anything on that table has been dripped on for centuries |
 | Throne Room | `One of a matched set of regalia — throne, mace and crown — made as ornamental work.` | not a mark but a design fact: it was made to match two other objects |
 
-**The Puddle legitimately carries salt**, and that is the rule working rather
-than an exception to it. Salt appears because that room has salt, which is
-precisely why it must not appear for the Throne Room.
+**The salt is in the water, not the room.** The tunnel itself is unremarkable;
+it is the pool that is oily and intensely salty. So the clause applies only to
+the three things that lay submerged in it — the Green Sword, the Silver Tongue
+and the Screaming Baby — and not to anything merely carried through. That
+precision is the whole point of the layer: it marks objects that were actually
+in contact with something, rather than tinting everything from a postcode.
 
 Everything else — the Vault's twenty chests, the Armoury's iron chests and bare
 racks, the Library's geology shelves, the Art Store's crates, the Spider
