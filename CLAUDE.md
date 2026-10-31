@@ -96,5 +96,5 @@ and every diff becomes unreadable.
 Obsidian, Syncthing and the Gemini Scribe plugin were all dropped on
 31 October 2026 and their files removed. Nothing reads this vault now but an
 editor and these tools. The remote is
-<https://github.com/Zerdiox/dnd_the_shadow>, public by the user's deliberate
+<https://github.com/Zerdiox/DND-The-Shadow>, public by the user's deliberate
 choice — treat anything committed as published.

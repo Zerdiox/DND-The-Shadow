@@ -140,7 +140,8 @@ stated there.
   deleted in the cleanup later the same day once their contents had been
   checked — see the cleanup section below. They are not in the working tree
   now.
-- **Pushed to GitHub**, 31 October: <https://github.com/Zerdiox/dnd_the_shadow>,
+- **Pushed to GitHub**, 31 October: <https://github.com/Zerdiox/DND-The-Shadow>
+  (renamed from `dnd_the_shadow` later the same day; the old name still 301s),
   `main` tracking `origin/main`. The repository is **public, and that is the
   user's deliberate choice** — they said so when asked. Do not treat it as a
   mistake or offer to make it private again. Practical consequence: everything

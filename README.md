@@ -97,11 +97,11 @@ Both record traps that cost real time. Read the relevant one before starting.
 ## Working copy
 
 Everything needed is in the repository; a clone is a complete working copy.
-The remote is <https://github.com/Zerdiox/dnd_the_shadow>, **public by the
+The remote is <https://github.com/Zerdiox/DND-The-Shadow>, **public by the
 user's deliberate choice** — treat anything committed here as published.
 
 ```bash
-git clone https://github.com/Zerdiox/dnd_the_shadow.git "DnD - The Shadow"
+git clone https://github.com/Zerdiox/DND-The-Shadow.git "DnD - The Shadow"
 cd "DnD - The Shadow"
 python .claude/tools/vault.py lint     # should report no problems
 python .claude/tools/vault.py stats    # folder counts
