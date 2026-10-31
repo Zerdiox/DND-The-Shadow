@@ -49,7 +49,7 @@ SKIP_DIRS = (".stversions", ".trash", ".obsidian", ".smart-env", ".stfolder",
 ARCHIVE_DIRS = ("99-Processed", "00-Inbox")
 
 # markdown at the vault root that is tooling, not a campaign note
-NOT_NOTES = ("CLAUDE.md", "README.md")
+NOT_NOTES = ("CLAUDE.md", "README.md", "token_reduction_protocol.md")
 
 FOLDER_TYPE = {
     "01-Sessions": "session",
