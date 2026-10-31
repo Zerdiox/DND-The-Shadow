@@ -135,9 +135,11 @@ stated there.
   `* -text` so notes are stored byte-for-byte — do not remove it, or every
   checkout rewrites line endings across the vault.
   `.smart-env/`, `.stfolder/` and `.playwright-mcp/` are ignored as derived
-  data. `.obsidian/`, `.trash/` and `.stversions/` are deliberately **tracked**,
-  despite looking like junk: `.stversions/00-Inbox/` holds old raw-note versions
-  that exist nowhere else, and the standing rule is never delete.
+  data; `.playwright-mcp/` regenerates on every Playwright call, so leave it.
+  `.obsidian/`, `.trash/` and `.stversions/` were tracked at first, then
+  deleted in the cleanup later the same day once their contents had been
+  checked — see the cleanup section below. They are not in the working tree
+  now.
 - **Pushed to GitHub**, 31 October: <https://github.com/Zerdiox/dnd_the_shadow>,
   `main` tracking `origin/main`. The repository is **public, and that is the
   user's deliberate choice** — they said so when asked. Do not treat it as a

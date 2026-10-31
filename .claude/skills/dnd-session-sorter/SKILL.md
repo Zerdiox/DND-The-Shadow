@@ -117,7 +117,9 @@ Once the sort is complete, move the original file from `00-Inbox/` to
 mv "00-Inbox/NAME.md" "99-Processed/NAME.md"
 ```
 
-Never delete or rewrite it — the vault rule is create, append, or move only.
+Move it, do not delete or rewrite it. Deleting is permitted in this vault
+now that git carries the history, but a raw note is the only primary record of
+what was said at the table, so it is archived rather than removed.
 Point the session summary's `## Raw Notes` link at the new `99-Processed/`
 path, not the old inbox path. If a file of that name already exists in
 `99-Processed/`, ask the user before overwriting.
