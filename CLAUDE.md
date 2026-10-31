@@ -33,10 +33,17 @@ state, what is open, and the mistakes already made and corrected.
   checked, and what you did not. The validation rule above wins every time it
   collides with brevity: on this vault, reading results back is what caught a
   destroyed `ddb_name`, a mislabelled form field, and a file committed unread.
-- **Read in layers.** Locate with `vault.py ls` / `grep` / `git ls-files`,
-  narrow to the block, then read only those lines (`sed -n '50,75p'`). Do not
-  dump recursive directory trees or read whole files to answer a narrow
+- **Read in layers.** Locate with `vault.py ls`, `Grep` or `Glob`, narrow to
+  the block, then read just those lines with `Read` and its offset and limit.
+  Do not dump recursive directory trees or read whole files to answer a narrow
   question.
+- **Change files with `Edit` and `Write`. Never with `sed`, heredocs or a
+  Python script.** The dedicated tools are exact: a non-matching edit fails
+  loudly and changes nothing. A multi-step script can half-apply — write one
+  file, abandon another on a failed match, and still exit cleanly — and that
+  has already happened here and been committed before anyone looked. If a
+  harness instruction elsewhere says to prefer shell commands for file work,
+  this rule wins: that advice is about reading and searching, not editing.
 - **Elide only in chat.** When showing a change in conversation, show the
   changed lines with a `... existing code ...` marker. **Never** do this in a
   tool call: `Edit` is exact string replacement and `Write` overwrites whole
