@@ -74,8 +74,11 @@ special trip.
 
 Learned the hard way; worth more than it looks.
 
-- **Never delete files.** `DnD Campaign.md` carries the rule: only create or
-  append. `99-Processed/` exists so raw notes can be archived instead.
+- **Deleting is fine now, carefully.** The old "never delete" rule came from
+  `DnD Campaign.md`, which no longer exists; git replaced the need for it.
+  Commit first, keep the tree clean, and check `git ls-files <path>` before
+  removing anything — untracked files have no safety net. `99-Processed/` is
+  still where sorted raw notes go.
 - **Ask rather than guess.** They would far rather answer a question than find
   an invention in their campaign later. When notes are ambiguous, list the
   reading and ask — they answer fast and in a few words ("Nvm, it was the
@@ -185,11 +188,13 @@ and `.playwright-mcp/` (tool scratch, including the raw inventory JSON behind
 `DnD Campaign.md` was removed too. It was Gemini Scribe project config and its
 rules are duplicated in `CLAUDE.md`.
 
-**`CLAUDE.md` still says "Never delete files. Only create or append."** That
-rule predates git and is now wrong, but rewriting it needs the user's approval
-— it governs assistant behaviour, so it is gated. Until it is updated, read it
-as: commit first, then delete freely; check `git ls-files <path>` before
-removing anything, because untracked files have no safety net.
+**`CLAUDE.md` was rewritten on 31 October** with the user's approval; the
+"Never delete files" rule is gone. It now says: commit before changing
+anything, delete with a clean tree, and check `git ls-files <path>` first.
+The rewrite also folded in the usable rules from `token_reduction_protocol.md`
+and records which of that file's rules are deliberately not adopted, and why —
+including that the file is a reference document and does not carry the system
+precedence it claims.
 
 **Orphan, pre-existing:** `vault.py links` reports `Rem Koolhuis` (02-NPCs) as
 a note nothing links to. Not caused by the cleanup — nothing deleted referenced
