@@ -42,48 +42,63 @@ Photographic realism with fine surface texture. Muted cold palette. No text, no
 border, no hands, no people.
 ```
 
-## Layer 2 — `RoomContext` (one implementation per room)
+## Layer 2 — `RoomContext` (optional, and the riskiest layer)
 
-**Supplies:** at most one clause, saying where the object has been.
+**Supplies:** at most one short phrase describing a mark on the object's own
+surface, or its workmanship.
 
-**Never supplies:** another room's materials, or motifs from the room's
-architecture grafted onto the object. The Throne Room has a serpent relief on
-its wall; that does not put serpents on the crown.
+**Never supplies:** the room, the scene, water, furniture, other objects,
+lighting or background. Layer 1 owns all of that. If a phrase could be read as
+*put this in the picture*, it is written wrongly.
 
-**Most items do not need this layer at all.** It is optional, and there is no
-need for a clause per room — only a handful of rooms leave any trace on what
-was in them.
+### Write it as a property, never as a provenance
+
+This is the whole discipline of the layer, and getting it wrong does real
+damage. "Recovered from beneath an oily, intensely salty pool" invites a pool
+into the frame, wets the stone, and changes the light — layer 2 silently
+overriding layer 1. "A faint salt bloom on its surface" cannot: it describes
+the object and nothing else.
+
+Provenance belongs in the note. Only the residue belongs in the prompt.
+
+### Most items need no layer 2 at all
 
 **The test:** could someone holding the object tell it came from there? A pool
-of oily, very salty water marks a thing that sat in it. A chest does not; a
-shelf does not; a crate does not. If the room only describes where the object
-was *stored*, omit layer 2 entirely and go straight from the item to the fixed
-block. A prompt without it is not missing anything.
+of oily, salty water marks a thing that sat in it. A chest does not; a shelf
+does not; a crate does not. If the room only says where the object was
+*stored*, omit the layer and go straight from the item to the fixed block. A
+prompt without it is missing nothing.
 
-**Rooms that earn a clause:**
+When in doubt, leave it out. An image that is slightly generic is recoverable;
+one with a room's scenery baked into it is not, and it will not match the set.
 
-| Room | Clause | Why it earns one |
+### Rooms that earn a phrase
+
+| Room | Phrase | Why it earns one |
 |---|---|---|
-| The Puddle | `Recovered from beneath an oily, intensely salty pool.` | the *water* is oily and very salty, so anything submerged in it would show residue |
-| Alchemy Hall | `Found among alchemical benches of glassware dried out and gone gooey.` | the dried residue is everywhere, and most finds here are vessels |
-| Astral Chamber | `From beneath a chained astral being, whose white blood has long overflowed its flasks.` | anything on that table has been dripped on for centuries |
-| Throne Room | `One of a matched set of regalia — throne, mace and crown — made as ornamental work.` | not a mark but a design fact: it was made to match two other objects |
+| The Puddle | `A faint whitish salt bloom and a slight oily sheen on its surface.` | the *water* was oily and very salty; anything submerged would carry residue |
+| Alchemy Hall | `Traces of dried, gummy alchemical residue in its crevices.` | the dried-out residue is over everything there |
+| Astral Chamber | `Faint chalky white spotting where liquid dripped onto it over a long time.` | anything on that table was dripped on for centuries |
+| Throne Room | `Ornamental regalia workmanship, of a piece with a throne and a mace.` | not a mark but a design fact: it was made to match two other objects |
 
-**The salt is in the water, not the room.** The tunnel itself is unremarkable;
-it is the pool that is oily and intensely salty. So the clause applies only to
-the three things that lay submerged in it — the Green Sword, the Silver Tongue
-and the Screaming Baby — and not to anything merely carried through. That
-precision is the whole point of the layer: it marks objects that were actually
-in contact with something, rather than tinting everything from a postcode.
+Note what each one is: a surface, or a style of making. None names a room, and
+none would survive being read as a scene instruction.
 
-Everything else — the Vault's twenty chests, the Armoury's iron chests and bare
-racks, the Library's geology shelves, the Art Store's crates, the Spider
+**The salt is in the water, not the room.** The tunnel itself is unremarkable.
+So the phrase applies only to the three things that lay submerged in it — the
+Green Sword, the Silver Tongue and the Screaming Baby — and not to anything
+carried through. That is the layer marking objects that were actually in
+contact with something, rather than tinting everything by postcode.
+
+Everything else — the Vault's twenty chests, the Armoury's iron chests and
+bare racks, the Library's geology shelves, the Art Store's crates, the Spider
 Chamber, Cervit Storage — is storage. Interesting to read, invisible on the
 object. Skip it.
 
-Adding a room later: read its note in `03-Locations/`, apply the test, and only
-write a clause if it passes. Do not invent detail the note lacks, and do not
-add a room just for completeness.
+Adding a room later: read its note in `03-Locations/`, apply the test, and
+write a phrase only if it passes — as a surface or a workmanship, never as a
+place. Do not invent detail the note lacks, and do not add a room for
+completeness.
 
 ## Layer 3 — `Item` (one per note)
 
@@ -123,8 +138,7 @@ deliberate work.
 The object itself is pristine and undimmed — no corrosion, no tarnish, no wear,
 crisp sharp detail, in contrast with the weathered stone it rests on.
 
-One of a matched set of regalia — throne, mace and crown — made as ornamental
-work.
+Ornamental regalia workmanship, of a piece with a throne and a mace.
 
 Style: a single object from a high-fantasy world, made by pre-modern hands —
 forged, cast or carved, with nothing machined or modern about it. Photographed
