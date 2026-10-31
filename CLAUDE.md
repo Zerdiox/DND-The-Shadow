@@ -82,6 +82,10 @@ and every diff becomes unreadable.
   anything involving the character sheet, use
   `.claude/skills/dndbeyond-homebrew/references/playwright-recipes.md`, which
   has verified selectors and states which recipes have actually been run.
+- **`dnd-item-images`** — illustrations for items, generated in the Gemini web
+  app through the user's Chrome rather than the paid API. Carries a fixed house
+  style derived from the campaign's own materials and the archive page's
+  palette, so the set stays consistent; read it before generating any item art.
 
 ## Layout
 
