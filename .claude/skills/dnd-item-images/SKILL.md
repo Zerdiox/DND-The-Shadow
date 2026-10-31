@@ -150,7 +150,9 @@ the full derivation and the palette values; the short version:
   to study deadly things. The recurring materials are bronze, iron, salt,
   crystal, resin, dried coral and damp stone — corroded and abandoned, not
   gleaming. "Archaeological catalogue plate" is the register the loot actually
-  lives in.
+  lives in. That describes the *place*, though: which of those materials apply
+  to a given item depends on the room it was found in, and whether the item
+  itself looks decayed depends on `magical`. Both rules are above.
 - **Lamplight, because that is how the party sees anything.** They are
   underground with lanterns the whole way down.
 - **The palette matches the archive page**, which already uses a desaturated
