@@ -4,6 +4,10 @@ Notes for an ongoing D&D 5e (2024) campaign, kept as plain markdown and
 versioned with git. No app is required to read or edit them: any text editor
 will do. The user plays **Vicaster Cloudwink**; the DM is **Zedicius**.
 
+The vault covers sessions 01-06 only. An earlier campaign came before them and
+was never written down, so the numbering starts at the first *recorded*
+session rather than the first one played.
+
 This file documents the structure so it can be rebuilt or verified from
 scratch. For how to *work* in the vault, see `CLAUDE.md`; for current state and
 open threads, see `.claude/HANDOFF.md`.

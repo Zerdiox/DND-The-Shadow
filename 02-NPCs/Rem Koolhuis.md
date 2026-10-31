@@ -4,25 +4,26 @@ status: alive
 pronouns:
 location:
 faction: Marignon
-first_appeared: before [[Session 01 - 2026-08-01]], in an unrecorded session
+first_appeared: before [[Session 01 - 2026-08-01]], in the earlier unrecorded campaign
 tags: [npc]
 ---
 
 ## Description
-Wizard from Marignon. The party met him on a boat, before they entered
-[[The Dam]], and he had a fight with another wizard.
+Wizard from Marignon. The party first came across him mid-fight with another
+wizard, with his boat close by. He won, and then gave them a ride on it to
+[[The Dam]] — so he is the reason they arrived there at all, immediately
+before the events of [[Session 01 - 2026-08-01]].
 
 ## Session Log
-- **Before [[Session 01 - 2026-08-01]]** — on the boat, ahead of the Dam
-  expedition. Met there, and fought another wizard. There are no session notes
-  covering this; it is recorded from the user's recollection on 31 October
-  2026. The other wizard, the cause and the outcome are all unknown, and
-  nothing in the vault records them.
+- **Before [[Session 01 - 2026-08-01]]** — met during the earlier stretch of
+  the campaign, which has no notes in this vault. Found fighting another
+  wizard beside his boat, beat him, and ferried the party to [[The Dam]].
+  Recorded from the user's recollection on 31 October 2026.
 
 ## Open questions
-- Which wizard did he fight, and what came of it?
-- Did he go into the Dam with the party, or part company at the boat? An
-  earlier version of this note said he "participated in the dam expedition",
-  but [[Session 01 - 2026-08-01]] neither mentions him nor lists him among its
-  linked NPCs, and the raw notes behind it do not name him either. That claim
-  was unsupported, so it has been removed rather than repeated.
+- Who was the other wizard, and what was the fight about?
+- Did he go into [[The Dam]] with the party, or stay with the boat? He brought
+  them there, but [[Session 01 - 2026-08-01]] does not mention him or list him
+  among its linked NPCs, and the raw notes behind it do not name him either —
+  so an earlier claim that he "participated in the dam expedition" was removed
+  as unsupported rather than repeated.

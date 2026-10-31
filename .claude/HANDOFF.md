@@ -20,6 +20,13 @@ task, not after it goes wrong** — both carry traps that cost real hours.
 ## Where things stand
 
 - **Sessions 01–06 are sorted.** 06 was *The Silver Tongue*, 23 October.
+- **An entire campaign preceded these sessions and is not in the vault.**
+  Confirmed by the user, 31 October. "Session 01" is the first *recorded*
+  session, not the first session played, and the Dam is not where the story
+  began. Do not read `first_appeared: Session 01` as "this is where they came
+  from" — for anyone the party already knew by then, it only means that is
+  the earliest note we hold. [[Rem Koolhuis]] is the known case: met in that
+  earlier stretch, and the reason the party reached the Dam at all.
 - **The group-facing archive** is one artifact, updated per session, not a new
   one each time: <https://claude.ai/artifact/7oHa5EKVDLApxf2i3ues5J>
 - **D&D Beyond is current.** Party Equipment holds 77 rows: 24 homebrew magic

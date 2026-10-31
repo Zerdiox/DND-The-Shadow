@@ -44,8 +44,10 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 VAULT = os.path.abspath(os.path.join(HERE, "..", ".."))
 
-SKIP_DIRS = (".stversions", ".trash", ".obsidian", ".smart-env", ".stfolder",
-             ".claude", "gemini-scribe")
+# directories that exist and hold no campaign notes. The Obsidian, Syncthing
+# and Gemini Scribe entries that used to be here were removed on 31 Oct 2026
+# along with the directories themselves.
+SKIP_DIRS = (".git", ".claude", ".playwright-mcp")
 ARCHIVE_DIRS = ("99-Processed", "00-Inbox")
 
 # markdown at the vault root that is tooling, not a campaign note
