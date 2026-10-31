@@ -213,10 +213,18 @@ there; its coordinate tables stay only as a fallback.
 
 ## Why things are the way they are
 
-The repository history was squashed to a single commit on 31 October 2026 at
-the user's request, to stop the deleted Obsidian/Syncthing/Gemini files being
-published in a public repo. These four explanations lived only in the commit
-messages that squash discarded, so they are recorded here instead.
+The repository history was squashed on 31 October 2026 because the user
+wanted a clean history. That was the whole motive and it is satisfied.
+
+**It was not an attempt to unpublish anything,** whatever the first commit's
+message implies — that message was written on a wrong assumption and the
+correction lives here. The old commits remain reachable on GitHub by hash and
+the user does not mind; verified on the day, `raw/8dcf442/DnD%20Campaign.md`
+still serves its 808 bytes. **Do not offer to delete and recreate the
+repository to "finish the job".** There is no job to finish.
+
+These four explanations lived only in the commit messages that the squash
+discarded, so they are recorded here instead.
 
 - **The five `ddb: removed 2026-10-31` items.** Claw Knives, Crossbow Bolts,
   Crossbow Snares, Crossbows and Rusted Gas Masks were deleted from Party
