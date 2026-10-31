@@ -94,31 +94,84 @@ Google's own guidance, which the template below follows:
 - **Expect to iterate.** The first result is a draft. Follow-up messages in the
   same conversation refine it; starting over loses the thread.
 
-### The template
+### The template: four layers, narrowing
 
-Two blocks. The house style block is **identical for every item** — copy it,
-do not retype it. Twenty-four images that each look lovely on their own and
-nothing like each other are worse than twenty-four plainer ones that read as a
-set, and the set is the point: these sit side by side on the archive page and
-in a single D&D Beyond inventory.
+Build every prompt by cascading from the widest context to the narrowest:
+
+| Layer | Scope | Varies? |
+|---|---|---|
+| 0 | It is D&D — fantasy, pre-modern, nothing machined | never |
+| 1 | The Cradle — the buried building holding nearly all of it | never |
+| 2 | The room inside the Cradle where this item was found | per item |
+| 3 | The item itself, from its note | per item |
+
+Each layer inherits from the one above and may refine it, never contradict it.
+That is what keeps twenty-four images reading as one set while still letting
+each object be itself — and it is also what stops one room's materials leaking
+onto an object from another.
+
+**Layer 0 — it is D&D.** The outermost frame, and the easiest to lose. This is
+a fantasy world with no modern anything: objects are forged, cast, carved,
+blown, woven or hand-worked. No machining, no injection moulding, no printed
+labels, no plastics, no screws, no contemporary industrial design. "Very old"
+here means pre-modern craft, not a disused twentieth-century plant.
+
+Watch two words in the block below. *Photographed* and *catalogue plate*
+describe how **we** are presenting the object now — a modern convention, and
+the right one, because it is how the archive page lays loot out. They say
+nothing about the object, which stays firmly pre-modern. And while the Cradle
+was built for research, it is an ancient fantasy structure, not a laboratory;
+if images start coming back looking like a bunker, that word is the culprit.
+
+**Layer 1 — the Cradle.** Nearly everything was recovered from it: a vast
+buried place, very old, built to study deadly things. Eldritch and wrong as
+much as it is abandoned.
+
+Layers 0 and 1 are identical for every item and live in one fixed block. Copy
+it; never retype it.
 
 ```
-Create an image of <SUBJECT>, <MATERIAL DETAIL>.
-
-<CONDITION LINE — chosen by `magical`, see below>
-
-<ONE LINE ON WHERE IT WAS FOUND, if the note gives one>
-
-Style: a single object photographed as an archaeological catalogue plate.
-Centred on weathered grey-green stone. Low raking lamplight from the upper
-left, one soft shadow beneath. The object fills about two thirds of the frame.
+Style: a single object from a high-fantasy world, made by pre-modern hands —
+forged, cast or carved, with nothing machined or modern about it. Photographed
+now as an archaeological catalogue plate: recovered from the Cradle, a vast and
+very old buried place, eldritch and wrong as much as it is abandoned. Centred
+on weathered grey-green stone. Low raking lamplight from the upper left, one
+soft shadow beneath. The object fills about two thirds of the frame.
 Photographic realism with fine surface texture. Muted cold palette. No text, no
 border, no hands, no people.
 ```
 
-Set the aspect ratio to **1:1** with the control in the composer rather than
-asking for square framing in words — it is a real setting and words are a
-guess.
+Say **the Cradle**, not "the vault". `03-Locations/Vault.md` is one specific
+room — the chamber above the Library with twenty chests — and most loot did not
+come from it. `The Cradle` is the `region` on the location notes and the right
+name for the whole place.
+
+**Layer 2 — the location.** Read the note's `found` field and its body for the
+room, then add at most one clause of that room's specific character. The
+Crystal Hall is salt and crystal; the Shell Room is dried coral and empty
+shells; the Armoury is iron chests and stripped weapon racks; the Alchemy Hall
+is dried-out glassware. `references/house-style.md` has the table.
+
+Only the room this item actually came from. Borrowing another's is an
+assertion about where the object has been, and wrong in the same way an
+invented mechanic is wrong.
+
+**Layer 3 — the item.**
+
+```
+Create an image of <SUBJECT>, <MATERIAL DETAIL from the note>.
+
+<CONDITION LINE — chosen by `magical`, see below>
+
+<ONE CLAUSE OF ROOM CONTEXT from layer 2, if the note places it>
+```
+
+Then set the aspect ratio to **1:1** with the control in the composer rather
+than asking for square framing in words — it is a real setting, and words are
+a guess.
+
+Assemble as: layer 3, then layer 2's clause, then the fixed layer 0+1 block
+verbatim at the end.
 
 ### The condition line is not optional, and it depends on `magical`
 
@@ -199,23 +252,34 @@ saw and nothing more.
 note gives exactly one sentence of appearance: *"An ornamental crown recovered
 from the Throne Room."* That is the whole of what can be depicted honestly.
 
+Layer 2 comes from `03-Locations/Throne Room.md`, which the note links: a
+chamber holding an ornamental throne, mace and crown, with an unidentified
+serpent relief along the wall. So the crown is one of a matched set of
+ornamental regalia — that is real context, and worth a clause.
+
 ```
 Create an image of an ornamental crown, its decoration fine and clearly
-deliberate work.
+deliberate work, one of a matched set of regalia made alongside a throne and a
+mace.
 
 The object itself is pristine and undimmed — no corrosion, no tarnish, no wear,
 crisp sharp detail, in contrast with the weathered stone it rests on.
 
-Recovered from a throne room.
-
-Style: a single object photographed as an archaeological catalogue plate.
-Centred on weathered grey-green stone. Low raking lamplight from the upper
-left, one soft shadow beneath. The object fills about two thirds of the frame.
+Style: a single object from a high-fantasy world, made by pre-modern hands —
+forged, cast or carved, with nothing machined or modern about it. Photographed
+now as an archaeological catalogue plate: recovered from the Cradle, a vast and
+very old buried place, eldritch and wrong as much as it is abandoned. Centred
+on weathered grey-green stone. Low raking lamplight from the upper left, one
+soft shadow beneath. The object fills about two thirds of the frame.
 Photographic realism with fine surface texture. Muted cold palette. No text, no
 border, no hands, no people.
 ```
 
 Aspect ratio 1:1, set with the control.
+
+The serpent relief is deliberately **not** in there. It is on the room's wall,
+not on the crown, and nothing says the motif carries over. That is the layer-2
+discipline in miniature: the room supplies context, not decoration to graft on.
 
 Note what is **absent**, and why:
 
