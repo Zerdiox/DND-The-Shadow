@@ -29,9 +29,42 @@ So: **bronze, iron, salt, crystal, resin, coral, damp stone** — corroded,
 crusted and abandoned. Objects photographed as recovered artefacts read true.
 Objects photographed as gleaming treasure do not.
 
+### Use the room the item came from, and only that room
+
+That table is organised by location for a reason. It is **not** a palette to
+sprinkle across every image. Each item note carries a `found` field naming the
+session, and its body usually names the room; that specific place is the
+legitimate context for what the object plausibly is and what clings to it.
+
+Salt belongs to the Crystal Hall. Shells and coral belong to the Shell Room.
+The Crown of Fear came from the Throne Room and has nothing to do with any of
+them — putting "salt crust" in its prompt only invites the model to crust a
+crown that was never near salt.
+
+So: read `found`, find the room, and draw on that. Borrowing another room's
+materials is the same class of error as inventing a mechanic — it asserts
+something about where this object has been.
+
+The background stays constant across the set — weathered grey-green stone —
+precisely so the varying part is the object itself.
+
 The party is underground with lanterns throughout, which is where the low
 raking lamplight comes from. Flat studio light would be wrong for the same
 reason.
+
+## Magical items do not age
+
+A rule of the setting, not a stylistic choice: in D&D, magic does not weather.
+An item with `magical: true` is depicted exactly as made — no corrosion, no
+tarnish, no pitting — however long it sat underground. Everything else in the
+Cradle has been rotting for centuries, so magical items read as uncannily
+intact against the stone they rest on. That contrast is the set's strongest
+visual idea rather than an accident, and it is worth protecting.
+
+`magical: false` or `unknown` gets the opposite: aged and worn as found.
+
+Pristine is not glowing. An undamaged crown is still an inert-looking crown
+unless its note records something visible.
 
 ## Palette, taken from the archive page
 

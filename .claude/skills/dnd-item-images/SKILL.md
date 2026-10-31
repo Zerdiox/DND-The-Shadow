@@ -103,18 +103,41 @@ set, and the set is the point: these sit side by side on the archive page and
 in a single D&D Beyond inventory.
 
 ```
-Create an image of <SUBJECT>, <MATERIAL AND CONDITION DETAIL>.
+Create an image of <SUBJECT>, <MATERIAL DETAIL>.
 
-<ONE LINE ON WHERE IT WAS FOUND OR WHAT IT DOES, if the note gives one>
+<CONDITION LINE — chosen by `magical`, see below>
 
-Style: a single object photographed as an archaeological catalogue plate,
-recovered from a buried research facility. Centred on a plain desaturated
-grey-green stone background. Low raking lamplight from the upper left, one soft
-shadow beneath. Square framing, the object filling about two thirds of the
-frame. Photographic realism with fine surface texture — corroded bronze, pitted
-iron, salt crust, damp stone. Muted cold palette. No text, no border, no hands,
-no people.
+<ONE LINE ON WHERE IT WAS FOUND, if the note gives one>
+
+Style: a single object photographed as an archaeological catalogue plate.
+Centred on weathered grey-green stone. Low raking lamplight from the upper
+left, one soft shadow beneath. The object fills about two thirds of the frame.
+Photographic realism with fine surface texture. Muted cold palette. No text, no
+border, no hands, no people.
 ```
+
+Set the aspect ratio to **1:1** with the control in the composer rather than
+asking for square framing in words — it is a real setting and words are a
+guess.
+
+### The condition line is not optional, and it depends on `magical`
+
+In D&D, **magical items do not age or wear.** Centuries underground leave them
+exactly as they were made. That is a rule of the setting, not a stylistic
+preference, so an item's `magical` value decides how it is depicted:
+
+| `magical` | Condition line |
+|---|---|
+| `true` | `The object itself is pristine and undimmed — no corrosion, no tarnish, no wear, crisp sharp detail, in contrast with the weathered stone it rests on.` |
+| `false` or `unknown` | `The object is aged and worn as found — tarnish, corrosion and pitting from long burial.` |
+
+This gives the set its logic: everything in the Cradle has been rotting for
+centuries except the things that cannot. A magical item that looks excavated is
+wrong in the same way an invented mechanic is wrong.
+
+**Pristine is not the same as glowing.** A magical item is undamaged; it is not
+luminous, radiant or wreathed in energy unless its note says something visible.
+The Crown of Fear is flawless *and* inert-looking. Both rules apply at once.
 
 ### Why that style and not another
 
@@ -149,8 +172,16 @@ that has none. A plain iron spike stays plain.
 | `## Description` | material, colour, condition — the bulk of the subject line |
 | `## Properties` | the one functional line, only if it would be *visible* |
 | `item_type` | shapes the framing: a potion is a vessel, a weapon lies flat |
-| `magical: false` | no glow, no runes, no aura |
+| `found` + the body | **the room it came from** — and only that room's character |
+| `magical: true` | pristine, unaged — see the condition rule above |
+| `magical: false` | aged as found, and no glow, no runes, no aura |
 | `identified: false` | describe only what was observed, nothing about effects |
+
+**Be mindful of where the item was found.** The campaign's materials are
+room-specific: salt in the Crystal Hall, shells and coral in the Shell Room,
+crated art in the Art Store, bronze and ice in the Spider Chamber. Read the
+note's `found` field and its body, use that room, and leave the rest alone.
+`references/house-style.md` has the per-room table.
 
 **The honesty rule matters more here than anywhere.** Most of this hoard is
 inert — acidic emeralds, a stone disc, fabric — and the user corrects
@@ -162,25 +193,51 @@ saw and nothing more.
 
 ### A worked example
 
-`Crown of Fear` — wondrous item, magical, carried by Vicaster.
+`Crown of Fear` — wondrous item, magical, identified, carried by Vicaster. Its
+note gives exactly one sentence of appearance: *"An ornamental crown recovered
+from the Throne Room."* That is the whole of what can be depicted honestly.
 
 ```
-Create an image of a dark iron crown, its band uneven and hand-beaten, the
-points rising at irregular heights like something made in a hurry.
+Create an image of an ornamental crown, its decoration fine and clearly
+deliberate work.
 
-It was found in a vault and worn once; wearing it pushed everyone nearby into
-fear until it was removed.
+The object itself is pristine and undimmed — no corrosion, no tarnish, no wear,
+crisp sharp detail, in contrast with the weathered stone it rests on.
 
-Style: a single object photographed as a museum catalogue plate. Centred on a
-plain dark stone-grey background, soft directional light from upper left, one
-soft shadow beneath. Square framing, the object filling about two thirds of the
-frame. Photographic realism, fine surface texture, no text, no border, no hands,
-no people.
+Recovered from a throne room.
+
+Style: a single object photographed as an archaeological catalogue plate.
+Centred on weathered grey-green stone. Low raking lamplight from the upper
+left, one soft shadow beneath. The object fills about two thirds of the frame.
+Photographic realism with fine surface texture. Muted cold palette. No text, no
+border, no hands, no people.
 ```
+
+Aspect ratio 1:1, set with the control.
+
+Note what is **absent**, and why:
+
+- **No metal is named.** The note does not say what it is made of, so neither
+  does the prompt.
+- **No ageing, because `magical: true`.** This is the correction that matters
+  most: a first attempt described it as "old and tarnished" and produced a
+  heavily corroded crown, which is simply wrong for the setting.
+- **No glow either.** The note records enchantment magic detected by an arcana
+  check, not anything visible. Pristine, not luminous.
+- **No salt, coral or shells.** Those materials belong to specific rooms — the
+  Crystal Hall, the Shell Room — not to every object in the vault. A crown from
+  the Throne Room has nothing to do with them.
+- **The mechanical effect is omitted.** "Everyone who sees the wearer is
+  frightened" is not a visual property of the object, and feeding it in invites
+  skulls and menace the crown does not have.
 
 Contrast with `Stone Disc`, which is `magical: false` and unremarkable: same
 style block, and a subject line that says only what it is — a plain worked
 stone disc, chipped at one edge. No glow, no carving the note does not mention.
+
+The pull towards embellishment is strong here, because a restrained prompt
+feels like a worse prompt. It is not. The vault is the source of truth and an
+invented crown is an invented fact.
 
 ## After generating
 
