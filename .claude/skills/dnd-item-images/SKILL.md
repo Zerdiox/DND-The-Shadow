@@ -146,15 +146,23 @@ room — the chamber above the Library with twenty chests — and most loot did 
 come from it. `The Cradle` is the `region` on the location notes and the right
 name for the whole place.
 
-**Layer 2 — the location.** Read the note's `found` field and its body for the
-room, then add at most one clause of that room's specific character. The
-Crystal Hall is salt and crystal; the Shell Room is dried coral and empty
-shells; the Armoury is iron chests and stripped weapon racks; the Alchemy Hall
-is dried-out glassware. `references/house-style.md` has the table.
+**Layer 2 — the room. Optional, and the riskiest layer.** Most items need none
+at all.
 
-Only the room this item actually came from. Borrowing another's is an
-assertion about where the object has been, and wrong in the same way an
-invented mechanic is wrong.
+Where it applies it is **one short phrase about a mark on the object's own
+surface**, never a description of the room. "Recovered from beneath an oily,
+salty pool" invites a pool into the frame and wets the stone, overriding layer
+1; "a faint salt bloom on its surface" cannot. Provenance belongs in the note;
+only the residue belongs in the prompt.
+
+The test: could someone holding the object tell where it came from? Chests,
+shelves and crates say where a thing was stored and leave no trace, so they
+earn nothing. Four rooms earn a phrase; the rest are skipped. When in doubt,
+leave it out — a slightly generic image is recoverable, one with a room baked
+into it is not.
+
+`references/layer-templates.md` has the four phrases and the rule for adding
+more.
 
 **Layer 3 — the item.**
 
@@ -259,11 +267,12 @@ ornamental regalia — that is real context, and worth a clause.
 
 ```
 Create an image of an ornamental crown, its decoration fine and clearly
-deliberate work, one of a matched set of regalia made alongside a throne and a
-mace.
+deliberate work.
 
 The object itself is pristine and undimmed — no corrosion, no tarnish, no wear,
 crisp sharp detail, in contrast with the weathered stone it rests on.
+
+Ornamental regalia workmanship, of a piece with a throne and a mace.
 
 Style: a single object from a high-fantasy world, made by pre-modern hands —
 forged, cast or carved, with nothing machined or modern about it. Photographed
