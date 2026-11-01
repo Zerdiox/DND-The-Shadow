@@ -36,16 +36,28 @@ Style: a single object from a high-fantasy world, made by pre-modern hands in
 the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
-throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone that fills the entire frame edge to edge, the
-object taking about two thirds of it. Low raking lamplight from the upper
-left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
+throughout. The object alone and centred, filling about two thirds of the
+frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
+soft shadow beneath. The setting fills the frame edge to edge with no border
+or margin, held shallow and quiet so the object stays the subject. Muted cold
+palette. A clean, unlettered plate.
 ```
 
-## Layer 2 — `RoomContext` (optional, and the riskiest layer)
+## Layer 2 — `RoomContext` (per item, and the riskiest layer)
 
-**Supplies:** at most one short phrase describing a mark on the object's own
-surface, or its workmanship.
+**Supplies, and this one is required:** the `<SURFACE>` the object rests on,
+taken from the room it was found in. A cupboard shelf, a cold stone floor,
+bare earth, an iron chest lid. This is where the image gets to tell a small
+story about where the thing was found.
+
+**Keep it a hint, not a painting.** One surface and at most one quiet
+suggestion behind it, shallow and out of the way. The object is still the
+subject at two thirds of the frame; the setting is the remaining third and
+should not compete. If someone would describe the result as "a scene", it has
+gone too far.
+
+**Also supplies:** at most one short phrase describing a mark on the object's
+own surface, or its workmanship.
 
 **May also supply:** one quiet background cue from the same room, if it suits
 the object — the Green Sword lying beside its puddle, say. Atmosphere is
@@ -78,7 +90,31 @@ prompt without it is missing nothing.
 When in doubt, leave it out. An image that is slightly generic is recoverable;
 one with a room's scenery baked into it is not, and it will not match the set.
 
-### Rooms that earn a phrase
+### Surfaces, one per room
+
+Every item needs one. Taken from the room's note in `03-Locations/`.
+
+| Room | `<SURFACE>` |
+|---|---|
+| Alchemy Hall | `a dark wooden cupboard shelf, more sealed vials dim in the shadow behind` |
+| Vault | `the open interior of a large wooden chest` |
+| Armoury | `the iron lid of a chest in a stripped armoury` |
+| Throne Room | `the weathered grey-green stone of the chamber floor` |
+| The Puddle | `wet rock at the lip of an oily pool` |
+| Cervit Storage | `straw packing inside an opened crate` |
+| Spider Chamber | `a stone floor carved with hieroglyphs` |
+| Library | `a reading table, spines of geological volumes behind` |
+| Astral Chamber | `a stone table under long-overflowed flasks` |
+| Art Store | `straw packing among crated sculpture` |
+
+For a room not listed, read its note and write one in the same register: a
+surface plus at most one thing behind it. Keep it to a clause.
+
+The Crown of Fear and Headhunter's Mace were made before this rule and sit on
+weathered stone — which is the Throne Room's floor, so they already comply and
+need no reworking.
+
+### Rooms that also earn a mark on the object
 
 | Room | Phrase | Why it earns one |
 |---|---|---|
@@ -150,10 +186,11 @@ Style: a single object from a high-fantasy world, made by pre-modern hands in
 the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
-throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone that fills the entire frame edge to edge, the
-object taking about two thirds of it. Low raking lamplight from the upper
-left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
+throughout. The object alone and centred, filling about two thirds of the
+frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
+soft shadow beneath. The setting fills the frame edge to edge with no border
+or margin, held shallow and quiet so the object stays the subject. Muted cold
+palette. A clean, unlettered plate.
 ```
 
 Layer 3, layer 2, layers 0+1. Aspect ratio 1:1 set with the control.

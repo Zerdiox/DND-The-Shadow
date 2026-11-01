@@ -142,15 +142,23 @@ so only the **ask** rows cost the user anything.
 | 9 | Colour | note, else **ask** | fear → deep garnet; poison → the palette's green |
 | 10 | Effect shown? | `## Properties` | a recorded effect may shape the design — **ask** how far |
 | 11 | Markings | note | labels and inscriptions are illegible; no readable letters |
-| 12 | Room mark | `found` | only if the room marks the object, else omit |
-| 13 | Set membership | neighbours | name the shared language explicitly |
-| 14 | Medium | fixed | painted rulebook plate, never photographic |
-| 15 | Framing | fixed | 1:1, object two thirds, **stone filling the frame edge to edge** |
+| 12 | Surface | `found` + room note | **required** — what it rests on, from the room it was found in |
+| 13 | Room mark | `found` | only if the room marks the object, else omit |
+| 14 | Set membership | neighbours | name the shared language explicitly |
+| 15 | Medium | fixed | painted rulebook plate, never photographic |
+| 16 | Framing | fixed | 1:1, object two thirds, setting edge to edge with no border |
 
-Row 15 earned its place on the first vial: it came back as a slate tile with
-a dark margin painted around it, while the crown and mace bled to the edges.
-Say "the stone fills the entire frame edge to edge" rather than trusting
-"centred on weathered grey-green stone".
+Row 12 is the one that tells a small story: a cupboard shelf, a cold floor,
+bare earth, an iron chest lid. The surface varies per item deliberately — what
+holds the set together is the medium, the cold palette, the raking light from
+the upper left and the framing, not a shared slab. Keep it to a surface plus
+at most one quiet thing behind it; if the result reads as a scene rather than
+a plate, it has gone too far.
+
+Row 16 earned its place on the first vial, which came back as a slate tile
+with a dark margin painted around it while the crown and mace bled to the
+edges. Say the setting fills the frame edge to edge rather than trusting
+"centred on".
 
 Rows marked **ask** are the whole of what the user needs to answer, and they
 can do it in one message. Everything else is already decided.
@@ -196,10 +204,11 @@ Style: a single object from a high-fantasy world, made by pre-modern hands in
 the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
-throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone that fills the entire frame edge to edge, the
-object taking about two thirds of it. Low raking lamplight from the upper
-left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
+throughout. The object alone and centred, filling about two thirds of the
+frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
+soft shadow beneath. The setting fills the frame edge to edge with no border
+or margin, held shallow and quiet so the object stays the subject. Muted cold
+palette. A clean, unlettered plate.
 ```
 
 Say **the Cradle**, not "the vault". `03-Locations/Vault.md` is one specific
@@ -339,10 +348,11 @@ Style: a single object from a high-fantasy world, made by pre-modern hands in
 the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
-throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone that fills the entire frame edge to edge, the
-object taking about two thirds of it. Low raking lamplight from the upper
-left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
+throughout. The object alone and centred, filling about two thirds of the
+frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
+soft shadow beneath. The setting fills the frame edge to edge with no border
+or margin, held shallow and quiet so the object stays the subject. Muted cold
+palette. A clean, unlettered plate.
 ```
 
 Aspect ratio 1:1, set with the control.
