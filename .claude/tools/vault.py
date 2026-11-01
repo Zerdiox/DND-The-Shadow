@@ -293,7 +293,7 @@ def cmd_lint(a):
                 if k not in n.fm:
                     flag(n, "missing key: %s" % k)
             for k in n.fm:
-                if k not in exp and k not in ("title", "aliases", "ddb", "ddb_name", "ddb_add"):
+                if k not in exp and k not in ("title", "aliases", "ddb", "ddb_name", "ddb_add", "image"):
                     flag(n, "unexpected key: %s" % k)
         if not n.fm:
             flag(n, "no frontmatter")

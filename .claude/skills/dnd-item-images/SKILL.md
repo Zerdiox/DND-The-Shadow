@@ -488,8 +488,11 @@ Then record it on the note so a later session knows the item has art:
 python .claude/tools/vault.py set "Crown of Fear" image "images/items/crown-of-fear.png"
 ```
 
-`image` is a new optional key. `vault.py lint` accepts unknown optional keys,
-but confirm with `lint` after the first one rather than assuming.
+`image` is an optional key, and it had to be allowed explicitly: `vault.py`
+lints against a fixed list and flags anything outside it as
+`unexpected key`. It is in the allowlist now, alongside `ddb`, `ddb_name` and
+`ddb_add`. Any further key needs adding there too — run `lint` and read the
+whole output before committing, rather than assuming it passed.
 
 For the D&D Beyond avatar, the item's edit page has an avatar field under
 Additional Information — see the homebrew skill, and
