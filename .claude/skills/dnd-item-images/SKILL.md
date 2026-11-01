@@ -343,6 +343,29 @@ The pull towards embellishment is strong here, because a restrained prompt
 feels like a worse prompt. It is not. The vault is the source of truth and an
 invented crown is an invented fact.
 
+## Material follows function
+
+Decide what a thing is made of by asking what it has to survive, not by
+copying the set it belongs to. Gold is soft: it belongs on a crown, and on a
+weapon it belongs as inlay on the haft, never as the head. A mace head is hard
+metal because it has to break bone.
+
+This came up on the Headhunter's Mace, which is regalia from the same
+workshop as the Crown of Fear and so "obviously" gold — except a gold mace
+head is useless. The right answer was a dark steel head with gold, garnet and
+serpents worked into the haft: unmistakably the same set, and still a weapon.
+
+Apply the same reasoning to the Extending Halberd, the Heartseeker Dagger and
+the Claw Knives. Edges and striking surfaces are hard metal; gold, silver and
+stones are decoration on the parts that are held rather than used.
+
+### Matching a set
+
+When several items come from one place and one maker, say so in the prompt and
+name the shared language explicitly — "the serpents and the red stones match
+the crown exactly". Shared motif, shared palette, different form. That is what
+makes a set read as a set rather than as a theme.
+
 ## Reading the item's effect into how it looks
 
 The honesty rule bars **inventing facts**. It does not bar using facts the
