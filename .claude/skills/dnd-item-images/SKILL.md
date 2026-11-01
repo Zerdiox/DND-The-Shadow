@@ -776,6 +776,39 @@ Starting over at step 3 would have lost the classical form won at step 2.
 
 ## After generating
 
+### Getting the file off the page
+
+**Gemini's "Download full-sized image" button produced no file** on
+1 November 2026 — nothing in `~/Downloads`, no `.crdownload`, no error. Do
+not keep clicking it. Re-fetching the `blob:` src fails too (`TypeError:
+Failed to fetch`); the blob is already revoked by the time you ask.
+
+What works is drawing the loaded `<img>` onto a canvas, which keeps the full
+1024 × 1024 rather than the ~708 px a screenshot of the element gives you:
+
+```js
+// browser_evaluate, with filename: '.playwright-mcp/<slug>.json'
+() => { const img = document.querySelector('#claude-latest-img');
+  const c = document.createElement('canvas');
+  c.width = img.naturalWidth; c.height = img.naturalHeight;
+  c.getContext('2d').drawImage(img, 0, 0);
+  const url = c.toDataURL('image/png');
+  return { w: c.width, h: c.height, b64: url.slice(url.indexOf(',') + 1) }; }
+```
+
+Pass `filename:` so the base64 lands in a file instead of the transcript — it
+is well over a megabyte. Then decode it to `images/items/<slug>.png` and
+**check the PNG magic bytes and dimensions**, because a truncated or failed
+decode still produces a file. Tag the image with an id first
+(`imgs[imgs.length - 1].id = 'claude-latest-img'`): after a refinement the
+thread holds several, and a bare selector takes the oldest.
+
+Decoding base64 is the one place a short Python call is right — it is
+creating a binary asset, not editing a note, and `Edit`/`Write` cannot do it.
+Everything in the vault's prose still goes through the dedicated tools.
+
+### Then
+
 Save as `images/items/<kebab-case-name>.png`. Commit with the item it belongs
 to named in the message, so the image and the note stay traceable to each
 other.
