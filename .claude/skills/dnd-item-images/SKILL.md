@@ -523,6 +523,22 @@ Four named sections leave nothing to be filled in by default, and the default
 is what keeps going wrong. The same walk suits a blade (pommel, grip, guard,
 ricasso, blade), a bottle (base, body, shoulder, neck, stopper) or a staff.
 
+### The nineteen vials: vary the glass deliberately
+
+Each vial of the Alchemy Hall cupboard gets its **own silhouette** — a
+different body, shoulder, neck or stopper — rather than one vessel recoloured
+nineteen times. The user's reasoning, and it is good: an alchemist whose
+labels have faded tells one from another by shape.
+
+It also squares with the notes. They record the vials as *unlabelled* and
+indistinguishable in their *contents*, not identical in their glass — the
+party could see which bottle was which and still have no idea what was in
+any of them.
+
+So vary the vessel and hold everything else: the five-section construction,
+the wax-sealed stopper, the faded illegible label, the cupboard shelf, the
+lighting and the medium. The liquid and the glass are what change.
+
 ### Matching a set
 
 When several items come from one place and one maker, say so in the prompt and
