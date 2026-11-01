@@ -132,6 +132,18 @@ Three behaviours, all observed, all of which look like failure and are not:
   so. I got this wrong once — reported quota, with no evidence for it, when
   the page was asking to be retried.
 
+- **Sending can stop working entirely.** After that error, every send
+  mechanism failed on a fresh page load: `element.click()`, focus-plus-Enter,
+  Playwright's real click, and a full synthetic pointer sequence. The button
+  reported `aria-disabled="false"` throughout and no error ever appeared. The
+  same JS click had worked five times earlier in the session.
+
+  **Four failed mechanisms is the stopping point.** It is an account- or
+  service-side state, not a selector problem, and no amount of event
+  plumbing gets past it. Tell the user, and suggest they try the same prompt
+  by hand in their own window — if that also does nothing, it is Gemini, not
+  the automation.
+
 Two things will waste your time:
 
 - **`browser_click` times out on this UI.** The elements resolve and are
