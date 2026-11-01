@@ -29,7 +29,8 @@ go stale faster than this file will.
 1. Read the item note: `python .claude/tools/vault.py get "<item>"`, and the
    note of the room it was found in.
 2. Assemble the prompt from the four layers.
-3. **Ask before generating, not after.** Aim for one generation per item.
+3. **Show the user the exact prompt and wait.** Every prompt, every time —
+   first drafts and refinements alike. Nothing is sent unseen.
 4. Generate at <https://gemini.google.com/images>, aspect ratio 1:1.
 5. Show the user before downloading anything. Downloading is a real change to
    their disk, and a wasted generation is cheaper than an unwanted file.
@@ -37,7 +38,26 @@ go stale faster than this file will.
 7. Use the resulting `raw.githubusercontent.com` URL for the D&D Beyond avatar
    and the archive page.
 
-### Step 3 in full: ask, do not iterate
+### Step 3 in full: show the prompt, then wait
+
+**Paste the exact text you are about to send, in full, and wait for a reply
+before sending it.** This holds for refinements as much as for first drafts,
+and it holds even when the change seems obvious or trivial.
+
+Three reasons it is worth the round trip:
+
+- **The prompt is the cheap thing to get wrong.** Reading one costs the user
+  a few seconds; a bad generation costs a slice of a daily allowance nobody
+  can see the size of, and it cannot be refunded.
+- **They catch what the rules cannot.** Every correction in this skill came
+  from a human reading either a prompt or its output — gold is soft, magical
+  items do not age, fear reads red, the haft is too short. None of it was
+  reachable by reasoning harder.
+- **It is easy to drift.** After the first item is approved, the temptation
+  is to treat the pattern as settled and fire the rest off. Resist it: the
+  rules were still changing at item three.
+
+Show the assembled prompt with the open questions attached, then stop.
 
 Refining an image in four passes looks like craft and is mostly waste. Every
 pass the Crown of Fear needed was a *rule* being discovered — magical items do
