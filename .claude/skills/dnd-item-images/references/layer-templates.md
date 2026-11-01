@@ -121,6 +121,27 @@ chest wall.
 What must not vary is the room. A Vault item sits in a chest; moving it to a
 shelf to be interesting is layer 2 inventing provenance.
 
+### A large object may show its room, and that is wanted
+
+The surfaces above that name a room — *"a stripped armoury"*, *"spines of
+geological volumes behind"* — really do pull the room into frame. The Red
+Lantern came back standing on a chest lid in an armoury interior, stone
+walls and weapon racks receding behind it, which reads as a scene rather
+than the shallow quiet setting layer 1 asks for.
+
+**The user looked at it and kept it**, 1 November 2026. So for a large
+object the depth is a feature, not the layer-2 failure it looks like, and
+these strings stay as written. Do not "fix" them.
+
+It fits the size rule rather than fighting it: small objects go on bare
+stone because a room would swallow them; a 30 cm lantern holds its own
+against one. Layer 1's "held shallow and quiet" is the floor, not a ceiling
+— it stops a setting competing with a small object, and a large object sets
+its own terms.
+
+If a room does swamp something, the fix is the size rule — move it to stone
+— not rewriting the room out of the table.
+
 ### Small objects get a plain surface instead
 
 **The user's rule, 1 November 2026: only keep a simpler background for
