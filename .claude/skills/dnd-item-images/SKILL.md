@@ -142,10 +142,24 @@ Three behaviours, all observed, all of which look like failure and are not:
   you try again?"* — a narrow regex built for the first one missed the
   second entirely and reported a silent stall.
 
-  **Check whether the prompt appears twice** in the conversation while you
-  are there. One failure produced two submissions from a single click, the
-  first erroring and the second left empty. If a duplicate is in flight,
-  wait rather than sending a third.
+  **A single click can submit the prompt twice.** Confirmed on two separate
+  conversations: one `send.click()`, two full user turns in the thread, both
+  erroring. It may well be causing the errors rather than merely
+  accompanying them, since it fires two identical generations at once.
+
+  Count the submissions after sending, before concluding anything about the
+  failure:
+
+  ```js
+  (() => { const lines = (document.querySelector('main')||document.body)
+      .innerText.split('\n').map(s => s.trim());
+    return lines.filter(l => l.startsWith('Create an image of')).length; })()
+  // 1 = one submission. 2 = the click double-fired.
+  ```
+
+  If it reports 2, do not retry — wait. Retrying a prompt that is already
+  in flight twice is how an item burns four generations and produces
+  nothing, which is exactly what happened to the Extra Action vial.
 
   "Something went wrong" is transient and the retry it asks for is the right
   move. Only conclude the allowance is exhausted if a message actually says
