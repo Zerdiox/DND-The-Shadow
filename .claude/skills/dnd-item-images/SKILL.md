@@ -154,8 +154,18 @@ Three behaviours, all observed, all of which look like failure and are not:
   to happen. `show_pane preview` does not help — that controls the built-in
   browser pane, and this runs through the extension in a real Chrome window.
 
-  **A partial spoof is available and worth applying anyway**, re-run after
-  every navigation since it does not survive one:
+  **The spoof below was tested and does not work.** Measured on the same
+  prompt:
+
+  | Condition | Send → conversation | Image |
+  |---|---|---|
+  | Tab genuinely visible | instant | ~9 s |
+  | Hidden, spoofed to report visible | **92 s** | **125 s** |
+
+  The page reported `hidden: false` throughout and it changed nothing; work
+  resumed the moment the user actually focused the window. So the throttling
+  is the browser's, not Gemini reading the visibility API, and no page-level
+  spoof will reach it. Keep it only as documentation of a dead end:
 
   ```js
   Object.defineProperty(document, 'hidden', {configurable:true, get:()=>false});
@@ -163,13 +173,11 @@ Three behaviours, all observed, all of which look like failure and are not:
   document.hasFocus = () => true;
   ```
 
-  **Do not assume it is enough.** It only fools code that *reads* those
-  properties. Chrome pauses `requestAnimationFrame` outright in a hidden tab
-  and clamps timers to roughly once a minute, and that throttling is
-  enforced by the renderer no matter what the page believes about itself. If
-  Gemini schedules its send through rAF — which the symptoms fit, since
-  everything resumes the instant the tab is looked at — no page-level spoof
-  will touch it.
+  It only fools code that *reads* those properties. Chrome pauses
+  `requestAnimationFrame` outright in a hidden tab and clamps timers to
+  roughly once a minute, and that throttling is enforced by the renderer no
+  matter what the page believes about itself. The measurement above settles
+  which of the two mechanisms is in play: it is the browser's.
 
   What would actually defeat the throttling is Chrome launched with
   `--disable-renderer-backgrounding`, or a CDP call to
