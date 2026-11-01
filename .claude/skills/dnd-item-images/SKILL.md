@@ -394,6 +394,20 @@ worth getting into the first prompt for anything with a handle, a blade or a
 stem, because proportion is the one error that survives repeated vague
 correction.
 
+**Then describe the anatomy section by section, end to end.** Saying "the grip
+is plain or wrapped" is not enough: asked for a grip, the model wrapped the
+entire haft. Walk the object from one end to the other and name each section
+and its length. For the mace, from the base up:
+
+1. a weighted metal pommel, garnet set in it
+2. a leather grip wrap one hand's width long — about 10 cm, one closed fist
+3. a short band of gold ornament with the serpents
+4. bare cold iron the rest of the way to the head, undecorated
+
+Four named sections leave nothing to be filled in by default, and the default
+is what keeps going wrong. The same walk suits a blade (pommel, grip, guard,
+ricasso, blade), a bottle (base, body, shoulder, neck, stopper) or a staff.
+
 ### Matching a set
 
 When several items come from one place and one maker, say so in the prompt and
