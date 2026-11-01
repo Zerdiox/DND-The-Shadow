@@ -37,9 +37,9 @@ the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone, filling about two thirds of the frame. Low raking
-lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
-clean, unlettered plate.
+weathered grey-green stone that fills the entire frame edge to edge, the
+object taking about two thirds of it. Low raking lamplight from the upper
+left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
 ```
 
 ## Layer 2 — `RoomContext` (optional, and the riskiest layer)
@@ -151,9 +151,9 @@ the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone, filling about two thirds of the frame. Low raking
-lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
-clean, unlettered plate.
+weathered grey-green stone that fills the entire frame edge to edge, the
+object taking about two thirds of it. Low raking lamplight from the upper
+left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
 ```
 
 Layer 3, layer 2, layers 0+1. Aspect ratio 1:1 set with the control.

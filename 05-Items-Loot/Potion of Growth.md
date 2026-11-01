@@ -18,6 +18,10 @@ ddb_add: yes
 
 ## Description
 One of the nineteen unlabelled vials of coloured liquid from the cupboard in the [[Alchemy Hall]]. Vial 2.
+The liquid is a deep amber, thick and honey-like. The vials all carry the
+remains of a paper label, faded past reading, which is why none of them could
+be told apart. Colour assigned for illustration on 1 November 2026 and not
+recorded at the table.
 
 ## Properties
 - Increases the drinker's size.

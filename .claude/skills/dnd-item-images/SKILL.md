@@ -123,6 +123,38 @@ Google's own guidance, which the template below follows:
 - **Expect to iterate.** The first result is a draft. Follow-up messages in the
   same conversation refine it; starting over loses the thread.
 
+### The checklist
+
+Walk this before writing any prompt. Each line is a characteristic that has
+gone wrong at least once; the Source column says where the answer comes from,
+so only the **ask** rows cost the user anything.
+
+| # | Characteristic | Source | Rule |
+|---|---|---|---|
+| 1 | Subject noun | note filename | the plain thing it is |
+| 2 | Material | note, else **ask** | follows function — gold is soft, so no gold blade or mace head |
+| 3 | Condition | `magical` | `true` → pristine and unaged; otherwise worn as found |
+| 4 | Overall size | **ask** or sense | state it in cm, never "large" or "small" |
+| 5 | Proportions | derive | a ratio between named parts, never a comparative |
+| 6 | Anatomy | derive | walk it end to end and name every section |
+| 7 | Handling | `item_type` | how it is held; gripped areas stay plain |
+| 8 | Contents and fill | note | for vessels: what is in it, how full, stopper type |
+| 9 | Colour | note, else **ask** | fear → deep garnet; poison → the palette's green |
+| 10 | Effect shown? | `## Properties` | a recorded effect may shape the design — **ask** how far |
+| 11 | Markings | note | labels and inscriptions are illegible; no readable letters |
+| 12 | Room mark | `found` | only if the room marks the object, else omit |
+| 13 | Set membership | neighbours | name the shared language explicitly |
+| 14 | Medium | fixed | painted rulebook plate, never photographic |
+| 15 | Framing | fixed | 1:1, object two thirds, **stone filling the frame edge to edge** |
+
+Row 15 earned its place on the first vial: it came back as a slate tile with
+a dark margin painted around it, while the crown and mace bled to the edges.
+Say "the stone fills the entire frame edge to edge" rather than trusting
+"centred on weathered grey-green stone".
+
+Rows marked **ask** are the whole of what the user needs to answer, and they
+can do it in one message. Everything else is already decided.
+
 ### The template: four layers, narrowing
 
 Build every prompt by cascading from the widest context to the narrowest:
@@ -165,9 +197,9 @@ the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone, filling about two thirds of the frame. Low raking
-lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
-clean, unlettered plate.
+weathered grey-green stone that fills the entire frame edge to edge, the
+object taking about two thirds of it. Low raking lamplight from the upper
+left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
 ```
 
 Say **the Cradle**, not "the vault". `03-Locations/Vault.md` is one specific
@@ -308,9 +340,9 @@ the tradition of a long-lost classical civilisation — hand-forged, cast and
 carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. Laid out as a catalogue plate — the object alone, centred on
-weathered grey-green stone, filling about two thirds of the frame. Low raking
-lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
-clean, unlettered plate.
+weathered grey-green stone that fills the entire frame edge to edge, the
+object taking about two thirds of it. Low raking lamplight from the upper
+left, one soft shadow beneath. Muted cold palette. A clean, unlettered plate.
 ```
 
 Aspect ratio 1:1, set with the control.
