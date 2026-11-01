@@ -641,6 +641,33 @@ effect, let it shape the design:
 This is where the vault stops deciding and taste begins, so it is the part to
 check with the user rather than settle alone.
 
+### State an effect as a position, not a property
+
+The strongest finding from the vials. An image model will reliably put a
+thing somewhere unexpected; it will not reliably give a thing an unusual
+quality.
+
+| Effect | Stated as | Result |
+|---|---|---|
+| Stopped Time | a bubble hanging motionless partway up | worked first time |
+| Reversed Gravity | liquid pooled against the underside of the seal, air below | worked first time |
+| Phasing, first try | the liquid "blurs slightly past the outline" | **failed** — it blurred the whole flask |
+| Phasing, second try | a crescent of liquid standing a few mm clear of the glass on the right | worked |
+
+Each success names an object and where it is. The failure named a quality of
+an edge, and "blur" leaked onto the entire vessel — the model had nowhere to
+put it, so it applied it everywhere.
+
+So when an item's effect needs showing, ask: **what would be in the wrong
+place if this were true?** Then say where that thing is. If the answer is
+genuinely a quality rather than a placement, consider leaving the effect out
+and letting the note carry it, rather than spending generations on it.
+
+Two supporting habits, both learned the same way: name the side or height
+explicitly ("on the right-hand side", "partway up"), and when an effect
+risks bleeding into the rendering, state the opposite for everything else —
+"render the flask tack-sharp, nothing about the vessel blurred or hazy".
+
 ### The user's visual vocabulary
 
 Established while making the Crown of Fear. These are conventions for this
