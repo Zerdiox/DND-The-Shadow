@@ -121,11 +121,31 @@ Three behaviours, all observed, all of which look like failure and are not:
 
   Look for it specifically before concluding anything:
 
+  Gemini words its failures differently each time, so match broadly and
+  check the tab title too — it becomes "Image Generation Error" on failure,
+  which is the single most reliable signal:
+
   ```js
-  [...document.querySelectorAll('span')]
-    .filter(e => /went wrong|try your request|limit|quota/i.test(e.textContent))
-    .map(e => e.textContent.trim())
+  ({
+    title: document.title,              // "Image Generation Error - Google Gemini"
+    errors: [...document.querySelectorAll('span,p,div')]
+      .filter(e => e.children.length === 0 &&
+        /went wrong|encountered an error|try again|try your request|unable|limit|quota/i
+          .test(e.textContent || ''))
+      .map(e => e.textContent.trim())
+      .filter(t => t.length < 160)
+  })
   ```
+
+  Wordings seen so far: *"Sorry, something went wrong. Please try your
+  request again."* and *"I encountered an error doing what you asked. Could
+  you try again?"* — a narrow regex built for the first one missed the
+  second entirely and reported a silent stall.
+
+  **Check whether the prompt appears twice** in the conversation while you
+  are there. One failure produced two submissions from a single click, the
+  first erroring and the second left empty. If a duplicate is in flight,
+  wait rather than sending a third.
 
   "Something went wrong" is transient and the retry it asks for is the right
   move. Only conclude the allowance is exhausted if a message actually says
@@ -640,6 +660,19 @@ effect, let it shape the design:
 
 This is where the vault stops deciding and taste begins, so it is the part to
 check with the user rather than settle alone.
+
+### Look at the silhouette before you send it
+
+Varying the glassware means inventing shapes, and shapes read as things. A
+twin-chambered flask — two identical rounded lobes side by side, conjoined,
+with a narrow neck rising between them — came back looking exactly like a
+scrotum, label across it like a waistband. It was funny; it was also a
+wasted generation and not something to put on a shared page.
+
+Before sending, picture the outline on its own and ask what else it
+resembles. **Duplicated forms stack vertically**, not side by side. Paired
+bulbs, paired spheres and anything symmetrical about a central seam want
+checking twice.
 
 ### State an effect as a position, not a property
 
