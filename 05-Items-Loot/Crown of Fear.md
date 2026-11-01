@@ -13,6 +13,7 @@ identified: true
 tags: [item, wondrous]
 ddb: https://www.dndbeyond.com/homebrew/creations/magic-items/12140241-crown-of-fear
 ddb_add: yes
+image: images/items/crown-of-fear.png
 ---
 
 ## Description

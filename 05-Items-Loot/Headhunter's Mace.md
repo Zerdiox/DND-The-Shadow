@@ -13,6 +13,7 @@ identified: true
 tags: [item, weapon]
 ddb: https://www.dndbeyond.com/homebrew/creations/magic-items/12140288-headhunters-mace
 ddb_add: yes
+image: images/items/headhunters-mace.png
 ---
 
 ## Description
