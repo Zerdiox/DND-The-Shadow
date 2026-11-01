@@ -16,7 +16,8 @@ ddb_add: yes
 ---
 
 ## Description
-An ornamental crown recovered from the [[Throne Room]].
+An ornamental gold crown recovered from the [[Throne Room]], where it stood
+with a matching throne and mace.
 
 ## Properties
 - When a creature sees the wearer, that creature must succeed on a DC 18 Wisdom
