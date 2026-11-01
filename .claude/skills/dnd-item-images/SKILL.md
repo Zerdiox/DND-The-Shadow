@@ -35,8 +35,11 @@ go stale faster than this file will.
 5. Show the user before downloading anything. Downloading is a real change to
    their disk, and a wasted generation is cheaper than an unwanted file.
 6. Save to `images/items/<slug>.png`, commit, push.
-7. Use the resulting `raw.githubusercontent.com` URL for the D&D Beyond avatar
-   and the archive page.
+7. Use the resulting `raw.githubusercontent.com` URL for the archive page. The
+   D&D Beyond avatar is a **file upload the user has to do** — open the edit
+   tab, expand the collapsed *Additional Information* section and scroll the
+   avatar field into view for them, then let them drag the file in. See the
+   homebrew skill's recipes; the URL is no use to that site.
 
 ### Step 3 in full: show the prompt, then wait
 
@@ -420,7 +423,7 @@ preference, so an item's `magical` value decides how it is depicted:
 
 | `magical` | Condition line |
 |---|---|
-| `true` | `The object itself is pristine and undimmed — no corrosion, no tarnish, no wear, crisp sharp detail, in contrast with the weathered stone it rests on.` |
+| `true` | `The object itself is pristine and undimmed — no corrosion, no tarnish, no wear, crisp sharp detail, in contrast with the aged surface it rests on.` |
 | `false` or `unknown` | `The object is aged and worn as found — tarnish, corrosion and pitting from long burial.` |
 
 This gives the set its logic: everything in the Cradle has been rotting for
@@ -501,7 +504,7 @@ Create an image of an ornamental crown, its decoration fine and clearly
 deliberate work.
 
 The object itself is pristine and undimmed — no corrosion, no tarnish, no wear,
-crisp sharp detail, in contrast with the weathered stone it rests on.
+crisp sharp detail, in contrast with the aged surface it rests on.
 
 Ornamental regalia workmanship, of a piece with a throne and a mace.
 
@@ -768,9 +771,13 @@ lints against a fixed list and flags anything outside it as
 `ddb_add`. Any further key needs adding there too — run `lint` and read the
 whole output before committing, rather than assuming it passed.
 
-For the D&D Beyond avatar, the item's edit page has an avatar field under
-Additional Information — see the homebrew skill, and
-`references/playwright-recipes.md` beside it for driving that site.
+For the D&D Beyond avatar, the item's edit page has the field in a collapsed
+*Additional Information* section. **The upload itself cannot be automated** —
+the extension bridge refuses to feed local files into a page. Expand the
+section and put the field on screen, and the user drags the file in.
+`references/playwright-recipes.md` in the homebrew skill has the selectors,
+the overlay that blocks ordinary clicks, and the query for checking afterwards
+that an avatar landed.
 
 ## Validate
 

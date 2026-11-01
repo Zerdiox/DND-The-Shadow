@@ -162,7 +162,14 @@ Create an image of <SUBJECT>, <MATERIAL DETAIL from the note>.
 
 | `magical` | Condition clause |
 |---|---|
-| `true` | `The object itself is pristine and undimmed — no corrosion, no tarnish, no wear, crisp sharp detail, in contrast with the weathered stone it rests on.` |
+| `true` | `The object itself is pristine and undimmed — no corrosion, no tarnish, no wear, crisp sharp detail, in contrast with the aged surface it rests on.` |
+
+**Keep that clause surface-neutral.** It used to end "in contrast with the
+weathered stone it rests on", which contradicts every `<SURFACE>` in the table
+that is not stone — a cupboard shelf, a chest interior, an iron lid, straw
+packing. The nine Alchemy Hall vials were generated with the stone wording
+while sitting on a wooden shelf. Layer 1 owns the surface; the condition
+clause must not name it.
 | `false` / `unknown` | `The object is aged and worn as found — tarnish, corrosion and pitting from long burial.` |
 
 Magical items do not age in D&D; that is a rule of the setting, so this clause
@@ -179,7 +186,7 @@ Create an image of an ornamental crown, its decoration fine and clearly
 deliberate work.
 
 The object itself is pristine and undimmed — no corrosion, no tarnish, no wear,
-crisp sharp detail, in contrast with the weathered stone it rests on.
+crisp sharp detail, in contrast with the aged surface it rests on.
 
 Ornamental regalia workmanship, of a piece with a throne and a mace.
 
