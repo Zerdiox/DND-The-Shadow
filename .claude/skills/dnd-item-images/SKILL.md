@@ -111,11 +111,26 @@ Three behaviours, all observed, all of which look like failure and are not:
 - **The JS click sometimes does not register at all.** Focus the composer and
   press Enter instead, which is safe because these prompts are a single
   paragraph with no newlines.
-- **A failed generation is silent.** The conversation is created and titled,
-  "Gemini said" appears with nothing after it, and no error is shown
-  anywhere. If no image has appeared after about 90 seconds and the reply is
-  empty, the generation failed — most likely the daily allowance. Stop and
-  tell the user rather than retrying; retries spend the same allowance.
+- **A failed generation looks silent but is not.** The conversation is
+  created and titled, and `innerText` shows "Gemini said" with nothing after
+  it — but there *is* an error on screen: *"Sorry, something went wrong.
+  Please try your request again."* It is split across three
+  `<span class="animating">` elements and rendered very low-contrast, so a
+  text scrape taken mid-animation misses it entirely and a glance at a
+  screenshot can too.
+
+  Look for it specifically before concluding anything:
+
+  ```js
+  [...document.querySelectorAll('span')]
+    .filter(e => /went wrong|try your request|limit|quota/i.test(e.textContent))
+    .map(e => e.textContent.trim())
+  ```
+
+  "Something went wrong" is transient and the retry it asks for is the right
+  move. Only conclude the allowance is exhausted if a message actually says
+  so. I got this wrong once — reported quota, with no evidence for it, when
+  the page was asking to be retried.
 
 Two things will waste your time:
 
