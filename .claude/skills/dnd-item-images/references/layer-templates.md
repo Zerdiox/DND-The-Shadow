@@ -116,10 +116,39 @@ call, 1 November 2026, and it matters because seven of the remaining items
 came out of the Vault — used verbatim, that is seven plates with one
 background. Stay in the room and change where in it the object sits: the
 corner where the boards meet the iron banding, the lid edge, against the
-chest wall. It also buys scale, which a thumb-sized object badly needs.
+chest wall.
 
 What must not vary is the room. A Vault item sits in a chest; moving it to a
 shelf to be interesting is layer 2 inventing provenance.
+
+### Small objects get a plain surface instead
+
+**The user's rule, 1 November 2026: only keep a simpler background for
+smaller items.** Roughly hand-sized or smaller takes bare weathered
+grey-green stone — the chamber floor, edge to edge, nothing built in it.
+Anything larger can carry the room's own surface from the table above.
+
+The reason is what the Tornado Prism cost: a thumb-sized object on an
+iron-bound chest makes the chest the most detailed thing in the frame, and
+it took two generations to get the box's geometry coherent before anyone
+could look at the prism. The user read the first attempt correctly — the
+near band floated at the wrong height and the far corner dropped out of the
+lid's plane — and that was two passes spent on scenery.
+
+A plain slab cannot be drawn wrong, and it is already the setting of the
+Crown of Fear and the Headhunter's Mace, so small items join an existing
+background rather than inventing another.
+
+Write it as what the setting is, never as removal:
+
+```
+a flat slab of weathered grey-green stone, the chamber floor, dry and
+faintly pitted with fine hairline cracks
+```
+
+The provenance is not lost, only moved: the note still records chest 11.
+That is the same division this layer already makes everywhere else —
+provenance in the note, residue on the object.
 
 The Crown of Fear and Headhunter's Mace were made before this rule and sit on
 weathered stone — which is the Throne Room's floor, so they already comply and
