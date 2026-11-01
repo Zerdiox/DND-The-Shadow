@@ -47,9 +47,15 @@ border, no hands, no people.
 **Supplies:** at most one short phrase describing a mark on the object's own
 surface, or its workmanship.
 
-**Never supplies:** the room, the scene, water, furniture, other objects,
-lighting or background. Layer 1 owns all of that. If a phrase could be read as
-*put this in the picture*, it is written wrongly.
+**May also supply:** one quiet background cue from the same room, if it suits
+the object — the Green Sword lying beside its puddle, say. Atmosphere is
+allowed, but only in the background, and only where it leaves the object
+itself untouched. The framing, lighting and palette from layer 1 still hold.
+
+**Never supplies:** a change to the object itself from where it sat, or a
+scene busy enough to compete with it. The test is whether the object would
+look identical with the cue removed. If it would not, the cue is doing too
+much.
 
 ### Write it as a property, never as a provenance
 
