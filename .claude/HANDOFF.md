@@ -263,3 +263,44 @@ discarded, so they are recorded here instead.
   English, so the names agree and the key is correctly absent. Seven other
   items still carry it, and any reconciliation matching note names against the
   live inventory must consult it or it will report false negatives.
+## Update — 1 November 2026, item images
+
+A new skill, `dnd-item-images`, generates item illustrations through the
+Gemini web app in the user's Chrome. The API is not used: they have no
+billing, and image generation is charged per image.
+
+**Two items are done.** `Crown of Fear` and `Headhunter's Mace`, both
+committed to `images/items/` and recorded on their notes under a new `image`
+key. Served publicly from the repo, so one file does for both destinations:
+
+```
+https://raw.githubusercontent.com/Zerdiox/DND-The-Shadow/main/images/items/crown-of-fear.png
+https://raw.githubusercontent.com/Zerdiox/DND-The-Shadow/main/images/items/headhunters-mace.png
+```
+
+**Next task: attach those two as D&D Beyond avatars.** The item edit page has
+an avatar field under Additional Information. This was deliberately left
+undone — it changes the user's account and they were not around to confirm
+it, and the Playwright recipes cover the character sheet rather than the
+homebrew edit pages, so that path is unmapped.
+
+**The prompt rules are the real output of the session.** All of them came
+from the user correcting a generated image, and they are in the skill:
+
+- four layers, narrowing — D&D, the Cradle, the room, the item — each adding
+  an attribute *of the object*, never a description of a place
+- magical items do not age; condition is keyed off the `magical` field
+- material follows function: a gold mace head is useless, so gold goes on
+  the haft
+- proportions as numbers, never comparatives — "noticeably longer" failed
+  twice, "70 cm, head the top fifth" worked at once
+- anatomy section by section, end to end; "the grip is wrapped" got the
+  whole haft wrapped
+- fear reads deep garnet red, cruelty reads jagged — the user's vocabulary
+- painted rulebook illustration, not photorealism
+- refine details in the same thread; change the medium with a fresh prompt
+- ask the user before generating, not after — quota is scarce and unknown
+
+The Crown took six generations and the mace four, nearly all of it
+discovering those rules. With them in the first prompt, expect one or two per
+item. Twenty-two items remain.
