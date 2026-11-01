@@ -161,8 +161,10 @@ The page's other search boxes are `type="search"`, so they do not interleave.
 Tested 1 November 2026 and it does not work. Record of the dead end so
 nobody spends the time again.
 
-The homebrew item edit page is at `<item url>/edit` and carries two hidden
-file inputs under Additional Information:
+The homebrew item edit page is at `<item url>/edit`. It is a single long
+form with no sectioning — the only headings on the page are the item name
+and the unrelated source Filters widget. The two avatar inputs sit near the
+bottom, after Weight, Notes and the Charges block, and they are hidden:
 
 | Field | Selector |
 |---|---|
@@ -190,9 +192,12 @@ worked around.
 If a chooser has been opened, close it with `browser_file_upload` and an
 empty `paths` array, or the page is left with a modal pending.
 
+The form is saved with `button[type="submit"]:has-text("Save Changes")`.
+
 **So avatars are the user's job.** The files sit in `images/items/`; they
 upload them by hand on each item's edit page. Offer the list of item URLs
-and matching filenames rather than attempting it.
+and matching filenames rather than attempting it — or open the edit pages as
+tabs with `browser_tabs` `new`, which is the one part of this that helps.
 
 ## Selector reference
 

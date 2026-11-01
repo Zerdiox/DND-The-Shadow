@@ -6,11 +6,16 @@ Playwright extension bridge refuses to feed local files into a page
 (`DOM.setFileInputFiles` → `Not allowed`). The reasoning is in
 `skills/dndbeyond-homebrew/references/playwright-recipes.md`.
 
-So it is a dozen manual uploads. For each row: open the edit link, scroll to
-**Additional Information**, and set **Avatar** to the file. There is a second
-field, **Large Avatar**; the same file works for both.
+So it is a dozen manual uploads. The edit page is one long form with no
+section headings — **Avatar** and **Large Avatar** are near the bottom, after
+Weight, Notes and the Charges block. The same file works for both. Then
+**Save Changes** at the end of the form.
 
 The files are in `images/items/` at the vault root.
+
+The tabs open left to right in exactly the order of this table, which is also
+the order the files sort by name in Explorer — so the leftmost tab takes the
+topmost file and you can work straight down both.
 
 | Item on D&D Beyond | File | Edit page |
 |---|---|---|
