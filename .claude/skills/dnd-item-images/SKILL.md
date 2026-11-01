@@ -26,14 +26,43 @@ go stale faster than this file will.
 
 ## The loop
 
-1. Read the item note: `python .claude/tools/vault.py get "<item>"`.
-2. Build the prompt (see below).
-3. Generate in Gemini: tools menu → **Create image**.
-4. Show the user before downloading anything. Downloading is a real change to
-   their disk and a wasted generation is cheaper than an unwanted file.
-5. Save to `images/items/<slug>.png`, commit, push.
-6. Use the resulting `raw.githubusercontent.com` URL for the D&D Beyond avatar
+1. Read the item note: `python .claude/tools/vault.py get "<item>"`, and the
+   note of the room it was found in.
+2. Assemble the prompt from the four layers.
+3. **Ask before generating, not after.** Aim for one generation per item.
+4. Generate at <https://gemini.google.com/images>, aspect ratio 1:1.
+5. Show the user before downloading anything. Downloading is a real change to
+   their disk, and a wasted generation is cheaper than an unwanted file.
+6. Save to `images/items/<slug>.png`, commit, push.
+7. Use the resulting `raw.githubusercontent.com` URL for the D&D Beyond avatar
    and the archive page.
+
+### Step 3 in full: ask, do not iterate
+
+Refining an image in four passes looks like craft and is mostly waste. Every
+pass the Crown of Fear needed was a *rule* being discovered — magical items do
+not age, fear reads red, cruelty reads jagged — and those are written down now.
+They apply automatically to the next item.
+
+What stays genuinely open per item is small, and the user can answer it in a
+sentence:
+
+- **What does it actually look like?** Most notes give one clause. "An
+  ornamental crown" left the material, period and form to be guessed, and the
+  first attempt guessed all three wrong. Asking "what's it made of?" cost one
+  message and settled it.
+- **Should its effect show, and how?** A recorded effect may shape the design,
+  but how much is taste. Ask.
+- **Is there anything from the room worth carrying over?** Only if the room
+  earns it.
+
+Put the assembled prompt in front of the user with those questions attached,
+then generate once. A question costs nothing; a generation comes out of a
+daily allowance nobody can see the size of.
+
+When a correction does arrive, decide whether it is general or specific. "Fear
+reads red" belongs in the skill; "this particular crown has a dent" belongs in
+the note. Rules go in the skill so no item needs them discovered twice.
 
 Because the repository is public, one committed file serves both destinations
 and there is no second copy to keep in sync. That is the whole reason for
