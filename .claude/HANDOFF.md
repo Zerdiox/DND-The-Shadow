@@ -339,4 +339,15 @@ alternative, and `DOM.setFileInputFiles` returns `Not allowed` over the
 Playwright extension bridge — a security boundary of `--extension` mode, not
 a selector problem. Written up in
 `.claude/skills/dndbeyond-homebrew/references/playwright-recipes.md`; do not
-retry it. The by-hand checklist is `.claude/AVATAR-UPLOAD.md`.
+retry it.
+
+**All twelve avatars are up, uploaded by the user and verified** — both
+Avatar and Large Avatar on every item, 24 distinct files on D&D Beyond.
+`.claude/AVATAR-UPLOAD.md` did its job and is deleted; `git log` has it.
+
+What to do for the remaining items, which the user asked for by name: open
+each edit tab, **expand the collapsed *Additional Information* section and
+scroll the avatar field into view**, so they only have to drag the file in.
+`browser_click` cannot do the expanding — an invisible full-viewport
+`div.site-overlay` eats every click — so call the header's own `click()`.
+Recipe and verification query are in the recipes file.

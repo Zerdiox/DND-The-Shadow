@@ -156,24 +156,46 @@ In DOM order within an open panel the fields are Cost Override, Weight
 Override, **Name**, **Notes**, **Description** (the only `textarea`), Quantity.
 The page's other search boxes are `type="search"`, so they do not interleave.
 
-## Item avatars cannot be uploaded from here
+## Item avatars — the upload is the user's, the setup is yours
 
-Tested 1 November 2026 and it does not work. Record of the dead end so
-nobody spends the time again.
+Tested 1 November 2026. The file cannot be put into the page from here, but
+everything up to the drop is worth doing for them. Twelve items were
+uploaded this way and verified.
 
-The homebrew item edit page is at `<item url>/edit`. It is a single long
-form with no sectioning — the only headings on the page are the item name
-and the unrelated source Filters widget. The two avatar inputs sit near the
-bottom, after Weight, Notes and the Charges block, and they are hidden:
+The homebrew item edit page is at `<item url>/edit`. The avatar fields live
+in a **collapsed** section headed *Additional Information* — the field groups
+are served with class `hide` and are expanded by the page's own jQuery
+(`Waterdeep.ShowMore.handleExpansion`), so a heading scan of the loaded page
+finds nothing and the inputs read as hidden. Expand it first:
+
+```
+browser_evaluate  () => document
+                      .querySelector('.ddb-homebrew-create-header-additional')
+                      .click()
+```
+
+**`browser_click` will not do this.** The page carries a full-viewport
+`div.site-overlay` — opacity 0, `pointer-events: auto`, z-index 99999 — that
+swallows every click, so Playwright waits for a stable, clickable element and
+times out after 5 s. Calling the element's own `click()` runs the bound
+jQuery handler and sidesteps the overlay. This is a UI toggle, nothing
+destructive, which is why evaluate is acceptable here.
+
+With the section open, the two fields are real visible inputs (~550 × 21):
 
 | Field | Selector |
 |---|---|
 | Avatar | `#field-avatar` |
 | Large Avatar | `#field-large-avatar` |
 
-Both are `input[type="file"]`, zero-size but enabled, and **D&D Beyond takes
-an uploaded file — there is no URL field.** So a public image URL is no help
-here, however convenient it is for the archive page.
+`a.scrollIntoView({block: 'center'})` afterwards puts them on screen. **Doing
+exactly this is the useful service to offer**: tabs open, section expanded,
+field in view, so the user can drag a file straight onto it. The user asked
+for it by name on 1 November 2026 after uploading the first twelve by hand.
+
+Both are `input[type="file"]`, and **D&D Beyond takes an uploaded file —
+there is no URL field.** So a public image URL is no help here, however
+convenient it is for the archive page.
 
 Clicking the input with `element.click()` does raise a file chooser, and
 Playwright intercepts it properly — no native dialog appears on the user's
@@ -193,6 +215,25 @@ If a chooser has been opened, close it with `browser_file_upload` and an
 empty `paths` array, or the page is left with a modal pending.
 
 The form is saved with `button[type="submit"]:has-text("Save Changes")`.
+
+### Checking afterwards whether an avatar landed
+
+Twelve page loads is slow and screenshots time out on this site. Fetch the
+edit pages same-origin from any D&D Beyond tab instead and read the two
+`<img>` tags the server renders beside each input:
+
+```js
+const r = await fetch(`/homebrew/creations/magic-items/${slug}/edit`,
+                      { credentials: 'same-origin' });
+const t = await r.text();
+[...t.matchAll(/class=['"]listing-(large-)?avatar['"]\s+src=['"]([^'"]+)['"]/g)]
+```
+
+An item with no avatar renders no such tag, so two hits means both fields are
+set. **Keep the quotes in that pattern permissive.** The server emits
+`class='listing-avatar'` with single quotes while the live DOM serialises to
+double, so a double-quoted pattern silently returns nothing for every item
+and looks exactly like twelve failed uploads. That misread happened here.
 
 **So avatars are the user's job.** The files sit in `images/items/`; they
 upload them by hand on each item's edit page. Offer the list of item URLs
