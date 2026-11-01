@@ -326,13 +326,21 @@ user asked for a shorter chain; that prompt was sent and refused by the quota.
 **Resume by re-sending it in that thread:** larger links, a single loose
 S-curve instead of coils, both ends in frame.
 
-**Nine items still unillustrated**, with prompts already reviewed and agreed
-with the user: Clay Mapmaker, Extending Halberd, Heartseeker Dagger, Mud
-Grenades, Radiant Gemstone, Vantablack Coin, White Pearl, Wrinkled Prune, and
-the Chain above. The item-specific text for each is in this session; what was
-never put in front of the user is the Heartseeker's garnet heart gem, the
-halberd's masterwork condition line, the Mapmaker's dish form, and four
-material-specific worn clauses. **Show those before sending them.**
+**Nine items still unillustrated, and their prompts are written out in
+[`.claude/BATCH-2-PROMPTS.md`](BATCH-2-PROMPTS.md)** — ready to send, with the
+Chain's resume prompt first. Clay Mapmaker, Extending Halberd, Heartseeker
+Dagger, Mud Grenades, Radiant Gemstone, Vantablack Coin, White Pearl,
+Wrinkled Prune, Chain of 24 Links.
+
+Four pieces of wording in that file were agreed in substance but **never
+shown to the user**: the Heartseeker's garnet heart gem, the halberd's
+masterwork condition line, the Mapmaker's dish form, and the material-specific
+worn clauses. They are marked UNSEEN in the file. Show them before sending —
+the standing rule is that the user reads every prompt first.
+
+One question is deliberately left open there: the Clay Mapmaker was repaired
+with *mending*, which leaves no trace, so a seamless dish is correct, but
+faint repair lines would tell the story better. Ask; do not decide it alone.
 
 **Avatars pending upload** for the Tornado Prisms and the Red Lanterns; the
 Bottled Silver Tear is already done. The user wants one upload run at the end

@@ -38,7 +38,8 @@ carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. The object alone and centred, filling about two thirds of the
 frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
-soft shadow beneath. The setting fills the frame edge to edge with no border
+soft shadow beneath, spreading to the lower right. The setting fills the
+frame edge to edge with no border
 or margin, held shallow and quiet so the object stays the subject. Restrained,
 desaturated colour throughout, the setting keeping whatever hue it naturally
 has. A clean, unlettered plate.
@@ -203,6 +204,12 @@ write a phrase only if it passes — as a surface or a workmanship, never as a
 place. Do not invent detail the note lacks, and do not add a room for
 completeness.
 
+**Why the shadow direction is spelled out.** The block already said the lamp
+was upper left, and the Tornado Prism still came back lit from the right with
+its shadow to the lower left, after a refinement rebuilt the background. A
+relit scene is easy to miss and breaks the set, so the block now names where
+the shadow falls as well as where the light comes from.
+
 ## Layer 3 — `Item` (one per note)
 
 **Supplies:** the subject noun, its materials as the note gives them, and a
@@ -223,14 +230,39 @@ Create an image of <SUBJECT>, <MATERIAL DETAIL from the note>.
 | `magical` | Condition clause |
 |---|---|
 | `true` | `The object itself is pristine and undimmed — no corrosion, no tarnish, no wear, crisp sharp detail, in contrast with the aged surface it rests on.` |
-
-**Keep that clause surface-neutral.** It used to end "in contrast with the
-weathered stone it rests on", which contradicts every `<SURFACE>` in the table
-that is not stone — a cupboard shelf, a chest interior, an iron lid, straw
-packing. The nine Alchemy Hall vials were generated with the stone wording
-while sitting on a wooden shelf. Layer 1 owns the surface; the condition
-clause must not name it.
 | `false` / `unknown` | `The object is aged and worn as found — tarnish, corrosion and pitting from long burial.` |
+
+**Keep the pristine clause surface-neutral.** It used to end "in contrast with
+the weathered stone it rests on", which contradicts every `<SURFACE>` in the
+table that is not stone — a cupboard shelf, a chest interior, an iron lid,
+straw packing. The nine Alchemy Hall vials were generated with the stone
+wording while sitting on a wooden shelf. Layer 1 owns the surface; the
+condition clause must not name it.
+
+**And the worn clause must suit the material.** The user's rule, 1 November
+2026. "Tarnish, corrosion and pitting" is how metal ages, and it is wrong for
+most of what is left in this hoard: a pearl does not corrode, a dried organ
+does not tarnish, and a coin that absorbs light cannot show tarnish without
+contradicting the one thing it does. Keep the shape of the sentence and
+change how that material ages.
+
+| Material | Worn clause |
+|---|---|
+| metal, glass, wood | `aged and worn as found — tarnish, corrosion and pitting from long burial` |
+| pearl, shell | `worn as found — its lustre dulled and its surface faintly scuffed by long burial, though the pearl itself is sound` |
+| dried organic matter | `dried and shrunken as found — its surface leathery, deeply wrinkled and dull, darkened by long burial` |
+| cut stone, gems | `worn as found — the stone itself unchipped and clear, its facets filmed with fine dust from long burial` |
+| a light-absorbing surface | `worn as found — its rim rubbed smooth with handling and age, its face unmarked` |
+
+**Masterwork overrides all of it.** Also the user's rule: masterwork means
+made by a master, so the item carries only minimal wear whatever `magical`
+says. The Extending Halberd is `magical: unknown` and still takes:
+
+```
+The object shows only the minimal wear of a master's work — the forging still
+crisp and true, the edges clean, with no more than a faint dulling of the
+metal.
+```
 
 Magical items do not age in D&D; that is a rule of the setting, so this clause
 is not optional and not a matter of taste. Pristine is not glowing.
@@ -256,7 +288,8 @@ carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. The object alone and centred, filling about two thirds of the
 frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
-soft shadow beneath. The setting fills the frame edge to edge with no border
+soft shadow beneath, spreading to the lower right. The setting fills the
+frame edge to edge with no border
 or margin, held shallow and quiet so the object stays the subject. Restrained,
 desaturated colour throughout, the setting keeping whatever hue it naturally
 has. A clean, unlettered plate.

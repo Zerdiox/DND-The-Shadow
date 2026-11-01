@@ -224,6 +224,30 @@ Three behaviours, all observed, all of which look like failure and are not:
   Check `document.hidden` before diagnosing anything else. A hidden tab
   explains a stalled send far more often than a broken selector does.
 
+- **A hidden tab does not queue the keypress, it drops it.** Measured on
+  1 November 2026, and it refines the "deferred send" picture above. Enter
+  pressed while `visibilityState` was `hidden` did nothing at all: no
+  conversation, no navigation, and the full 1197-character prompt still
+  sitting in the composer twenty seconds later with the tab visible again.
+  Pressing Enter once more sent it instantly.
+
+  **The composer is the tell, and it is reliable.** A send that is in flight
+  empties the composer; a send that was dropped leaves the text in place. So
+  before worrying about whether a resend will double-fire, read the composer:
+
+  ```js
+  ({ url: location.href,
+     composerLen: document.querySelector('div.ql-editor[contenteditable="true"]')
+                    .innerText.trim().length })
+  ```
+
+  Text still there and the URL still `/images` means nothing was sent and a
+  resend is safe. An empty composer, or a URL of `/app/<id>`, means it went —
+  wait, do not resend.
+
+  Check visibility immediately *before* pressing Enter rather than after
+  typing, since the user often switches away while reading a prompt.
+
 - **The delay can run to several minutes.** This is the one that fooled me
   twice in a row. After the "something went wrong" error, four send
   mechanisms in a row appeared to do nothing — `element.click()`,
@@ -370,7 +394,8 @@ carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. The object alone and centred, filling about two thirds of the
 frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
-soft shadow beneath. The setting fills the frame edge to edge with no border
+soft shadow beneath, spreading to the lower right. The setting fills the
+frame edge to edge with no border
 or margin, held shallow and quiet so the object stays the subject. Restrained,
 desaturated colour throughout, the setting keeping whatever hue it naturally
 has. A clean, unlettered plate.
@@ -449,6 +474,13 @@ preference, so an item's `magical` value decides how it is depicted:
 |---|---|
 | `true` | `The object itself is pristine and undimmed — no corrosion, no tarnish, no wear, crisp sharp detail, in contrast with the aged surface it rests on.` |
 | `false` or `unknown` | `The object is aged and worn as found — tarnish, corrosion and pitting from long burial.` |
+
+**That worn clause is for metal, glass and wood.** It must suit the material:
+a pearl does not corrode, a dried organ does not tarnish, and a coin that
+absorbs light cannot show tarnish without contradicting itself. **Masterwork
+overrides it entirely** — made by a master means minimal wear, whatever
+`magical` says. Both are the user's rules of 1 November 2026, and
+`references/layer-templates.md` has the per-material wordings.
 
 This gives the set its logic: everything in the Cradle has been rotting for
 centuries except the things that cannot. A magical item that looks excavated is
@@ -538,7 +570,8 @@ carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
 painting with visible brushwork, confident edges and painterly texture
 throughout. The object alone and centred, filling about two thirds of the
 frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
-soft shadow beneath. The setting fills the frame edge to edge with no border
+soft shadow beneath, spreading to the lower right. The setting fills the
+frame edge to edge with no border
 or margin, held shallow and quiet so the object stays the subject. Restrained,
 desaturated colour throughout, the setting keeping whatever hue it naturally
 has. A clean, unlettered plate.
@@ -719,6 +752,36 @@ effect, let it shape the design:
 
 This is where the vault stops deciding and taste begins, so it is the part to
 check with the user rather than settle alone.
+
+### A plainly described object comes back as catalogue hardware
+
+The Chain of 24 Links was prompted as "a loose coil of heavy dark iron chain,
+its links oval and each about 4 cm long, dark and smooth with a low sheen".
+That is an accurate reading of the note and it produced builder's-merchant
+chain: identical stamped-looking links in a flat coil, nothing hand-made
+about it. The user's verdict was "a bit basic", and it also quietly broke
+layer 0, which says nothing in this world is machined.
+
+Two fixes, and the first is not optional:
+
+- **Say the forge work shows.** Each piece individually drawn and hammered,
+  facets catching the light, welds visible, pieces close but not identical.
+  Uniformity is the giveaway of a modern object.
+- **Read the effect into the form.** The chain casts *Evard's Black
+  Tentacles*, so its links were re-forged as coiling tentacles each gripping
+  the next. That is the same move as the serpents on the Crown of Fear:
+  working a recorded property into the shape, not inventing one.
+
+So when an item is a plain functional thing — a chain, a ball, a coin, a
+dish — the note alone will not carry a plate. Ask what it *does* and let that
+shape it, and check the result against layer 0 for uniformity.
+
+**Detail needs room to read.** The tentacle forging only survived at the two
+ends of that chain, because the full length coils three times and the inner
+links are too small to show anything. The user's fix was the right one: make
+the object read shorter and larger — fewer coils, bigger links — rather than
+asking harder for detail that has nowhere to appear. Any object that folds,
+coils or repeats has this problem.
 
 ### Look at the silhouette before you send it
 
