@@ -413,6 +413,29 @@ Then set the aspect ratio to **1:1** with the control in the composer rather
 than asking for square framing in words — it is a real setting, and words are
 a guess.
 
+**It resets on every new conversation.** Going back to `/images` for the next
+item leaves the control reading plain "Aspect ratio" with no `aria-label`, so
+set it again per item and confirm the label reads `Aspect ratio, 1:1` before
+sending. Nothing on screen complains if you forget; the plate just comes back
+the wrong shape and the generation is spent. Within one thread it holds, so a
+refinement needs no reset.
+
+Setting it takes two clicks, both through `browser_evaluate`:
+
+```js
+// 1. open the menu
+[...document.querySelectorAll('button')]
+  .find(e => e.innerText.trim() === 'Aspect ratio').click();
+// 2. choose 1:1 — note the role, it is NOT menuitem
+[...document.querySelectorAll('.gem-menu-item-label')]
+  .find(e => e.textContent.trim() === '1:1')
+  .closest('[role="menuitemradio"]').click();
+```
+
+Read `aria-checked` back in a *later* call, not the one that clicks: Angular
+has not updated it yet in the same tick, and it reports `false` on a click
+that worked.
+
 Assemble as: layer 3, then layer 2's clause, then the fixed layer 0+1 block
 verbatim at the end.
 

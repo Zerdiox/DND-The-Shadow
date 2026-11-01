@@ -111,6 +111,16 @@ Every item needs one. Taken from the room's note in `03-Locations/`.
 For a room not listed, read its note and write one in the same register: a
 surface plus at most one thing behind it. Keep it to a clause.
 
+**Vary the detail a little between items from the same room.** The user's
+call, 1 November 2026, and it matters because seven of the remaining items
+came out of the Vault — used verbatim, that is seven plates with one
+background. Stay in the room and change where in it the object sits: the
+corner where the boards meet the iron banding, the lid edge, against the
+chest wall. It also buys scale, which a thumb-sized object badly needs.
+
+What must not vary is the room. A Vault item sits in a chest; moving it to a
+shelf to be interesting is layer 2 inventing provenance.
+
 The Crown of Fear and Headhunter's Mace were made before this rule and sit on
 weathered stone — which is the Throne Room's floor, so they already comply and
 need no reworking.
