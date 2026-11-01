@@ -14,6 +14,7 @@ tags: [item, potion]
 ddb: https://www.dndbeyond.com/homebrew/creations/magic-items/12140447-potion-of-growth-cradle
 ddb_name: Potion of Growth (Cradle)
 ddb_add: yes
+image: images/items/potion-of-growth.png
 ---
 
 ## Description
