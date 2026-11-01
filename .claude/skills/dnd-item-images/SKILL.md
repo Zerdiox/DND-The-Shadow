@@ -310,6 +310,7 @@ so only the **ask** rows cost the user anything.
 | 14 | Set membership | neighbours | name the shared language explicitly |
 | 15 | Medium | fixed | painted rulebook plate, never photographic |
 | 16 | Framing | fixed | 1:1, object two thirds, setting edge to edge with no border |
+| 17 | Count | `quantity` | one object, unless the item is itself plural — see below |
 
 Row 12 is the one that tells a small story: a cupboard shelf, a cold floor,
 bare earth, an iron chest lid. The surface varies per item deliberately — what
@@ -644,6 +645,26 @@ a ground-glass stopper instead of cork, or a wire-and-lever seal.
 
 Walk the anatomy of *this* vessel, however many parts that turns out to be.
 The rule was always "name every section end to end", never "name five".
+
+### Always illustrate one, however many were found
+
+`quantity` counts **how many were recovered, not what the subject is.** Four
+Mud Grenades are four copies of one item; two Tornado Prisms are two copies of
+one item; the nineteen vials were nineteen separate items. Each gets a plate
+of a single object, and the count lives in the note where it belongs.
+
+The exception is an object that is **inherently plural** — a pair of gloves, a
+pair of boots, a set of dice. There the item *is* the pair, and the plate shows
+the pair. The test is whether one of them alone would still be the item: one
+glove is half a thing, one grenade is a grenade.
+
+The user's rule, 1 November 2026, and it settles the question for the whole
+batch rather than item by item. It also matches what they said about the Poison
+Vials — "just one" — so there is no need to ask again per item.
+
+Set the `quantity` into the item note, never into the frame. A plate with four
+balls on it also wrecks the framing rule: the object is supposed to fill two
+thirds of a 1:1 frame, and four of anything cannot.
 
 ### Matching a set
 
