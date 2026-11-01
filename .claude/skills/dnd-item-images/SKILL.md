@@ -359,6 +359,41 @@ Apply the same reasoning to the Extending Halberd, the Heartseeker Dagger and
 the Claw Knives. Edges and striking surfaces are hard metal; gold, silver and
 stones are decoration on the parts that are held rather than used.
 
+### Say how it is held and used
+
+Proportion is where these images go wrong most quietly, and the fix is to
+describe the object's function rather than only its appearance. "An ornamental
+mace" says nothing about size, so the first attempt produced something
+sceptre-short, with inlay running the whole length of the haft.
+
+State what the thing has to accommodate:
+
+- **How it is held.** One hand or two, and therefore how long the grip is.
+  A one-handed mace needs a full grip with room to spare, and the head sized
+  to be swung one-handed.
+- **Where hands go, decoration does not.** A grip is plain or wrapped, because
+  gold filigree under a closing fist is uncomfortable and wears away.
+  Ornament belongs above the grip and around the pommel.
+- **What it holds, pours or carries,** for vessels: a potion needs a stopper
+  and a volume that looks drinkable; a lantern needs a way to hang.
+- **What it weighs.** Balance shows. A weapon that reads as weightless looks
+  like a prop.
+
+The vault rarely states any of this, but it follows from `item_type` plus
+common sense — and it is exactly the kind of thing to put to the user in the
+pre-generation questions, since they have handled the thing at the table.
+
+**Give proportions as numbers, never as comparatives.** "The haft should be
+noticeably longer" produced a haft two and a half head-lengths long, then
+stayed there when asked again. "The whole mace is about 70 cm; the head takes
+the top fifth and the haft the remaining four fifths" is actionable, because
+it can be measured rather than judged.
+
+Say it as a ratio between parts, a real-world dimension, or both. This is
+worth getting into the first prompt for anything with a handle, a blade or a
+stem, because proportion is the one error that survives repeated vague
+correction.
+
 ### Matching a set
 
 When several items come from one place and one maker, say so in the prompt and
