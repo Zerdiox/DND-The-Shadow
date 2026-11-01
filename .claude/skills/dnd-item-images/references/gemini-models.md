@@ -45,16 +45,47 @@ alone.
 
 ## Quotas
 
-Unknown and variable, deliberately. Google does not publish a fixed figure for
-the app, and third-party sources disagree by an order of magnitude — 20 a day,
-100 a day, "depends on load, refreshes every five hours with a weekly cap".
-One frequently repeated claim is that free accounts get roughly two
-Pro-quality images per day before falling back to the standard model, which
-would make the first generations of a session the valuable ones. **None of
-this was verified here**, because verifying it means spending the quota.
+**There is a usage page, and it is exact: <https://gemini.google.com/usage>.**
+Found on 1 November 2026 when the account hit the wall mid-batch. Read it
+instead of guessing — guessing quota is a mistake this skill has already
+recorded once.
 
-The practical consequence: plan a handful of items per sitting, do the
-showpieces first, and expect to stop early rather than finishing a batch.
+It shows two bars and the reset time for each:
+
+```
+Current usage   100% used   Resets at 23:06
+Weekly limit      9% used   Resets on 2 Nov at 21:06
+```
+
+Two things follow. **The short window is what binds**, not the weekly one —
+at exhaustion the weekly bar was still at 9%, so the account is limited by a
+roughly daily cycle and the week will never be the problem at this pace. And
+the reset is an absolute clock time, so the wait is knowable: say so rather
+than telling the user it is indefinite.
+
+What it cost to get there on 1 November 2026: nine vial images earlier in the
+day, then eight more in the evening — two for the Bottled Silver Tear, three
+for the Tornado Prisms, one for the Red Lanterns, two for the Chain — and the
+next request was refused. So **on the order of fifteen to twenty generations
+exhausts a day**, with the caveat that the window rolls and the vials may
+have partly aged out of it. Treat that as the planning figure until the page
+says otherwise.
+
+How exhaustion presents, so it is recognised rather than diagnosed:
+
+- The composer sends normally and the conversation is created.
+- No image arrives, and the reply reads *"I can create more images as soon as
+  your limit resets. Check your usage in Settings."*
+- The tab may navigate itself to `/usage`.
+
+**That refusal still spends the request.** The Chain's third prompt returned
+nothing and is gone. When a run is near the limit, check `/usage` before
+sending rather than after.
+
+The older guidance still holds: do the showpieces first, and expect to stop
+early rather than finish a batch. The claim that free accounts get roughly
+two Pro-quality images per day before falling back to the standard model
+remains **unverified** — the usage page does not break usage down by model.
 
 ## Why not the API
 

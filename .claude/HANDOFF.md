@@ -305,6 +305,49 @@ The Crown took six generations and the mace four, nearly all of it
 discovering those rules. With them in the first prompt, expect one or two per
 item. Twenty-two items remain.
 
+## Update — 1 November 2026, second batch, stopped by the quota
+
+**Fifteen items are illustrated.** The twelve from the first batch, plus the
+Bottled Silver Tear, the Tornado Prisms and the Red Lanterns. All committed
+with their `image:` keys set and pushed.
+
+**Stopped at 21:32 on the daily Gemini limit**, which resets at 23:06. The
+usage page at <https://gemini.google.com/usage> is exact and new to the
+skill — read it rather than inferring, and note the refusal still spends the
+request.
+
+**Where the Chain of 24 Links got to.** Thread
+`gemini.google.com/app/b6e0554111b38135`, two images in it. A plain dark iron
+chain came back as catalogue hardware, so the links were re-forged as coiling
+tentacles — a design read from its *Evard's Black Tentacles* casting, the same
+move as the serpents on the Crown. The tentacles only took at the two ends
+because the chain coils three times and the interior links are too small. The
+user asked for a shorter chain; that prompt was sent and refused by the quota.
+**Resume by re-sending it in that thread:** larger links, a single loose
+S-curve instead of coils, both ends in frame.
+
+**Nine items still unillustrated**, with prompts already reviewed and agreed
+with the user: Clay Mapmaker, Extending Halberd, Heartseeker Dagger, Mud
+Grenades, Radiant Gemstone, Vantablack Coin, White Pearl, Wrinkled Prune, and
+the Chain above. The item-specific text for each is in this session; what was
+never put in front of the user is the Heartseeker's garnet heart gem, the
+halberd's masterwork condition line, the Mapmaker's dish form, and four
+material-specific worn clauses. **Show those before sending them.**
+
+**Avatars pending upload** for the Tornado Prisms and the Red Lanterns; the
+Bottled Silver Tear is already done. The user wants one upload run at the end
+of the whole batch rather than per item.
+
+**Rules the user set this session**, all committed:
+
+- Always illustrate one object, whatever `quantity` says, unless the item is
+  inherently plural like a pair of gloves.
+- Small items get bare stone; large items may show their room, and the
+  armoury interior behind the lantern is wanted, not a layer-2 failure.
+- Vary the surface detail between items from the same room.
+- The worn clause must suit the material — a pearl does not corrode.
+- Masterwork means minimal wear, not age.
+
 ## Update — 1 November 2026, the vials and the avatar dead end
 
 **Twelve items are illustrated**, all in `images/items/`, each recorded in its
