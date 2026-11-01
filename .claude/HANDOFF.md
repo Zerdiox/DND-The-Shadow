@@ -304,3 +304,39 @@ from the user correcting a generated image, and they are in the skill:
 The Crown took six generations and the mace four, nearly all of it
 discovering those rules. With them in the first prompt, expect one or two per
 item. Twenty-two items remain.
+
+## Update — 1 November 2026, the vials and the avatar dead end
+
+**Twelve items are illustrated**, all in `images/items/`, each recorded in its
+note's `image:` key: the Crown of Fear, the Headhunter's Mace, the Poison
+Vials, and the nine identified potions from the Alchemy Hall cupboard. Twelve
+homebrew one-offs are still unillustrated — Bottled Silver Tear, Chain of 24
+Links, Clay Mapmaker, Extending Halberd, Heartseeker Dagger, Mud Grenades,
+Radiant Gemstone, Red Lanterns, Tornado Prisms, Vantablack Coin, White Pearl,
+Wrinkled Prune.
+
+**The prompt rule the user asked for by name**: *they see every prompt before
+it is sent.* Not a courtesy — it is in the skill as a hard step. Generations
+are scarce and most of the corrections above came from them reading a prompt,
+so do not send one unseen however obvious it looks.
+
+Two more rules the vials produced, both in the skill:
+
+- **Put the idea in the vessel, not in the liquid.** A double-gourd flask for
+  the extra action, a riveted iron sleeve for invulnerability — both landed
+  first try, where describing the effect as a property of the fluid did not.
+- **State an effect as a position, not a property.** "Blurs past the outline"
+  softened the whole flask; "a crescent standing clear of the glass" worked.
+
+**Chrome throttles the Gemini tab when it is not focused.** The user spotted
+it; `visibilityState` confirmed it. Spoofing visibility is a measured dead
+end — 92 s to create the conversation versus instant with real focus. The tab
+has to actually be in front.
+
+**D&D Beyond avatars cannot be uploaded from here.** The edit page's
+`#field-avatar` and `#field-large-avatar` are file inputs with no URL
+alternative, and `DOM.setFileInputFiles` returns `Not allowed` over the
+Playwright extension bridge — a security boundary of `--extension` mode, not
+a selector problem. Written up in
+`.claude/skills/dndbeyond-homebrew/references/playwright-recipes.md`; do not
+retry it. The by-hand checklist is `.claude/AVATAR-UPLOAD.md`.

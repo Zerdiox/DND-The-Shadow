@@ -156,6 +156,44 @@ In DOM order within an open panel the fields are Cost Override, Weight
 Override, **Name**, **Notes**, **Description** (the only `textarea`), Quantity.
 The page's other search boxes are `type="search"`, so they do not interleave.
 
+## Item avatars cannot be uploaded from here
+
+Tested 1 November 2026 and it does not work. Record of the dead end so
+nobody spends the time again.
+
+The homebrew item edit page is at `<item url>/edit` and carries two hidden
+file inputs under Additional Information:
+
+| Field | Selector |
+|---|---|
+| Avatar | `#field-avatar` |
+| Large Avatar | `#field-large-avatar` |
+
+Both are `input[type="file"]`, zero-size but enabled, and **D&D Beyond takes
+an uploaded file — there is no URL field.** So a public image URL is no help
+here, however convenient it is for the archive page.
+
+Clicking the input with `element.click()` does raise a file chooser, and
+Playwright intercepts it properly — no native dialog appears on the user's
+screen. But the upload itself fails:
+
+```
+fileChooser.setFiles: Protocol error (DOM.setFileInputFiles):
+{"code":-32000,"message":"Not allowed"}
+```
+
+That is the **extension bridge refusing to put local files into a page**, a
+deliberate security boundary of `--extension` mode rather than a bug or a
+selector problem. Nothing on this side gets past it, and it should not be
+worked around.
+
+If a chooser has been opened, close it with `browser_file_upload` and an
+empty `paths` array, or the page is left with a modal pending.
+
+**So avatars are the user's job.** The files sit in `images/items/`; they
+upload them by hand on each item's edit page. Offer the list of item URLs
+and matching filenames rather than attempting it.
+
 ## Selector reference
 
 | Target | Selector |
