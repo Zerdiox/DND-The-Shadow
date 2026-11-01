@@ -132,6 +132,30 @@ Three behaviours, all observed, all of which look like failure and are not:
   so. I got this wrong once — reported quota, with no evidence for it, when
   the page was asking to be retried.
 
+- **The cause of nearly all of it: the tab is hidden.** Confirmed by asking
+  the page directly —
+
+  ```js
+  ({ visibilityState: document.visibilityState, hidden: document.hidden,
+     hasFocus: document.hasFocus() })
+  // → { visibilityState: "hidden", hidden: true, hasFocus: false }
+  ```
+
+  Gemini runs in the **user's own Chrome**, so the tab is backgrounded
+  whenever Chrome is not focused or another tab is in front. Browsers
+  throttle background pages, and Gemini defers the send until the tab is
+  looked at. That is why generations complete the instant the user glances
+  at the window, and why the same click works immediately sometimes and not
+  at all other times.
+
+  **There is no fix from this side.** `show_pane preview` does not help: it
+  controls the built-in browser pane, and this runs through the extension in
+  a real Chrome window. Either ask the user to leave the Gemini tab visible
+  while generating, or accept multi-minute waits and poll patiently.
+
+  Check `document.hidden` before diagnosing anything else. A hidden tab
+  explains a stalled send far more often than a broken selector does.
+
 - **The delay can run to several minutes.** This is the one that fooled me
   twice in a row. After the "something went wrong" error, four send
   mechanisms in a row appeared to do nothing — `element.click()`,
@@ -535,9 +559,23 @@ indistinguishable in their *contents*, not identical in their glass — the
 party could see which bottle was which and still have no idea what was in
 any of them.
 
-So vary the vessel and hold everything else: the five-section construction,
-the wax-sealed stopper, the faded illegible label, the cupboard shelf, the
-lighting and the medium. The liquid and the glass are what change.
+So vary the vessel and hold everything else: the wax-sealed stopper, the
+faded illegible label, the cupboard shelf, the lighting and the medium. The
+liquid and the glass are what change.
+
+**Do not force five sections.** The first vials were all described as "built
+in five sections from the bottom up — base, body, shoulder, neck, stopper",
+because that is the generic bottle anatomy and it templated well. It is also
+a cage: if every vessel has the same five parts, they can only differ in
+proportion, which is a thin kind of variety.
+
+Glassware is more varied than that. A round-bottomed flask has no base and
+cannot stand. An ampoule is sealed glass with no stopper at all. A squat jar
+has no neck. A retort has a long bent spout. A bottle may have a handle, or
+a ground-glass stopper instead of cork, or a wire-and-lever seal.
+
+Walk the anatomy of *this* vessel, however many parts that turns out to be.
+The rule was always "name every section end to end", never "name five".
 
 ### Matching a set
 
