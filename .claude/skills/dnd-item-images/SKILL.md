@@ -99,6 +99,24 @@ Verified working in the user's Chrome. Selectors and quirks:
 | Mode picker | `button[data-test-id="bard-mode-menu-button"]` |
 | Generated images | the **Images** entry in the left sidebar |
 
+### Sending is unreliable — read this before retrying
+
+Three behaviours, all observed, all of which look like failure and are not:
+
+- **A send can take over a minute to register.** The JS click returns
+  `sent: true`, the prompt stays in the composer, the URL stays on `/images`
+  — and then a minute later a conversation appears. **Check `location.href`
+  before resending.** A URL of `/app/<id>` means it went; resending would
+  spend a second generation for nothing.
+- **The JS click sometimes does not register at all.** Focus the composer and
+  press Enter instead, which is safe because these prompts are a single
+  paragraph with no newlines.
+- **A failed generation is silent.** The conversation is created and titled,
+  "Gemini said" appears with nothing after it, and no error is shown
+  anywhere. If no image has appeared after about 90 seconds and the reply is
+  empty, the generation failed — most likely the daily allowance. Stop and
+  tell the user rather than retrying; retries spend the same allowance.
+
 Two things will waste your time:
 
 - **`browser_click` times out on this UI.** The elements resolve and are
