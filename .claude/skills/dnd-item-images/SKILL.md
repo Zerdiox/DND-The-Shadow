@@ -227,8 +227,9 @@ painting with visible brushwork, confident edges and painterly texture
 throughout. The object alone and centred, filling about two thirds of the
 frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
 soft shadow beneath. The setting fills the frame edge to edge with no border
-or margin, held shallow and quiet so the object stays the subject. Muted cold
-palette. A clean, unlettered plate.
+or margin, held shallow and quiet so the object stays the subject. Restrained,
+desaturated colour throughout, the setting keeping whatever hue it naturally
+has. A clean, unlettered plate.
 ```
 
 Say **the Cradle**, not "the vault". `03-Locations/Vault.md` is one specific
@@ -371,8 +372,9 @@ painting with visible brushwork, confident edges and painterly texture
 throughout. The object alone and centred, filling about two thirds of the
 frame, resting on <SURFACE>. Low raking lamplight from the upper left, one
 soft shadow beneath. The setting fills the frame edge to edge with no border
-or margin, held shallow and quiet so the object stays the subject. Muted cold
-palette. A clean, unlettered plate.
+or margin, held shallow and quiet so the object stays the subject. Restrained,
+desaturated colour throughout, the setting keeping whatever hue it naturally
+has. A clean, unlettered plate.
 ```
 
 Aspect ratio 1:1, set with the control.

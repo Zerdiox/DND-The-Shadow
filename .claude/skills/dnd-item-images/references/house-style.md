@@ -68,8 +68,15 @@ unless its note records something visible.
 
 ## Palette, taken from the archive page
 
-The group-facing archive already has a design system, and images that ignore it
-will fight the page they are embedded in. Its tokens:
+These are the **page's** tokens, not a constraint on the images. Since
+surfaces became per item, an image takes whatever hue its own setting has — a
+wooden cupboard is warm, the Puddle is wet grey, the Throne Room is cold
+stone. What keeps them from fighting the page is staying *desaturated*, not
+matching these values.
+
+Two things the table is still for: picking an accent when an item needs one
+(garnet for fear, the poison green for poison), and judging whether an image
+is too saturated to sit quietly on the page. Its tokens:
 
 | Role | Light | Dark |
 |---|---|---|
@@ -85,8 +92,11 @@ will fight the page they are embedded in. Its tokens:
 | poison | `#3F7A2E` | `#8FCB6A` |
 
 A desaturated grey-green ground with verdigris, garnet, antique gold and a
-poison green. The image background should sit near `surface-2` so it reads on
-both the light and dark versions of the page without a hard edge.
+poison green. An image no longer has to land on `surface-2` — its background
+is whatever its room provides — but it should stay close to these in
+*saturation*, so that a warm cupboard and a cold stone floor still sit
+quietly beside each other and on both the light and dark versions of the
+page.
 
 The page's type is Bodoni Moda for headings, Karla for body, IBM Plex Mono for
 labels — relevant only if a composite or banner image is ever made. Individual
