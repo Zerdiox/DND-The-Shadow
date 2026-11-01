@@ -131,14 +131,14 @@ Layers 0 and 1 are identical for every item and live in one fixed block. Copy
 it; never retype it.
 
 ```
-Style: a single object from a high-fantasy world, made by pre-modern hands —
-forged, cast or carved, with nothing machined or modern about it. Photographed
-now as an archaeological catalogue plate: recovered from the Cradle, a vast and
-very old buried place, eldritch and wrong as much as it is abandoned. Centred
-on weathered grey-green stone. Low raking lamplight from the upper left, one
-soft shadow beneath. The object fills about two thirds of the frame.
-Photographic realism with fine surface texture. Muted cold palette. No text, no
-border, no hands, no people.
+Style: a single object from a high-fantasy world, made by pre-modern hands in
+the tradition of a long-lost classical civilisation — hand-forged, cast and
+carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
+painting with visible brushwork, confident edges and painterly texture
+throughout. Laid out as a catalogue plate — the object alone, centred on
+weathered grey-green stone, filling about two thirds of the frame. Low raking
+lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
+clean, unlettered plate.
 ```
 
 Say **the Cradle**, not "the vault". `03-Locations/Vault.md` is one specific
@@ -274,14 +274,14 @@ crisp sharp detail, in contrast with the weathered stone it rests on.
 
 Ornamental regalia workmanship, of a piece with a throne and a mace.
 
-Style: a single object from a high-fantasy world, made by pre-modern hands —
-forged, cast or carved, with nothing machined or modern about it. Photographed
-now as an archaeological catalogue plate: recovered from the Cradle, a vast and
-very old buried place, eldritch and wrong as much as it is abandoned. Centred
-on weathered grey-green stone. Low raking lamplight from the upper left, one
-soft shadow beneath. The object fills about two thirds of the frame.
-Photographic realism with fine surface texture. Muted cold palette. No text, no
-border, no hands, no people.
+Style: a single object from a high-fantasy world, made by pre-modern hands in
+the tradition of a long-lost classical civilisation — hand-forged, cast and
+carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
+painting with visible brushwork, confident edges and painterly texture
+throughout. Laid out as a catalogue plate — the object alone, centred on
+weathered grey-green stone, filling about two thirds of the frame. Low raking
+lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
+clean, unlettered plate.
 ```
 
 Aspect ratio 1:1, set with the control.
@@ -313,6 +313,67 @@ stone disc, chipped at one edge. No glow, no carving the note does not mention.
 The pull towards embellishment is strong here, because a restrained prompt
 feels like a worse prompt. It is not. The vault is the source of truth and an
 invented crown is an invented fact.
+
+## Reading the item's effect into how it looks
+
+The honesty rule bars **inventing facts**. It does not bar using facts the
+vault already records to decide how a thing looks — and an early draft of this
+skill got that wrong, excluding the Crown of Fear's fear effect as "not
+visible" and producing pleasant museum goldwork for an object that terrifies
+anyone who sees it worn.
+
+An object made to do something generally looks like it. If a note records an
+effect, let it shape the design:
+
+- **The effect is a design brief, not decoration.** "Frightens onlookers" does
+  not mean add skulls; it means the whole piece should be uncomfortable to
+  look at — cruel proportions, predatory forms.
+- **Motifs from the room can carry over.** The Throne Room has a serpent
+  relief along its wall and the crown was made as part of a matched set with
+  the throne. Working serpents into the crown's band is reading the room, not
+  inventing.
+- **"Too nice" is a real failure.** If an item's note says it does something
+  awful and the image is merely handsome, the image is wrong.
+
+This is where the vault stops deciding and taste begins, so it is the part to
+check with the user rather than settle alone.
+
+### The user's visual vocabulary
+
+Established while making the Crown of Fear. These are conventions for this
+campaign, so the set stays legible:
+
+| Reads as | Rendered as |
+|---|---|
+| fear, menace | **deep garnet red** — dark blood red, never bright ruby |
+| evil, cruelty | **jagged and angular** — shards, facets, uneven spines, never smooth domes or round cabochons |
+
+Garnet is already in the archive page's palette, so red accents sit inside the
+design system rather than fighting it. Keep red the only warm colour in an
+otherwise cold frame and it reads as the source of the menace.
+
+Add to this table as more items establish more conventions. Ask rather than
+guess at a new one.
+
+## Iterate in the thread, one change at a time
+
+Refine in the same Gemini conversation rather than starting over. A fresh
+prompt loses everything that was already right; a follow-up keeps it. State
+what to preserve explicitly — "keep the gold, the serpents, the stone, the
+lighting and the framing" — then make one change.
+
+The Crown of Fear took four passes, and the sequence is worth knowing because
+each step fixed exactly one thing:
+
+1. *old and tarnished* → a corroded Gothic crown. **Wrong**: magical items do
+   not age, and the Gothic form was the model's default, not the setting's.
+2. gold, classical banded diadem, pristine → right materials and period, but
+   pleasant and inert.
+3. serpents in the band, unsettling → the room's motif carried over, and a
+   serpent relief appeared in the background of its own accord.
+4. garnet-red angular stones, jagged crest → menace, finally legible.
+
+Starting over at step 3 would have lost the classical form won at step 2.
 
 ## After generating
 

@@ -32,14 +32,14 @@ raking lamplight, 1:1.
 prompt:
 
 ```
-Style: a single object from a high-fantasy world, made by pre-modern hands —
-forged, cast or carved, with nothing machined or modern about it. Photographed
-now as an archaeological catalogue plate: recovered from the Cradle, a vast and
-very old buried place, eldritch and wrong as much as it is abandoned. Centred
-on weathered grey-green stone. Low raking lamplight from the upper left, one
-soft shadow beneath. The object fills about two thirds of the frame.
-Photographic realism with fine surface texture. Muted cold palette. No text, no
-border, no hands, no people.
+Style: a single object from a high-fantasy world, made by pre-modern hands in
+the tradition of a long-lost classical civilisation — hand-forged, cast and
+carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
+painting with visible brushwork, confident edges and painterly texture
+throughout. Laid out as a catalogue plate — the object alone, centred on
+weathered grey-green stone, filling about two thirds of the frame. Low raking
+lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
+clean, unlettered plate.
 ```
 
 ## Layer 2 — `RoomContext` (optional, and the riskiest layer)
@@ -146,14 +146,14 @@ crisp sharp detail, in contrast with the weathered stone it rests on.
 
 Ornamental regalia workmanship, of a piece with a throne and a mace.
 
-Style: a single object from a high-fantasy world, made by pre-modern hands —
-forged, cast or carved, with nothing machined or modern about it. Photographed
-now as an archaeological catalogue plate: recovered from the Cradle, a vast and
-very old buried place, eldritch and wrong as much as it is abandoned. Centred
-on weathered grey-green stone. Low raking lamplight from the upper left, one
-soft shadow beneath. The object fills about two thirds of the frame.
-Photographic realism with fine surface texture. Muted cold palette. No text, no
-border, no hands, no people.
+Style: a single object from a high-fantasy world, made by pre-modern hands in
+the tradition of a long-lost classical civilisation — hand-forged, cast and
+carved. Painted as a fantasy roleplaying rulebook item illustration: a digital
+painting with visible brushwork, confident edges and painterly texture
+throughout. Laid out as a catalogue plate — the object alone, centred on
+weathered grey-green stone, filling about two thirds of the frame. Low raking
+lamplight from the upper left, one soft shadow beneath. Muted cold palette. A
+clean, unlettered plate.
 ```
 
 Layer 3, layer 2, layers 0+1. Aspect ratio 1:1 set with the control.
