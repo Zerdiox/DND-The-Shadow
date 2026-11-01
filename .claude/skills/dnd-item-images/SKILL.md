@@ -148,10 +148,35 @@ Three behaviours, all observed, all of which look like failure and are not:
   at the window, and why the same click works immediately sometimes and not
   at all other times.
 
-  **There is no fix from this side.** `show_pane preview` does not help: it
-  controls the built-in browser pane, and this runs through the extension in
-  a real Chrome window. Either ask the user to leave the Gemini tab visible
-  while generating, or accept multi-minute waits and poll patiently.
+  **The reliable fix is the user's:** leave the Gemini tab visible while
+  generating. With it visible, sends land instantly and images arrive in
+  about nine seconds; hidden, the same send can take minutes or appear never
+  to happen. `show_pane preview` does not help — that controls the built-in
+  browser pane, and this runs through the extension in a real Chrome window.
+
+  **A partial spoof is available and worth applying anyway**, re-run after
+  every navigation since it does not survive one:
+
+  ```js
+  Object.defineProperty(document, 'hidden', {configurable:true, get:()=>false});
+  Object.defineProperty(document, 'visibilityState', {configurable:true, get:()=>'visible'});
+  document.hasFocus = () => true;
+  ```
+
+  **Do not assume it is enough.** It only fools code that *reads* those
+  properties. Chrome pauses `requestAnimationFrame` outright in a hidden tab
+  and clamps timers to roughly once a minute, and that throttling is
+  enforced by the renderer no matter what the page believes about itself. If
+  Gemini schedules its send through rAF — which the symptoms fit, since
+  everything resumes the instant the tab is looked at — no page-level spoof
+  will touch it.
+
+  What would actually defeat the throttling is Chrome launched with
+  `--disable-renderer-backgrounding`, or a CDP call to
+  `Page.setWebLifecycleState('active')`. Neither is reachable here: the
+  extension attaches to a Chrome the user already started, and this MCP
+  exposes no raw CDP except through `browser_run_code_unsafe`, which is
+  RCE-equivalent and not worth it for a convenience.
 
   Check `document.hidden` before diagnosing anything else. A hidden tab
   explains a stalled send far more often than a broken selector does.
