@@ -840,6 +840,46 @@ otherwise cold frame and it reads as the source of the menace.
 Add to this table as more items establish more conventions. Ask rather than
 guess at a new one.
 
+## Keep a refinement short
+
+**A refinement that piles up adjectives gets all of them crammed in.** The
+user's correction, 2 November 2026, and it is the single most useful thing
+learned about refining.
+
+The Heartseeker's pommel stone took six passes. Each of mine stacked more
+qualifiers — jagged, raw, asymmetric, splintered, clouded inclusions, one
+edge chipped, translucent at the edges, deep blood garnet darkening to
+near-black — and the model obediently crowded every one into a thumbnail-
+sized object, which made it busy at the top and no closer to right. Then:
+
+```
+Keep everything else exactly as it is. Change only the pommel stone: far
+less detail on it, the surface left simple, its outline a broken heart.
+```
+
+That did in one line what four long prompts could not.
+
+So on a refinement, say the **one** thing and stop. Resist adding a second
+clause to protect against a misreading; that clause is what gets drawn.
+
+**But a short prompt only keeps what it mentions.** The same one-liner lost
+the stone's colour, because it said nothing about colour and the model
+defaulted it to the surrounding steel. The fix was another one-liner — *the
+pommel stone is deep garnet red* — not a longer prompt. Expect to spend two
+short passes rather than one long one; it is still cheaper, and each pass
+is legible.
+
+**And correct towards the target, not past it.** Told the heart was "too
+anatomically correct", I replaced the anatomy with a symbol, then with a
+rock, overshooting twice in opposite directions. "Too much X" means less X,
+not not-X.
+
+A last caution the user gave when I offered to write "heart" into the
+vocabulary table: **do not generalise a word into a rule.** What a heart, or
+any such shape, should look like depends on what they asked for that time.
+The table below is for conventions they have actually set, such as garnet
+for fear; it is not a dictionary.
+
 ## Iterate in the thread, one change at a time
 
 Refine in the same Gemini conversation rather than starting over. A fresh
