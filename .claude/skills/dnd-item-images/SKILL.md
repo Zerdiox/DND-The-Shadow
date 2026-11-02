@@ -345,6 +345,16 @@ so only the **ask** rows cost the user anything.
 | 16 | Framing | fixed | 1:1, object two thirds, setting edge to edge with no border |
 | 17 | Count | `quantity` | one object, unless the item is itself plural — see below |
 
+Row 11 says inscriptions are illegible and no letters are readable, and that
+is right for the vials' faded labels. **Four single characters are a workable
+exception**: the Clay Mapmaker was asked for N, E, S and W stamped into the
+rim at the compass points and all four came back clean, correctly placed and
+first time, on 2 November 2026. Do not extend it to words, and expect a retry
+if a plate needs more than a handful of characters. It does not conflict with
+"a clean, unlettered plate" in the style block either — that governs the
+illustration, forbidding captions drawn over the image, not lettering that is
+part of the object.
+
 Row 12 is the one that tells a small story: a cupboard shelf, a cold floor,
 bare earth, an iron chest lid. The surface varies per item deliberately — what
 holds the set together is the medium, the cold palette, the raking light from
