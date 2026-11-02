@@ -14,10 +14,20 @@ tags: [item]
 ddb: https://www.dndbeyond.com/homebrew/creations/magic-items/12141707-white-pearl-cradle
 ddb_name: White Pearl (Cradle)
 ddb_add: yes
+image: images/items/white-pearl.png
 ---
 
 ## Description
 A white pearl, found in the corner of a chest.
+
+Illustrated on bare chamber stone: about 1.5 cm across, slightly irregular
+as a natural pearl is, its nacre showing faint green and lilac tints, the
+surface scuffed and dulled rather than polished bright.
+
+**It is not drawn glowing.** The note says it glows under special light, and
+lamplight is not that light, so the plate shows only what a lantern would
+reveal. The iridescence is reflected, not emitted. Assigned for illustration
+on 2 November 2026.
 
 ## Properties
 - Glows under special light.
