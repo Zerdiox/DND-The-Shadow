@@ -840,6 +840,33 @@ otherwise cold frame and it reads as the source of the menace.
 Add to this table as more items establish more conventions. Ask rather than
 guess at a new one.
 
+## Proportion and composition will not move in a thread
+
+Confirmed twice, on the Tornado Prism and the Extending Halberd. A refinement
+is anchored to the image it refines, and anything structural — where a part
+sits, how big it is relative to another — comes back unchanged however
+precisely it is stated.
+
+The halberd's head was asked twice to grow, the second time with explicit
+measurements, and both passes returned the same picture. A **fresh prompt**
+carrying the same numbers changed it on the first attempt. Two generations
+wasted learning it a second time.
+
+So when a correction is about size, placement or arrangement rather than
+colour, material or detail, start a new thread with the target baked in.
+Detail refinements still belong in the thread; this is the exception.
+
+**Give the proportion a reason, not just a number.** What finally landed was
+not "the head is 50 cm" — that had already failed inside the thread — but:
+
+```
+...so head and haft are nearly equal in length and the weapon looks
+top-heavy and unfinished, as though most of its reach is missing.
+```
+
+A measurement is something the model can quietly ignore; a thing the object
+*looks like* is something it has to draw. Pair the number with the reason.
+
 ## Keep a refinement short
 
 **A refinement that piles up adjectives gets all of them crammed in.** The

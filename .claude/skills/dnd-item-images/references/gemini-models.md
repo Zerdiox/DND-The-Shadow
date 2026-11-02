@@ -66,10 +66,15 @@ than telling the user it is indefinite.
 What it cost to get there on 1 November 2026: nine vial images earlier in the
 day, then eight more in the evening — two for the Bottled Silver Tear, three
 for the Tornado Prisms, one for the Red Lanterns, two for the Chain — and the
-next request was refused. So **on the order of fifteen to twenty generations
-exhausts a day**, with the caveat that the window rolls and the vials may
-have partly aged out of it. Treat that as the planning figure until the page
-says otherwise.
+next request was refused.
+
+**Measured properly on 2 November: twelve generations read 46%, so the day
+holds roughly twenty-six.** That is the figure to plan with. The earlier
+"fifteen to twenty" was inferred from where the wall fell rather than read
+off the page, and it was low.
+
+Read the percentage rather than counting. The window rolls, so a count from
+the start of a session drifts, and the page is authoritative and free.
 
 How exhaustion presents, so it is recognised rather than diagnosed:
 
