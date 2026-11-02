@@ -141,9 +141,18 @@ Three behaviours, all observed, all of which look like failure and are not:
   ```
 
   Wordings seen so far: *"Sorry, something went wrong. Please try your
-  request again."* and *"I encountered an error doing what you asked. Could
-  you try again?"* — a narrow regex built for the first one missed the
-  second entirely and reported a silent stall.
+  request again."*, *"I encountered an error doing what you asked. Could you
+  try again?"* and *"I seem to be encountering an error. Can I try something
+  else for you?"* — a narrow regex built for the first one missed the second
+  entirely and reported a silent stall, and the regex above then missed the
+  third because it matched `encountered` and not `encountering`. Match the
+  stem: `encounter`, not a tense of it.
+
+  **The tab title is the reliable signal**, not the body text. It became
+  *"Failed Artifact Illustration Request"* on that third failure, having been
+  *"Image Generation Error"* before — the wording varies there too, but the
+  words *error*, *failed* or *failure* have appeared every time, while the
+  body text has slipped past three different regexes.
 
   **If the prompt appears twice, ask before blaming the automation.** Two
   submissions showed up in a thread and I concluded a single `send.click()`
