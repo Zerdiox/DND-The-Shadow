@@ -233,10 +233,18 @@ Astral Chamber, `magical: true`. **UNSEEN: the dish form.** The note says only
 The Astral Chamber is one of the four rooms that earns a mark on the object,
 so the chalky spotting clause is included.
 
+**Settled 2 November 2026.** The user chose **seamless** — *mending* leaves
+no trace, so the dish shows no repair. They also asked for it to be marked
+like a map: latitude and longitude lines, and the compass points on the rim.
+
 ```
 Create an image of a shallow clay dish about 25 cm across, hand-thrown from
-pale grey-brown clay, with a broad flat floor and a low rounded rim, its inner
-floor smooth and empty.
+pale grey-brown clay, with a broad flat floor and a low rounded rim. Across
+the inner floor a fine grid of incised lines runs edge to edge, cut shallow
+into the clay like the latitude and longitude graticule of a map. Four single
+letters are stamped deep into the flat of the rim at the compass points — N
+at the top, E at the right, S at the bottom, W at the left — each one clean
+and sharply impressed.
 
 The object itself is pristine and undimmed — no corrosion, no tarnish, no
 wear, crisp sharp detail, in contrast with the aged surface it rests on.
@@ -247,11 +255,17 @@ Style: [the fixed block, resting on a stone table under long-overflowed
 flasks]
 ```
 
-**One thing to settle with the user first.** The note says it was found
-smashed and repaired with *mending*, which in the rules leaves no trace — so
-a pristine, seamless dish is the correct reading. Faint repair lines would
-tell the story better but would contradict the spell. Ask which they want
-before sending; do not decide it alone.
+**This is the one item that deliberately carries readable letters**, against
+checklist row 11, which says inscriptions are illegible and no letters are
+readable. That rule was written for the vials' faded labels and it is right
+for them; a mapmaking device with compass points is the exception the user
+asked for. Four single characters is also about the most text these models
+place reliably — expect a pass or two if they come back malformed, and do not
+extend this to words.
+
+It does not conflict with "a clean, unlettered plate" in the style block:
+that governs the illustration, forbidding captions and labels drawn over the
+image. Letters on the object itself are part of the object.
 
 ---
 
