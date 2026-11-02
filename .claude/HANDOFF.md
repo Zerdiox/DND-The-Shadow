@@ -305,6 +305,53 @@ The Crown took six generations and the mace four, nearly all of it
 discovering those rules. With them in the first prompt, expect one or two per
 item. Twenty-two items remain.
 
+## Update — 2 November 2026, all twenty-four illustrated
+
+**Every item has a plate.** 24 images in `images/items/`, 24 notes carrying
+an `image:` key, all committed and pushed. `.claude/BATCH-2-PROMPTS.md` has
+served its purpose and is deleted; it is in history if a prompt is wanted
+back.
+
+**Eleven D&D Beyond avatars are still to upload** — the only thing left.
+Checked against the live site, not assumed:
+
+| Item | File |
+|---|---|
+| Heartseeker Dagger | `heartseeker-dagger.png` |
+| Mud Grenades | `mud-grenades.png` |
+| Tornado Prisms | `tornado-prisms.png` |
+| Chain of 24 Links | `chain-of-24-links.png` |
+| Clay Mapmaker | `clay-mapmaker.png` |
+| Radiant Gemstone | `radiant-gemstone.png` |
+| Red Lanterns | `red-lanterns.png` |
+| Vantablack Coin | `vantablack-coin.png` |
+| White Pearl | `white-pearl.png` |
+| Wrinkled Prune | `wrinkled-prune.png` |
+| Extending Halberd | `extending-halberd.png` |
+
+The other thirteen are done. Re-run the check rather than trusting this
+table — the query is in the homebrew skill's recipes, and the upload itself
+is the user's (expand *Additional Information*, scroll the field into view,
+they drag the file in).
+
+**Rules the user set on 2 November**, all committed into the skill:
+
+- A refinement that piles up adjectives gets all of them crammed in. Say the
+  one thing. A short prompt only keeps what it mentions, so expect two short
+  passes rather than one long one.
+- "Too much X" means less X, not not-X. Correct towards the target.
+- Do not generalise a word like "heart" into the vocabulary table. It means
+  whatever they asked for that time.
+- Proportion and composition will not move inside a thread. Start a fresh
+  prompt, and give the proportion a reason rather than only a number.
+- Masterwork means minimal wear, whatever `magical` says.
+- The worn clause must suit the material.
+- Four single characters of readable text are workable; words are not.
+
+**Quota, measured rather than guessed:** twelve generations read 46% on
+`gemini.google.com/usage`, so a day holds roughly twenty-six. This session
+used about twenty-three.
+
 ## Update — 1 November 2026, second batch, stopped by the quota
 
 **Fifteen items are illustrated.** The twelve from the first batch, plus the
@@ -327,10 +374,13 @@ user asked for a shorter chain; that prompt was sent and refused by the quota.
 S-curve instead of coils, both ends in frame.
 
 **Nine items still unillustrated, and their prompts are written out in
-[`.claude/BATCH-2-PROMPTS.md`](BATCH-2-PROMPTS.md)** — ready to send, with the
-Chain's resume prompt first. Clay Mapmaker, Extending Halberd, Heartseeker
-Dagger, Mud Grenades, Radiant Gemstone, Vantablack Coin, White Pearl,
-Wrinkled Prune, Chain of 24 Links.
+`.claude/BATCH-2-PROMPTS.md`** — ready to send, with the Chain's resume
+prompt first. Clay Mapmaker, Extending Halberd, Heartseeker Dagger, Mud
+Grenades, Radiant Gemstone, Vantablack Coin, White Pearl, Wrinkled Prune,
+Chain of 24 Links.
+
+> **Superseded 2 November 2026.** All nine were illustrated and that file
+> was deleted; `git log` has it. See the update at the top.
 
 Four pieces of wording in that file were agreed in substance but **never
 shown to the user**: the Heartseeker's garnet heart gem, the halberd's
