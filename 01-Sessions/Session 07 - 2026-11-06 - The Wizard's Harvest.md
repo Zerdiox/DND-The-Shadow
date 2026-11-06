@@ -43,7 +43,7 @@ weapon. The party went home.
 
 Past [[Castle]], which is thriving, and into Orebridge, which has flourished —
 trees in bloom, fields worked, the city recovered from the dwarven invasion with
-[[The Grove]]'s help. They reported everything to [[Theodin]] and handed over the
+[[The Grove]]'s help. They reported everything to [[Theodin]] and lent him the
 [[Disease Books]] and the [[Poison Books]] — five volumes, the halves of the
 Shadow among them. He pointed them at the grove, who have been working on the
 plague for a long time, and came along. The druids said they need more time.
@@ -54,7 +54,7 @@ The party took an extended break.
 - Took three bottles of its blood on the way out.
 - Left [[The Cradle]] without finding the observatory.
 - Did not fight [[Rem Koolhuis]], and did not agree to anything either.
-- Gave the [[Disease Books]] and [[Poison Books]] to [[Theodin]], and kept the rest.
+- Lent the [[Disease Books]] and [[Poison Books]] to [[Theodin]] for the grove to work from, and kept the rest.
 
 ## Notable moments
 - The mercy that wasn't: the grenade freed it, and it hurt just as much on the

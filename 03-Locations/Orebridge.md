@@ -19,4 +19,4 @@ for a long time — which makes Orebridge the lead [[Aurorion]] gave
 [[Vicaster]] for [[The Shadow]].
 
 ## Session Log
-- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: Named by [[Aurorion]] through *contact other plane* as where the people who can help are. The party travelled back, found the city thriving, reported to [[Theodin]] and handed over the [[Disease Books]] and [[Poison Books]]. He pointed them at [[The Grove]].
+- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: Named by [[Aurorion]] through *contact other plane* as where the people who can help are. The party travelled back, found the city thriving, reported to [[Theodin]] and lent him the [[Disease Books]] and [[Poison Books]]. He pointed them at [[The Grove]].
