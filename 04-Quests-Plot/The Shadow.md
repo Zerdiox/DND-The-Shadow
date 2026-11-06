@@ -1,8 +1,8 @@
 ---
 type: quest
 status: active
-related_npcs:
-related_locations: [[The Cradle]], [[Alchemy Hall]]
+related_npcs: [[Theodin]]
+related_locations: [[The Cradle]], [[Alchemy Hall]], [[Orebridge]]
 started: before [[Session 01 - 2026-08-01]]
 tags: [quest, campaign]
 ---
@@ -24,5 +24,13 @@ documentation for both halves of the plague.
 Whether the builders made the Shadow, predicted it, or merely recorded it is not
 yet established.
 
+**There is a lead now, and it is at home.** In
+[[Session 07 - 2026-11-06 - The Wizard's Harvest]] [[Vicaster]] asked
+[[Aurorion]] through *contact other plane* who could help, and the answer was
+[[Orebridge]]. [[Theodin]] took the books and pointed the party at
+[[The Grove]], who have been working on the plague for a long time. They asked
+for more time, and the party went on an extended break.
+
 ## Session Log
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: Found both halves documented in the alchemy hall's [[Disease Books]], with no remedy in either.
+- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: [[Aurorion]] named [[Orebridge]] as where the help is. [[Theodin]] took the books and sent the party to [[The Grove]], who need more time.

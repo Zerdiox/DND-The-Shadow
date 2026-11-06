@@ -2,7 +2,7 @@
 type: npc
 status: alive
 pronouns:
-location:
+location: [[The Dam]]
 faction: Marignon
 first_appeared: before [[Session 01 - 2026-08-01]], in the earlier unrecorded campaign
 tags: [npc]
@@ -19,6 +19,11 @@ before the events of [[Session 01 - 2026-08-01]].
   the campaign, which has no notes in this vault. Found fighting another
   wizard beside his boat, beat him, and ferried the party to [[The Dam]].
   Recorded from the user's recollection on 31 October 2026.
+- **[[Session 07 - 2026-11-06 - The Wizard's Harvest]]**: Found standing on top
+  of [[The Dam]], with three golems in place in front of it. He is taking the
+  dam: the plan is to power the golems with the melt from the coming winter and
+  harvest magical power. He said all of this himself, unprompted. The party did
+  not fight him and went on to [[Orebridge]]. See [[The Harvest]].
 
 ## Open questions
 - Who was the other wizard, and what was the fight about?

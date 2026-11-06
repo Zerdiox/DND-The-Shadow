@@ -34,3 +34,4 @@ generation. The note's own wording is the authority: there is a button.
 
 ## Session Log
 - [[Session 05 - 2026-10-16 - This Is My Book]]: Found in chest 7 of the [[Armoury]] and identified by [[Muradin]].
+- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: [[Muradin]] used one in the [[Astral Chamber]] to break the chains holding [[The Astral Being]]. It worked — the creature came down — but the fall snapped off some of its spikes and left it in the mud, no better off.

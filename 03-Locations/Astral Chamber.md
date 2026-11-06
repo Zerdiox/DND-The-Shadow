@@ -14,3 +14,4 @@ a stairway down a giant square hole.
 
 ## Session Log
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: [[Aslaug]] recognised the thing on the chains. [[Vicaster]] mended the smashed clay construction and kept it. [[Muradin]] opened the door with *guidance* and the party went down.
+- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: Passed back through on the way up. [[The Astral Being]] was cut down and killed here, and the party left with three bottles of [[Astral Blood]].
