@@ -10,7 +10,7 @@ value:
 owner: party
 found: [[Session 07 - 2026-11-06 - The Wizard's Harvest]]
 identified: true
-ddb_add:
+ddb_add: no
 tags: [item]
 ---
 

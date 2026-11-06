@@ -7,7 +7,7 @@ magical: false
 quantity: 3
 weight:
 value:
-owner: [[Vicaster]]
+owner: [[Theodin]]
 found: [[Session 06 - 2026-10-23 - The Silver Tongue]]
 identified: true
 tags: [item]
@@ -24,3 +24,4 @@ with durations, inoculation times and effects.
 
 ## Session Log
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: Read through by [[Vicaster]] and taken.
+- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: Handed to [[Theodin]] in [[Orebridge]], along with the [[Disease Books]], and passed on to [[The Grove]]. The party no longer carries them.

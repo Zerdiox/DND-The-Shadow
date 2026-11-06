@@ -7,7 +7,7 @@ magical: false
 quantity: 2
 weight:
 value:
-owner: [[Vicaster]]
+owner: [[Theodin]]
 found: [[Session 06 - 2026-10-23 - The Silver Tongue]]
 identified: true
 tags: [item]
@@ -32,3 +32,4 @@ might work one out.
 ## Session Log
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: Read through by [[Vicaster]] and taken.
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: Recognised as documenting both halves of [[The Shadow]].
+- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: Handed to [[Theodin]] in [[Orebridge]], along with the [[Poison Books]], and passed on to [[The Grove]] — who have worked the plague for years and asked for more time. The party no longer carries them.

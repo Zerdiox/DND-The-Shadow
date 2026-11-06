@@ -44,16 +44,17 @@ weapon. The party went home.
 Past [[Castle]], which is thriving, and into Orebridge, which has flourished —
 trees in bloom, fields worked, the city recovered from the dwarven invasion with
 [[The Grove]]'s help. They reported everything to [[Theodin]] and handed over the
-books. He pointed them at the grove, who have been working on the plague for a
-long time, and came along. The druids said they need more time. The party took
-an extended break.
+[[Disease Books]] and the [[Poison Books]] — five volumes, the halves of the
+Shadow among them. He pointed them at the grove, who have been working on the
+plague for a long time, and came along. The druids said they need more time.
+The party took an extended break.
 
 ## Key decisions
 - Killed [[The Astral Being]] rather than leave it hanging a second time.
 - Took three bottles of its blood on the way out.
 - Left [[The Cradle]] without finding the observatory.
 - Did not fight [[Rem Koolhuis]], and did not agree to anything either.
-- Handed the books over to [[Theodin]].
+- Gave the [[Disease Books]] and [[Poison Books]] to [[Theodin]], and kept the rest.
 
 ## Notable moments
 - The mercy that wasn't: the grenade freed it, and it hurt just as much on the
@@ -70,7 +71,7 @@ an extended break.
 - NPCs: [[Vicaster]], [[Drivik]], [[Aslaug]], [[Muradin]], [[Echo of Twilight]], [[The Astral Being]], [[Rem Koolhuis]], [[Theodin]]
 - Locations: [[Astral Chamber]], [[Great Hall]], [[Butterfly Cave]], [[Glass Floor Room]], [[Poison Cage]], [[Armoury]], [[The Bronze Mouth]], [[Inverted Pyramid]], [[The Cradle]], [[The Dam]], [[Castle]], [[Orebridge]]
 - Quests: [[Into the Cradle]], [[The Portals]], [[The Shadow]], [[The Harvest]]
-- Items: [[Astral Blood]], [[Mud Grenades]]
+- Items: [[Astral Blood]], [[Mud Grenades]], [[Disease Books]], [[Poison Books]]
 - Lore: [[Aurorion]], [[The Grove]]
 
 ## Raw Notes
