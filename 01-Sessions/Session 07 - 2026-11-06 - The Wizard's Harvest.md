@@ -30,7 +30,8 @@ door. [[Vicaster]] cast *fly* on Drivik, Muradin and himself — Muradin started
 being sick the moment his feet left the floor, because dwarves don't do flying.
 [[Echo of Twilight]] went up as an owl and Aslaug was carried. Drivik opened
 [[The Bronze Mouth]] and they came out in the [[Inverted Pyramid]], among the
-statues. Out of [[The Cradle]] at last, with the observatory never found.
+statues. Out of [[The Cradle]] at last, carrying what they went down for — the
+[[Disease Books]] and the [[Poison Books]]. The observatory was never found.
 
 Above ground, Vicaster cast *contact other plane* and spoke to [[Aurorion]].
 The people who can help are in [[Orebridge]] — their own home town.
@@ -52,7 +53,7 @@ The party took an extended break.
 ## Key decisions
 - Killed [[The Astral Being]] rather than leave it hanging a second time.
 - Took three bottles of its blood on the way out.
-- Left [[The Cradle]] without finding the observatory.
+- Left [[The Cradle]] with the books, and without the observatory.
 - Did not fight [[Rem Koolhuis]], and did not agree to anything either.
 - Lent the [[Disease Books]] and [[Poison Books]] to [[Theodin]] for the grove to work from, and kept the rest.
 
