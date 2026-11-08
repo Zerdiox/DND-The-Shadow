@@ -32,9 +32,6 @@ yet established.
 on the plague for a long time. They asked for more time, and the party went on
 an extended break.
 
-The books are lent, not given. The grove has the documentation to work from;
-the party expect it back.
-
 ## Session Log
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: Found both halves documented in the alchemy hall's [[Disease Books]], with no remedy in either.
 - [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: [[Aurorion]] named [[Orebridge]] as where the help is. [[Theodin]] took the loan of the [[Disease Books]] and [[Poison Books]] and sent the party to [[The Grove]], who need more time.

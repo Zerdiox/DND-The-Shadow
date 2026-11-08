@@ -26,15 +26,10 @@ came to [[The Cradle]] to stop.
 Neither contains a remedy, though someone with more knowledge of the subject
 might work one out.
 
-**On loan to [[The Grove]]** since
-[[Session 07 - 2026-11-06 - The Wizard's Harvest]], handed over through
-[[Theodin]] so the druids can work from them. Lent, not given — still the
-party's, and still their row in the D&D Beyond party inventory.
-
 ## Properties
 - Reference works. Not magical.
 
 ## Session Log
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: Read through by [[Vicaster]] and taken.
 - [[Session 06 - 2026-10-23 - The Silver Tongue]]: Recognised as documenting both halves of [[The Shadow]].
-- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: Lent to [[Theodin]] in [[Orebridge]], along with the [[Poison Books]], and passed on to [[The Grove]] — who have worked the plague for years and asked for more time. Still the party's; they expect them back.
+- [[Session 07 - 2026-11-06 - The Wizard's Harvest]]: Lent to [[Theodin]] in [[Orebridge]], along with the [[Poison Books]], for [[The Grove]] to work from.
